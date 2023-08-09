@@ -1,22 +1,27 @@
-{"products":
-[
-    {
-      "id": "p1",
-      "name": "Laptop",
-      "category": "electronics",
-      "price": 999.99
-    },
-    {
-      "id": "p2",
-      "name": "T-Shirt",
-      "category": "clothing",
-      "price": 19.99
-    },
-    {
-      "id": "p3",
-      "name": "Decorative Pillow",
-      "category": "home_decor",
-      "price": 24.99
-    }
-  ]
+{
+
+"products": [
+  {
+    "id": 1,
+    "name": "Laptop",
+    "category": "Women",
+    "price": 999.99,
+    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+  },
+  {
+    "id": 2,
+    "name": "T-Shirt",
+    "category": "Women",
+    "price": 19.99,
+    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+  },
+  {
+    "id": 3,
+    "name": "Decorative Pillow",
+    "category": "Kid",
+    "price": 24.99,
+    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+  }
+]
 }
+
