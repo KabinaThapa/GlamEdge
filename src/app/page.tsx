@@ -4,6 +4,7 @@ import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { fetchProduct } from '@/redux/features/productslice'
 import { AppDispatch, RootState } from '@/redux/store'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
     <>
     <div>
       {item.map((item)=>(
-        <li key={item.id}>{item.category}</li>
+        <li key={item.id}><Link href={`/${item.category}`}>{item.category}</Link></li>
       ))}
     </div>
     </>
