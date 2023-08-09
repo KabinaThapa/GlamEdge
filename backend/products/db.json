@@ -1,0 +1,22 @@
+{"products":
+[
+    {
+      "id": "p1",
+      "name": "Laptop",
+      "category": "electronics",
+      "price": 999.99
+    },
+    {
+      "id": "p2",
+      "name": "T-Shirt",
+      "category": "clothing",
+      "price": 19.99
+    },
+    {
+      "id": "p3",
+      "name": "Decorative Pillow",
+      "category": "home_decor",
+      "price": 24.99
+    }
+  ]
+}
