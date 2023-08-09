@@ -1,5 +1,5 @@
 import './globals.css'
-
+import { ReduxProvider } from '@/redux/provider'
 
 export default function RootLayout({
   children,
@@ -8,7 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body >
+        <ReduxProvider>{children}</ReduxProvider>
+       
+        </body>
     </html>
   )
 }
