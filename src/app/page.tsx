@@ -28,7 +28,7 @@ export default function Home() {
     <div>
       {item.map((item)=>(
         <li key={item.id}>
-          <Link href={`/${item.id}`}>
+          <Link href={`/product/${item.id}`}>
           {item.id}</Link>
           <img src={item.image} width='200'/>
         </li>

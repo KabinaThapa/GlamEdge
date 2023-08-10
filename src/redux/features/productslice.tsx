@@ -1,12 +1,9 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import {PayloadAction} from '@reduxjs/toolkit'
 
-export interface ProductCategory{
-    id:string,
-    image:string
-}
+
 export interface Product{
-    id:number,
+    subcategory:string,
     name:string,
     category:string,
     price:string|number,

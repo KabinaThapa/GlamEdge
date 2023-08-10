@@ -4,25 +4,27 @@ import { RootState, AppDispatch } from '@/redux/store';
 import { useSelector, useDispatch } from 'react-redux';
 
 
-import { fetchSubCategory } from '@/redux/features/subcategoryslice';
-import { subcategory } from './../../redux/features/subcategoryslice';
+
+import { fetchProduct } from '@/redux/features/productslice';
 
 
-export default function Page({ params }: { params: { category: string } }) {
+
+
+export default function Page({ params }: { params: { category: string, subcategory: string } }) {
     const dispatch=useDispatch<AppDispatch>()
     useEffect(()=>{
-      dispatch(fetchSubCategory())
+      dispatch(fetchProduct())
     },[])
-    const{item}=useSelector((state:RootState)=>state.subcategory)
+    const{item}=useSelector((state:RootState)=>state.product)
     console.log(item)
     console.log(params)
-    const filterCategory=item.filter((subcategory)=>subcategory.id === params.category)
+    const filterCategory=item.filter((product)=>product.category === params.category && product.subcategory===params.subcategory)
     console.log(filterCategory)
     return <>
-    <div> {params.category}
+    <div> {params.subcategory}
     {filterCategory.map((products)=>(
         <div>
-        <li>{products.subcategory}</li>
+        <li>{products.name}</li>
         <img src={products.image}/>
         </div>
     ))}
