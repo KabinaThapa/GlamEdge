@@ -1,5 +1,8 @@
 import './globals.css'
 import { ReduxProvider } from '@/redux/provider'
+import Navbar from '@/components/navbar';
+
+import Footer from '@/components/footer';
 
 export default function RootLayout({
   children,
@@ -8,10 +11,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+    
       <body >
-        <ReduxProvider>{children}</ReduxProvider>
+      
+        <ReduxProvider>
+        <Navbar/>
+          {children}
+         <Footer/>
+          </ReduxProvider>
        
         </body>
+        
     </html>
   )
 }

@@ -35,9 +35,9 @@
        
       {
        
-            "id":"Women",
+            "id":"women",
             "image":"https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/latest2.jpg.webp",
-            "subcategory":"Dress"
+            "subcategory":"Pants"
         },
        
         
@@ -46,7 +46,7 @@
        
             "id":"Sunscreen",
             "image":"https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-gallery-img-3.jpg",
-            "subcategory":"beauty"
+            "subcategory":"Beauty"
       }
     ]
     }
