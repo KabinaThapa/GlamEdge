@@ -1,0 +1,54 @@
+{
+
+    "subcategory": [
+      {
+        
+            "id":"Tshirt",
+            "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
+            "category":"men"
+      },
+      {
+        
+            "id":"Pants",
+            "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
+            "category":"men"
+      },
+      {
+        
+            "id":"Footwear",
+            "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
+            "category":"men"
+      },
+      {
+        
+            "id":"Accessories",
+            "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
+            "category":"men"
+      },
+        
+    
+       
+            {
+            "id":"Tshirt",
+            "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
+            "category":"women"},
+       
+      {
+       
+            "id":"Dress",
+            "image":"https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/latest2.jpg.webp",
+            "category":"women"
+        },
+       
+        
+      {
+        
+       
+            "id":"Sunscreen",
+            "image":"https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-gallery-img-3.jpg",
+            "category":"beauty"
+      }
+    ]
+    }
+    
+    

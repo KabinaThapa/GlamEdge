@@ -1,57 +1,52 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import {PayloadAction} from '@reduxjs/toolkit'
 
-export interface ProductCategory{
+
+export interface subcategory{
     id:string,
-    image:string
-}
-export interface Product{
-    id:number,
-    name:string,
     category:string,
-    price:string|number,
     image:string
 }
 
-export const fetchProduct=createAsyncThunk("products/fetchproduct",
+export const fetchSubCategory=createAsyncThunk("products/fetchSubCategory",
 async()=>{
-    const response=await fetch('http://localhost:4001/products')
+    const response=await fetch('http://localhost:4003/subcategory')
     const data=await response.json()
-    return data as Product[]
+    return data as subcategory[]
 }
 ) 
-export interface Productstate{
-    item: Product[],
+export interface Subcategorystate{
+    item: subcategory[],
     status:'idle'|'loading'|'succeeded'|'failed',
     error:string|null
 
 } 
-const initialState:Productstate={
+const initialState:Subcategorystate={
     item:[],
     status:'idle',
     error:null,
 }
 
- const productSlice= createSlice({
-    name:"product",
+ const subcategorySlice= createSlice({
+    name:"subcategory",
     initialState,
     reducers:{},
     extraReducers:(builder)=>{
         builder
-        .addCase(fetchProduct.pending, (state )=>{
+        .addCase(fetchSubCategory.pending, (state )=>{
             state.status='loading'
             
         })
-        .addCase(fetchProduct.fulfilled, (state, action:PayloadAction<Product[]>)=>{
+        .addCase(fetchSubCategory.fulfilled, (state, action:PayloadAction<subcategory[]>)=>{
             state.status='succeeded',
             state.item=action.payload
 
         })
-        .addCase(fetchProduct.rejected, (state, action)=>{
+        .addCase(fetchSubCategory.rejected, (state, action)=>{
             state.status='failed',
             state.error=action.error.message
 
         })
     },
 })
-export default productSlice.reducer
+export default subcategorySlice.reducer

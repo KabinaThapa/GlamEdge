@@ -3,22 +3,45 @@
 "products": [
   {
     "id": 1,
-    "name": "Laptop",
-    "category": "Women",
+    "name": "Printed Tshirt",
+    "category": "men",
+    "subcategory":[{
+        "name":"T-Shirt"
+
+    }],
     "price": 999.99,
     "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
   },
   {
     "id": 2,
-    "name": "T-Shirt",
-    "category": "Women",
+    "name": "Cropped Tshirt",
+    "category": "men",
+    "subcategory":[{
+        "name":"T-Shirt"
+
+    }],
+    "price": 999.99,
+    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+  },
+  {
+    "id": 2,
+    "name": "Cotton Pant",
+    "category": "men",
+    "subcategory":[{
+        "name":"Pant"
+
+    }],
     "price": 19.99,
     "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
   },
   {
     "id": 3,
-    "name": "Decorative Pillow",
-    "category": "Kid",
+    "name": "Sky Toner",
+    "category": "beauty",
+    "subcategory":[{
+        "name":"Skin Care"
+
+    }],
     "price": 24.99,
     "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
   }
