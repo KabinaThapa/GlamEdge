@@ -3,41 +3,41 @@
     "subcategory": [
       {
         
-            "id":"Tshirt",
+            "id":"men",
             "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
-            "category":"men"
+            "subcategory":"Tshirt"
       },
       {
         
-            "id":"Pants",
+            "id":"men",
             "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
-            "category":"men"
+            "subcategory":"Pants"
       },
       {
         
-            "id":"Footwear",
+            "id":"men",
             "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
-            "category":"men"
+            "subcategory":"Footwear"
       },
       {
         
-            "id":"Accessories",
+            "id":"men",
             "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
-            "category":"men"
+            "subcategory":"Accessories"
       },
         
     
        
             {
-            "id":"Tshirt",
+            "id":"women",
             "image":"https://preview.colorlib.com/theme/cozastore/images/banner-02.jpg.webp",
-            "category":"women"},
+            "subcategory":"Tshirt"},
        
       {
        
-            "id":"Dress",
+            "id":"Women",
             "image":"https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/latest2.jpg.webp",
-            "category":"women"
+            "subcategory":"Dress"
         },
        
         
@@ -46,7 +46,7 @@
        
             "id":"Sunscreen",
             "image":"https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-gallery-img-3.jpg",
-            "category":"beauty"
+            "subcategory":"beauty"
       }
     ]
     }

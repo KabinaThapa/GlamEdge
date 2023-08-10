@@ -4,11 +4,11 @@ import {PayloadAction} from '@reduxjs/toolkit'
 
 export interface subcategory{
     id:string,
-    category:string,
+    subcategory:string,
     image:string
 }
 
-export const fetchSubCategory=createAsyncThunk("products/fetchSubCategory",
+export const fetchSubCategory=createAsyncThunk("subcategory/fetchSubCategory",
 async()=>{
     const response=await fetch('http://localhost:4003/subcategory')
     const data=await response.json()

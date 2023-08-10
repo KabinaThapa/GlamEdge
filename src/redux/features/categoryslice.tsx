@@ -8,7 +8,7 @@ export interface Category{
     image:string
 }
 
-export const fetchCategory=createAsyncThunk("products/fetchproduct",
+export const fetchCategory=createAsyncThunk("category/fetchcategory",
 async()=>{
     const response=await fetch('http://localhost:4002/category')
     const data=await response.json()
