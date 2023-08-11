@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
     <div className='w-full h-96 bg-babypowder'>
-      <p>Banner</p>
+      <img className='object-contain w-full h-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/articles/blog-1_1296x.png?v=1614756761'}/>
     </div>
     <h1 className='text-2xl'>Our Category</h1>
     <div className='h-auto grid grid-cols-3 w-full bg-Platinum'>
@@ -34,11 +34,12 @@ export default function Home() {
       {item.map((item)=>(
         
         
-        <div key={item.id} className='capitalize text-xl h-auto w-[50%] border-2'>
+        <div key={item.id} className='capitalize text-xl h-auto border-2 '>
           <Link href={`/product/${item.id}`}>
           <h1>{item.id}</h1>
-          
-          <img className='object-cover w-full' src={item.image}/>
+          <div className='w-full h-96 border-black border-2'>
+           <img className='object-contain w-full h-full' src={item.image}/>
+          </div>
           
           </Link>
         
