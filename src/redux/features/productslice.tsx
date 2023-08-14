@@ -3,6 +3,7 @@ import {PayloadAction} from '@reduxjs/toolkit'
 
 
 export interface Product{
+    id:string,
     subcategory:string,
     name:string,
     category:string,

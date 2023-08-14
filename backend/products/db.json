@@ -1,87 +1,103 @@
 {
-
-"products": [
-  
-      {
-        "subcategory": "Tshirt",
-        "name": "Printed Tshirt",
-        "category": "men",
-        "price": 999.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Striped Tshirt",
-        "category": "men",
-        "price": 799.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Graphic Tshirt",
-        "category": "men",
-        "price": 649.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Plain Tshirt",
-        "category": "men",
-        "price": 549.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "V-neck Tshirt",
-        "category": "men",
-        "price": 699.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Henley Tshirt",
-        "category": "men",
-        "price": 749.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Polo Tshirt",
-        "category": "men",
-        "price": 899.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Ringer Tshirt",
-        "category": "men",
-        "price": 599.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Raglan Tshirt",
-        "category": "men",
-        "price": 749.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Tshirt",
-        "name": "Pocket Tshirt",
-        "category": "men",
-        "price": 699.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-  
-  {
-    "subcategory": "Tshirt",
-    "name": "Printed Tshirt",
-    "category": "men",
-    "price": 999.99,
-    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-  },
-
+  "products": [
     {
+      "id": 1,
+      "subcategory": "Tshirt",
+      "name": "Printed Tshirt",
+      "category": "men",
+      "price": 999.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 2,
+      "subcategory": "Tshirt",
+      "name": "Striped Tshirt",
+      "category": "men",
+      "price": 799.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 3,
+      "subcategory": "Tshirt",
+      "name": "Graphic Tshirt",
+      "category": "men",
+      "price": 649.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 4,
+      "subcategory": "Tshirt",
+      "name": "Plain Tshirt",
+      "category": "men",
+      "price": 549.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 5,
+      "subcategory": "Tshirt",
+      "name": "V-neck Tshirt",
+      "category": "men",
+      "price": 699.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 6,
+      "subcategory": "Tshirt",
+      "name": "Henley Tshirt",
+      "category": "men",
+      "price": 749.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 7,
+      "subcategory": "Tshirt",
+      "name": "Polo Tshirt",
+      "category": "men",
+      "price": 899.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 8,
+      "subcategory": "Tshirt",
+      "name": "Ringer Tshirt",
+      "category": "men",
+      "price": 599.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 9,
+      "subcategory": "Tshirt",
+      "name": "Raglan Tshirt",
+      "category": "men",
+      "price": 749.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 10,
+      "subcategory": "Tshirt",
+      "name": "Pocket Tshirt",
+      "category": "men",
+      "price": 699.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 11,
+      "subcategory": "Tshirt",
+      "name": "Floral Print Tee",
+      "category": "women",
+      "price": 29.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 12,
+      "subcategory": "Tshirt",
+      "name": "Graphic Logo T-Shirt",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 13,
       "subcategory": "Pants",
       "name": "Classic Chinos",
       "category": "men",
@@ -89,6 +105,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 14,
       "subcategory": "Pants",
       "name": "Slim Fit Jeans",
       "category": "men",
@@ -96,6 +113,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 15,
       "subcategory": "Pants",
       "name": "Cargo Pants",
       "category": "men",
@@ -103,6 +121,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 16,
       "subcategory": "Pants",
       "name": "Cropped Trousers",
       "category": "men",
@@ -110,6 +129,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 17,
       "subcategory": "Pants",
       "name": "Jogger Pants",
       "category": "men",
@@ -117,6 +137,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 18,
       "subcategory": "Pants",
       "name": "Dress Pants",
       "category": "men",
@@ -124,6 +145,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 19,
       "subcategory": "Pants",
       "name": "Track Pants",
       "category": "men",
@@ -131,146 +153,148 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
+      "id": 20,
       "subcategory": "Pants",
       "name": "Corduroy Pants",
       "category": "men",
       "price": 1399.99,
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
-  {
-    "subcategory": "Pants",
-    "name": "Cropped Pants",
-    "category": "men",
-    "price": 999.99,
-    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-  },
-  {
-    "subcategory": "Pants",
-    "name": "Cotton Pant",
-    "category": "men",
-    
-    "price": 19.99,
-    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-  },
-  {
-    "subcategory": "Skin care",
-    "name": "Sky Toner",
-    "category": "beauty",
-   
-    "price": 24.99,
-    "image":"https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-  },
-      {
-        "subcategory": "Footwear",
-        "name": "Classic Leather Loafers",
-        "category": "men",
-        "price": 1999.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Sneaker Collection",
-        "category": "men",
-        "price": 1499.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Casual Slip-Ons",
-        "category": "men",
-        "price": 1599.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Formal Oxfords",
-        "category": "men",
-        "price": 2199.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Hiking Boots",
-        "category": "men",
-        "price": 1799.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Running Shoes",
-        "category": "men",
-        "price": 1699.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Outdoor Sandals",
-        "category": "men",
-        "price": 1299.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      {
-        "subcategory": "Footwear",
-        "name": "Classic Brogues",
-        "category": "men",
-        "price": 2099.99,
-        "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-      },
-      
-          {
-            "subcategory": "Tshirt",
-            "name": "Floral Print Tee",
-            "category": "women",
-            "price": 29.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-          },
-          {
-            "subcategory": "Tshirt",
-            "name": "Graphic Logo T-Shirt",
-            "category": "women",
-            "price": 24.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-          },
-          {
-            "subcategory": "Pants",
-            "name": "Slim Fit Denim Jeans",
-            "category": "women",
-            "price": 49.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-          },
-          {
-            "subcategory": "Pants",
-            "name": "High-Waisted Leggings",
-            "category": "women",
-            "price": 34.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-          },
-          {
-            "subcategory": "Footwear",
-            "name": "Casual Sneakers",
-            "category": "women",
-            "price": 59.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-          },
-          {
-            "subcategory": "Footwear",
-            "name": "Ankle Strap Sandals",
-            "category": "women",
-            "price": 39.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-          },
-          {
-            "subcategory": "Footwear",
-            "name": "Classic Ballet Flats",
-            "category": "women",
-            "price": 44.99,
-            "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
-            
-          }
-      
-      
-    
-  
-]
+    {
+      "id": 21,
+      "subcategory": "Pants",
+      "name": "Cropped Pants",
+      "category": "men",
+      "price": 999.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 22,
+      "subcategory": "Pants",
+      "name": "Cotton Pant",
+      "category": "men",
+      "price": 19.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 23,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 24,
+      "subcategory": "Footwear",
+      "name": "Classic Leather Loafers",
+      "category": "men",
+      "price": 1999.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 25,
+      "subcategory": "Footwear",
+      "name": "Sneaker Collection",
+      "category": "men",
+      "price": 1499.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 26,
+      "subcategory": "Footwear",
+      "name": "Casual Slip-Ons",
+      "category": "men",
+      "price": 1599.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 27,
+      "subcategory": "Footwear",
+      "name": "Formal Oxfords",
+      "category": "men",
+      "price": 2199.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 28,
+      "subcategory": "Footwear",
+      "name": "Hiking Boots",
+      "category": "men",
+      "price": 1799.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 29,
+      "subcategory": "Footwear",
+      "name": "Running Shoes",
+      "category": "men",
+      "price": 1699.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 30,
+      "subcategory": "Footwear",
+      "name": "Outdoor Sandals",
+      "category": "men",
+      "price": 1299.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 31,
+      "subcategory": "Footwear",
+      "name": "Classic Brogues",
+      "category": "men",
+      "price": 2099.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 32,
+      "subcategory": "Tshirt",
+      "name": "Graphic Logo T-Shirt",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 33,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 34,
+      "subcategory": "Pants",
+      "name": "High-Waisted Leggings",
+      "category": "women",
+      "price": 34.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 35,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 36,
+      "subcategory": "Footwear",
+      "name": "Ankle Strap Sandals",
+      "category": "women",
+      "price": 39.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 37,
+      "subcategory": "Footwear",
+      "name": "Classic Ballet Flats",
+      "category": "women",
+      "price": 44.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    }
+  ]
 }
-
