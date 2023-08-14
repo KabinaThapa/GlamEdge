@@ -5,7 +5,9 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 
-import { fetchProduct } from '@/redux/features/productslice';
+
+import { Product, fetchProduct } from '@/redux/features/productslice';
+import { addtocart } from '@/redux/features/cartslice';
 
 
 
@@ -20,12 +22,19 @@ export default function Page({ params }: { params: { category: string, subcatego
     console.log(params)
     const filterCategory=item.filter((product)=>product.category === params.category && product.subcategory===params.subcategory)
     console.log(filterCategory)
+    //addtocart functionality
+    //const {data}=useSelector((state:RootState)=>state.cart.data)
+    const handleAddtocart=(product:Product)=>{
+      dispatch(addtocart(product))
+
+    }
     return <>
     <div> {params.subcategory}
-    {filterCategory.map((products)=>(
-        <div>
-        <li>{products.name}</li>
-        <img src={products.image}/>
+    {filterCategory.map((product)=>(
+        <div className='border-2'>
+        <li>{product.name}</li>
+        <img src={product.image} width='300'/>
+        <button onClick={()=>handleAddtocart(product)}>addtocart</button>
         </div>
     ))}
     

@@ -2,23 +2,26 @@ import React from 'react'
 import {createSlice} from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-interface Item{
+export interface Item{
+    id:string,
+    subcategory?:string,
     name:string,
+    category?:string,
     price:number,
-    image:string,
+    image:string
 }
-interface State{
-items:Item[]
+ export interface State{
+data:Item[]
 }
  const initialState:State={
-    items:[]
+    data:[]
 }
 export const cartSlice =createSlice ({
     name:'cart',
     initialState,
     reducers:{
         addtocart:(state, action:PayloadAction<Item>)=>{
-            state.items.push(action.payload)
+            state.data.push(action.payload)
 
         }
 
