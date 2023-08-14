@@ -1,5 +1,5 @@
 'use client'
-import { decrement, increment } from '@/redux/features/cartslice'
+import { decrement, increment, removefromcart } from '@/redux/features/cartslice'
 import { RootState } from '@/redux/store'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
@@ -16,6 +16,10 @@ const page = () => {
     dispatch(decrement(id))
 
   }
+  const handleDelete=(id:number)=>{
+    dispatch(removefromcart(id))
+
+  }
   
   return (
     <div>
@@ -29,6 +33,9 @@ const page = () => {
         <h1>{product.quantity}</h1>
         <button onClick={()=>{handleDecrement(product.id)}}>-</button>
       </div>
+      <div>
+      <button onClick={()=>{handleDelete(product.id)}}>X</button>
+        </div>
       </div>
       ))}
       
