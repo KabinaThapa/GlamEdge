@@ -35,10 +35,22 @@ export const cartSlice =createSlice ({
         }
 
         },
+        increment:(state, action:PayloadAction<number>)=>{
+            const item=state.data.find((item)=>item.id===action.payload)
+            if(item){
+                item.quantity+=1
+            }
+        },
+        decrement:(state, action:PayloadAction<number>)=>{
+            const item=state.data.find((item)=>item.id===action.payload)
+            if(item){
+                item.quantity-=1
+            }
+        }
 
     }
 })
-export const {addtocart}=cartSlice.actions
+export const {addtocart, increment, decrement}=cartSlice.actions
 export default cartSlice.reducer
   
 
