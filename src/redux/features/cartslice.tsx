@@ -12,10 +12,14 @@ export interface Item{
     quantity:number,
 }
  export interface State{
-data:Item[]
+data:Item[],
+cartQuantity:number,
+cartAmount:number
 }
  const initialState:State={
-    data:[]
+    data:[],
+    cartQuantity:0,
+    cartAmount:0
 }
 export const cartSlice =createSlice ({
     name:'cart',
@@ -33,6 +37,7 @@ export const cartSlice =createSlice ({
             
             state.data.push({...action.payload, quantity:1})
         }
+        state.cartQuantity+=1
 
         },
         removefromcart:(state,action:PayloadAction<number>)=>{
@@ -41,6 +46,7 @@ export const cartSlice =createSlice ({
                 state.data=state.data.filter((item)=>item.id !== action.payload)
 
             }
+            state.cartQuantity-=1
 
         },
         increment:(state, action:PayloadAction<number>)=>{
@@ -51,7 +57,7 @@ export const cartSlice =createSlice ({
         },
         decrement:(state, action:PayloadAction<number>)=>{
             const item=state.data.find((item)=>item.id===action.payload)
-            if(item){
+            if(item && item.quantity>1){
                 item.quantity-=1
             }
         }
