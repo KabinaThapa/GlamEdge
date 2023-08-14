@@ -38,6 +38,7 @@ export const cartSlice =createSlice ({
             state.data.push({...action.payload, quantity:1})
         }
         state.cartQuantity+=1
+        state.cartAmount+=action.payload.price
 
         },
         removefromcart:(state,action:PayloadAction<number>)=>{
@@ -45,20 +46,27 @@ export const cartSlice =createSlice ({
             if(item){
                 state.data=state.data.filter((item)=>item.id !== action.payload)
 
-            }
+            
             state.cartQuantity-=1
+            state.cartAmount-=item.price*item.quantity
+            
+            }
 
         },
         increment:(state, action:PayloadAction<number>)=>{
             const item=state.data.find((item)=>item.id===action.payload)
             if(item){
                 item.quantity+=1
+                state.cartQuantity+=1
+                state.cartAmount+=item.price
             }
         },
         decrement:(state, action:PayloadAction<number>)=>{
             const item=state.data.find((item)=>item.id===action.payload)
             if(item && item.quantity>1){
                 item.quantity-=1
+                state.cartQuantity-=1
+                state.cartAmount-=item.price
             }
         }
 
