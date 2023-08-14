@@ -3,12 +3,14 @@ import {PayloadAction} from '@reduxjs/toolkit'
 
 
 export interface Product{
-    id:string,
+    id:number,
     subcategory:string,
     name:string,
     category:string,
     price:number,
-    image:string
+    image:string,
+   
+    
 }
 
 export const fetchProduct=createAsyncThunk("products/fetchproduct",

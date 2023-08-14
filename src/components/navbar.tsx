@@ -9,11 +9,11 @@ const navbar = () => {
         </ul>
         <div>
             <ul className='flex w-96 justify-between text-lg'>
-                <li>Home</li>
-                <li>Shop</li>
-                <li>Sale</li>
+                <li><Link href='/'>Home</Link></li>
+                <li><Link href='/'>Shop</Link></li>
+                <li><Link href='/'>Sale</Link></li>
                 <li><Link href='/shoppingcart'>cart</Link></li>
-                <li>wishlist</li>
+                <li><Link href='/wishlist'>Wishlist</Link></li>
                 <li>login</li>
             </ul>
         </div>

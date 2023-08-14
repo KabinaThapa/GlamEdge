@@ -4,15 +4,16 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 const page = () => {
-  const data=useSelector((state:RootState)=>state.cart.data)
-  console.log(data)
+  const items=useSelector((state:RootState)=>state.cart.data)
+  console.log(items)
   const dispatch=useDispatch()
   
   return (
     <div>
-      {data.map((product)=>(
+      {items.map((product)=>(
         <div key={product.id}>
-        <h1>{product.name}</h1>
+        <h1>{product.name}-quantity:{product.quantity}</h1>
+        <h1>{product.quantity}</h1>
         </div>
       ))}
     </div>

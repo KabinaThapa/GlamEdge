@@ -3,12 +3,13 @@ import {createSlice} from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface Item{
-    id:string,
+    id:number,
     subcategory?:string,
     name:string,
     category?:string,
     price:number,
-    image:string
+    image:string,
+    quantity:number,
 }
  export interface State{
 data:Item[]
@@ -21,9 +22,19 @@ export const cartSlice =createSlice ({
     initialState,
     reducers:{
         addtocart:(state, action:PayloadAction<Item>)=>{
-            state.data.push(action.payload)
+            const existingitem=state.data.find((item)=>item.id===action.payload.id)
+            //console.log(existingitem)
+            if(existingitem){
+                existingitem.quantity +=1
 
+            }
+            else{
+
+            
+            state.data.push({...action.payload, quantity:1})
         }
+
+        },
 
     }
 })
