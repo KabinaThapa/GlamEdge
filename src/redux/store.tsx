@@ -3,12 +3,14 @@ import productReducer from "./features/productslice";
 import categoryReducer from "./features/categoryslice";
 import subcategoryReducer from "./features/subcategoryslice";
 import cartReducer from "./features/cartslice";
+import wishlistReducer from "./features/wishlistslice";
 export const store=configureStore({
     reducer:{
         product: productReducer,
         category: categoryReducer,
         subcategory:subcategoryReducer,
-        cart:cartReducer
+        cart:cartReducer,
+        wishlist:wishlistReducer
     },
 })
 export type RootState=ReturnType<typeof store.getState>
