@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux'
 const page = () => {
   const items=useSelector((state:RootState)=>state.cart.data)
   const {cartQuantity}=useSelector((state:RootState)=>state.cart)
+  const {cartAmount}=useSelector((state:RootState)=>state.cart)
   
   console.log(items)
   const dispatch=useDispatch()
@@ -42,6 +43,7 @@ const page = () => {
       </div>
       ))}
       <h1> {cartQuantity}</h1>
+      <h1>{cartAmount}</h1>
     </div>
   )
 }
