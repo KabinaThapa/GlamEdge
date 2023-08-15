@@ -1,5 +1,19 @@
 {
-    "users":[{
-
-    }]
+  "users": [
+    {
+      "email": "kate@gmail.com",
+      "password": "$2a$10$K3CpufQKtesOLCBCKEJOG.sPraJHuRkUnJzlgyWGUGf52lb4tjVFC",
+      "id": 1
+    },
+    {
+      "email": "kay@gmail.com",
+      "password": "$2a$10$iua07wD7IvEZjFLYLKfxdugTXC1wftgaYO9opI0UhRhEcNGQf0A9y",
+      "id": 2
+    },
+    {
+      "email": "kay1@gmail.com",
+      "password": "$2a$10$vVRhhGbg9TUAS34PUvMaAOs6Bszj5Tb5TW9zsmmIR91ypxDhtJhre",
+      "id": 3
+    }
+  ]
 }
