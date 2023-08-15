@@ -14,7 +14,7 @@ const navbar = () => {
                 <li><Link href='/'>Sale</Link></li>
                 <li><Link href='/shoppingcart'>cart</Link></li>
                 <li><Link href='/wishlist'>Wishlist</Link></li>
-                <li>login</li>
+                <li><Link href='/signin'>Login</Link></li>
             </ul>
         </div>
     </nav>
