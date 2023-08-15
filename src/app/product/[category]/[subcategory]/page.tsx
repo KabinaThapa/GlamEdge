@@ -6,8 +6,10 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 
-import { Product, fetchProduct } from '@/redux/features/productslice';
+import {  fetchProduct } from '@/redux/features/productslice';
 import { Item, addtocart } from '@/redux/features/cartslice';
+import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
+
 
 
 
@@ -22,16 +24,31 @@ export default function Page({ params }: { params: { category: string, subcatego
     console.log(params)
     const filterCategory=item.filter((product)=>product.category === params.category && product.subcategory===params.subcategory)
     console.log(filterCategory)
+    const items=useSelector((state:RootState)=>state.wishlist.item)
+
     //addtocart functionality
-    //const {data}=useSelector((state:RootState)=>state.cart.data)
+    
     const handleAddtocart=(product:Item)=>{
       dispatch(addtocart(product))
 
     }
+    //addtowishlist functionality
+    const handleSave=(item:Items)=>{
+      if(items.find((item)=>item.id===item.id)){
+        dispatch(removefromwishlist(item.id))
+      }
+      else{
+        dispatch(addtowishlist(item))
+      }
+    }
     return <>
-    <div> {params.subcategory}
+    {params.subcategory}
+    <div className=' grid grid-cols-4' > 
     {filterCategory.map((product)=>(
-        <div className='border-2'>
+        <div className=''>
+          <div>
+          <button onClick={()=>handleSave(product)}>save</button>
+          </div>
         <li>{product.name}</li>
         <img src={product.image} width='300'/>
         <button onClick={()=>handleAddtocart(product)}>addtocart</button>

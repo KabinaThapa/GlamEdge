@@ -9,6 +9,7 @@ export interface Product{
     category:string,
     price:number,
     image:string,
+    quantity:number,
    
     
 }

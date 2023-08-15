@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
-import { Item } from '@/redux/features/cartslice';
-export interface Item{
+
+export interface Items{
     id:number,
     name:string,
     price:number,
     quantity:number
 }
 export interface State{
-    item:Item[],
+    item:Items[],
 
 }
 export const initialState:State={
@@ -18,12 +18,14 @@ export const wishlistSlice=createSlice({
     name:'wishlist',
     initialState,
     reducers:{
-        addtowishlist:(state, action:PayloadAction<Item>)=>{
+        addtowishlist:(state, action:PayloadAction<Items>)=>{
             state.item.push(action.payload)
         },
-       
+        removefromwishlist:(state, action:PayloadAction<number>)=>{
+            state.item=state.item.filter((item)=>item.id!==action.payload)
+        }
 
     }
 })
-export const {addtowishlist}=wishlistSlice.actions
+export const {addtowishlist, removefromwishlist}=wishlistSlice.actions
 export default wishlistSlice.reducer
