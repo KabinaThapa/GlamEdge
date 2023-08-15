@@ -33,12 +33,12 @@ export default function Page({ params }: { params: { category: string, subcatego
 
     }
     //addtowishlist functionality
-    const handleSave=(item:Items)=>{
-      if(items.find((item)=>item.id===item.id)){
-        dispatch(removefromwishlist(item.id))
+    const handleSave=(product:Items)=>{
+      if(items.find((item)=>item.id===product.id)){
+        dispatch(removefromwishlist(product.id))
       }
       else{
-        dispatch(addtowishlist(item))
+        dispatch(addtowishlist(product))
       }
     }
     return <>
