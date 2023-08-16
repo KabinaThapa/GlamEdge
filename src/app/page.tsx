@@ -25,20 +25,27 @@ export default function Home() {
 
   return (
     <>
-    <div className='w-full h-96 bg-babypowder'>
-      <img className='object-contain w-full h-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/articles/blog-1_1296x.png?v=1614756761'}/>
+    <div className='w-full h-auto bg-babypowder flex  justify-center items-center gap-6 '>
+      <div className='w-[60%] h-auto  flex'>
+      <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
+      </div>
+      <div className=' w-[32%] h-auto grid grid-cols-1 gap-6'>
+      <img className='object-contain w-full h-full' src={'https://yanka-demos.myshopify.com/cdn/shop/files/demo08_08_1024x.jpg?v=1613771741'}/>
+      <img className='object-contain w-full h-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_01.jpg?3192'}/>
+      </div>
     </div>
+
     <h1 className='text-2xl'>Our Category</h1>
     <div className='h-auto grid grid-cols-3 w-full bg-Platinum'>
      
       {item.map((item)=>(
         
         
-        <div key={item.id} className='capitalize text-xl h-auto border-2 '>
+        <div key={item.id} className='capitalize text-xl h-auto '>
           <Link href={`/product/${item.id}`}>
           <h1>{item.id}</h1>
-          <div className='w-full h-96 border-black border-2'>
-           <img className='object-contain w-full h-full' src={item.image}/>
+          <div className='w-full h-96 border-black  overflow-hidden '>
+           <img className='object-contain w-full h-full transition-transform duration-1000 transform hover:scale-110 ' src={item.image} loading='lazy' alt='image'/>
           </div>
           
           </Link>
