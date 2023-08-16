@@ -6,7 +6,7 @@ import { fetchProduct } from '@/redux/features/productslice'
 import { fetchCategory } from '@/redux/features/categoryslice'
 import { AppDispatch, RootState } from '@/redux/store'
 import Link from 'next/link'
-
+import styles from '@/style.module.css'
 
 export default function Home() {
   const {item, status, error} = useSelector((state:RootState)=>state.category);
@@ -37,7 +37,7 @@ export default function Home() {
     </section>
 
     <section className='bg-Platinum p-4'>
-    <h1 className='text-4xl text-center mb-8'>Our Category</h1>
+    <h1 className={styles.kabi + ' text-4xl text-center mb-8'}>Our Category</h1>
     <div className='h-auto grid grid-cols-3  gap-4'>
       {item.map((item)=>(
         <div key={item.id} className='relative group gap-4 capitalize text-2xl overflow-hidden'>

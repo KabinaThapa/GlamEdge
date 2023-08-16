@@ -1,7 +1,26 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const navbar = () => {
+  const[isloggedin, setIsloggedin]=useState(false)
+  const[useremail, setUseremail]=useState('')
+  useEffect(()=>{
+    const sessionToken=localStorage.getItem('session-token')
+    const email=localStorage.getItem('email')
+    if(sessionToken&&email){
+    setIsloggedin(true)
+  setUseremail(email)
+    }
+  },[])
+
+  const handleLogout=()=>{
+    localStorage.removeItem('session-token')
+    localStorage.removeItem('email')
+    setUseremail('')
+    setIsloggedin(false)
+    
+  }
   return (
     <nav className='w-full flex justify-around bg-Platinum p-4 items-center'>
         <ul>
@@ -14,7 +33,17 @@ const navbar = () => {
                 <li><Link href='/'>Sale</Link></li>
                 <li><Link href='/shoppingcart'>cart</Link></li>
                 <li><Link href='/wishlist'>Wishlist</Link></li>
-                <li><Link href='/signin'>Login</Link></li>
+                {isloggedin ? (
+                  <div>
+                
+                  <button onClick={handleLogout}>Logout</button>
+                
+                <li>{useremail}</li>
+                </div>):(
+                   <button ><Link href='/signin'>Login</Link></button>
+                   )
+}
+
             </ul>
         </div>
     </nav>
