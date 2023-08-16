@@ -25,7 +25,8 @@ export default function Home() {
 
   return (
     <>
-    <div className='w-full h-auto bg-babypowder flex  justify-center items-center gap-6 '>
+    <div className=' flex flex-col gap-12 w-full items-center justify-center'>
+    <section className='w-full h-auto bg-babypowder flex  justify-center items-center gap-6 p-4'>
       <div className='w-[60%] h-auto  flex'>
       <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
       </div>
@@ -33,19 +34,19 @@ export default function Home() {
       <img className='object-contain w-full h-full' src={'https://yanka-demos.myshopify.com/cdn/shop/files/demo08_08_1024x.jpg?v=1613771741'}/>
       <img className='object-contain w-full h-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_01.jpg?3192'}/>
       </div>
-    </div>
+    </section>
 
-    <h1 className='text-2xl'>Our Category</h1>
-    <div className='h-auto grid grid-cols-3 w-full bg-Platinum'>
-     
+    <section className='bg-Platinum p-4'>
+    <h1 className='text-4xl text-center mb-8'>Our Category</h1>
+    <div className='h-auto grid grid-cols-3  gap-4'>
       {item.map((item)=>(
-        
-        
-        <div key={item.id} className='capitalize text-xl h-auto '>
+        <div key={item.id} className='relative group gap-4 capitalize text-2xl overflow-hidden'>
           <Link href={`/product/${item.id}`}>
-          <h1>{item.id}</h1>
-          <div className='w-full h-96 border-black  overflow-hidden '>
-           <img className='object-contain w-full h-full transition-transform duration-1000 transform hover:scale-110 ' src={item.image} loading='lazy' alt='image'/>
+
+           <img className=' object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 ' src={item.image} loading='lazy' alt='image'/>
+          
+          <div className='absolute top-[50%] right-[30%] bg-babypowder w-32 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110'>
+            <h1>{item.id}</h1>
           </div>
           
           </Link>
@@ -53,7 +54,8 @@ export default function Home() {
         </div>
       ))}
     </div>
-    <div className='w-full  bg-babypowder  '>
+    </section>
+    <section className='w-full'>
     <h1 className='text-2xl'> Featured products</h1>
     <div className='w-[80%] h-auto grid grid-cols-3 place-items-center p-4 space-y-4 border-2 mx-auto'>
      
@@ -91,8 +93,8 @@ export default function Home() {
       
     
     </div>
-    </div>
-    <div className='w-full h-auto bg-Antiflashwhite'>
+    </section>
+    <section className='w-full h-auto'>
       <h1 className='text-2xl'>Sale</h1>
       <div className='w-[80%] h-auto grid grid-cols-3 place-items-center p-4 space-y-4 border-2 mx-auto'>
      
@@ -130,6 +132,7 @@ export default function Home() {
       
     
     </div>
+    </section>
     </div>
     </>
   )
