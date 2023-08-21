@@ -25,6 +25,7 @@ export default function Home() {
 
   return (
     <>
+    
     <div className=' flex flex-col gap-12 w-full items-center justify-center'>
     <section className='w-full h-auto bg-babypowder flex  justify-center items-center gap-6 p-4'>
       <div className='w-[60%] h-auto  flex'>
