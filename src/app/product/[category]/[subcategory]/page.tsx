@@ -2,13 +2,10 @@
 import React, {useEffect} from 'react'
 import { RootState, AppDispatch } from '@/redux/store';
 import { useSelector, useDispatch } from 'react-redux';
-
-
-
-
 import {  fetchProduct } from '@/redux/features/productslice';
 import { Item, addtocart } from '@/redux/features/cartslice';
 import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
+import Card from '@/components/card'
 
 
 
@@ -46,12 +43,16 @@ export default function Page({ params }: { params: { category: string, subcatego
     <div className=' grid grid-cols-4' > 
     {filterCategory.map((product)=>(
         <div className=''>
-          <div>
-          <button onClick={()=>handleSave(product)}>save</button>
-          </div>
-        <li>{product.name}</li>
-        <img src={product.image} width='300'/>
-        <button onClick={()=>handleAddtocart(product)}>addtocart</button>
+          
+       
+        <Card
+      img={product.image}
+      title={product.name}
+      price={product.price}
+      addtocart={()=>handleAddtocart(product)}
+      savetowishlist={()=>handleSave(product)}
+      />
+       
         </div>
     ))}
     

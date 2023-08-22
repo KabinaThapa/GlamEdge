@@ -64,13 +64,14 @@ console.log(session)
   return (
     <>
     
-    <div>
+    <div className=''>
       {items.map((product)=>(
-        <div key={product.id}>
+        <div key={product.id} className='flex'>
         <h1>{product.name}</h1>
+        <img src={product.image} width='200'/>
       
        
-        <div className='border-2 w-44 p-2'>
+        <div className='border-2 w-44 p-2 text-center'>
         <button onClick={()=>{handleIncrement(product.id)}}>+</button>
         <h1>{product.quantity}</h1>
         <button onClick={()=>{handleDecrement(product.id)}}>-</button>
