@@ -17,7 +17,7 @@ const ProductCard = ({ img, width, title, children, price, loading }) => {
     <>
     <div className='flex flex-col'>
     <div
-      className=" group w-full h-auto  overflow-hidden relative  shadow-md "
+      className=" group w-[80%] h-auto  overflow-hidden relative  shadow-md "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
