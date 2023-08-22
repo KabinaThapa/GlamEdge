@@ -3,7 +3,7 @@ import { Item } from '@/redux/features/cartslice';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Stripe } from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-08-16', // Use the latest API version
 });
 
@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const { items } = req.body; // Assuming cartItems is an array of product objects
 
-      const lineItems = cartItems.map((item:Item) => ({
+      const lineItems = items.map((item:Item) => ({
         price: item.price, // Replace with the actual Price ID of each product
         quantity: item.quantity,
       }));

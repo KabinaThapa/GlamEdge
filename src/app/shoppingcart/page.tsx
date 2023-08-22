@@ -5,6 +5,8 @@ import Link from 'next/link'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {loadStripe} from '@stripe/stripe-js'
+import Navbar from '@/components/navbar'
+
 
 
 const page = () => {
@@ -32,16 +34,19 @@ const page = () => {
  const handleCheckout=async()=>{
   console.log(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
   const stripe=await stripePromise
-  const response=await fetch('/api/checkout-session',{
+  const response=await fetch("/api/checkout-session",{
     method:'POST',
     headers:{
-      'Content-Type':'application/json',
+      "Content-Type":'application/json',
 
     },
     body:JSON.stringify({items}),
   })
+  //const responseText = await response.text();
+//console.log('Response Content:', responseText);
   console.log(items)
 const session=await response.json()
+console.log(session)
 
   
   const result: any = await stripe?.redirectToCheckout({
@@ -58,6 +63,7 @@ const session=await response.json()
   
   return (
     <>
+    
     <div>
       {items.map((product)=>(
         <div key={product.id}>
