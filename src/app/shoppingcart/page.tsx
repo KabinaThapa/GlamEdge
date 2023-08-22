@@ -64,11 +64,10 @@ console.log(session)
   return (
     <>
     
-    <div>
+    <form action="/api/checkout_session" method="POST">
       {items.map((product)=>(
         <div key={product.id}>
         <h1>{product.name}</h1>
-      
        
         <div className='border-2 w-44 p-2'>
         <button onClick={()=>{handleIncrement(product.id)}}>+</button>
@@ -83,9 +82,9 @@ console.log(session)
       ))}
       <h1> {cartQuantity}</h1>
       <h1>{cartAmount}</h1>
-      <button onClick={handleCheckout} className='border-2 p-4 rounded-md bg-slate-400'>
+      <button type="submit" onClick={handleCheckout} className='border-2 p-4 rounded-md bg-slate-400'>
         Checkout</button>
-    </div>
+    </form>
     </>
   )
 

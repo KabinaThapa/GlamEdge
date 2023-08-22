@@ -14,6 +14,11 @@
       "email": "kay1@gmail.com",
       "password": "$2a$10$vVRhhGbg9TUAS34PUvMaAOs6Bszj5Tb5TW9zsmmIR91ypxDhtJhre",
       "id": 3
+    },
+    {
+      "email": "yogesh@takeo.ai",
+      "password": "$2a$10$lNBrMiCKTiQj1LKPA5GW8e6u1ywtZJVdaydAfUoVI6W2DFZVwdLZ6",
+      "id": 4
     }
   ]
 }
