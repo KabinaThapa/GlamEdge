@@ -7,6 +7,7 @@ import { fetchCategory } from '@/redux/features/categoryslice'
 import { AppDispatch, RootState } from '@/redux/store'
 import Link from 'next/link'
 import styles from '@/style.module.css'
+import Card from '@/components/card'
 
 export default function Home() {
   const {item, status, error} = useSelector((state:RootState)=>state.category);
@@ -60,21 +61,26 @@ export default function Home() {
     <h1 className='text-2xl'> Featured products</h1>
     <div className='w-[80%] h-auto grid grid-cols-3 place-items-center p-4 space-y-4 border-2 mx-auto'>
      
-      <div className='border-2'>
-      <img src={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_35559729-bb4f-477a-afbb-d695451b9719_1120x.jpg?v=1615530706'} width='250'/>
-      <h2>ECO AWARE ORGANIC COTTON TOP</h2>
-      <h2>$39.00</h2>
-      </div>
-      <div>
-      <img src={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_fb07f6fc-f4bb-46a9-966d-1a0b66e6960a_1120x.jpg?v=1614067794'} width='300'/>
-      <h2>CLASSIC ONE-BREASTED JACKET</h2>
-      <h2>$179.00</h2>
-      </div>
-      <div>
-      <img src={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_7bb38758-0669-4713-864a-f6723b07f307_1120x.jpg?v=1616638533'} width='250'/>
-      <h2>Embosses knit cardigon</h2>
-      <h2>$118.00</h2>
-      </div>
+    
+      <Card img={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_35559729-bb4f-477a-afbb-d695451b9719_1120x.jpg?v=1615530706'}
+       width='250'
+      title='ECO AWARE ORGANIC COTTON TOP'
+      price='$39.00'/>
+     
+      
+      
+      
+      <Card img={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_fb07f6fc-f4bb-46a9-966d-1a0b66e6960a_1120x.jpg?v=1614067794'}
+       width='300'
+      title='CLASSIC ONE-BREASTED JACKET'
+      price='$179.00'/>
+      
+      
+      <Card img={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_7bb38758-0669-4713-864a-f6723b07f307_1120x.jpg?v=1616638533'}
+       width='250'
+      title='Embosses knit cardigon'
+      price='$118.00'/>
+      
       <div>
       <img src={'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_e6fe8d6a-e054-4a68-ae4c-84dfb4f66d48_1120x.jpg?v=1613984692'} width='250'/>
       <h2>T-shirt with logo</h2>
