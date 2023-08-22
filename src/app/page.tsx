@@ -194,9 +194,9 @@ export default function Home() {
     <section className='w-full h-auto flex'>
       <article className='w-[40%] p-4'>
     <h1 className='text-2xl'> Featured products</h1>
-    
+    <h2>Discover Our Featured Products</h2>
     <p>
-      <h2>Discover Our Featured Products</h2>
+      
 Explore our handpicked selection of featured products, carefully 
 chosen to bring you the latest trends and premium quality. 
 From stylish apparel to must-have accessories, our featured products
@@ -225,7 +225,7 @@ Shop now and elevate your style with our curated favorites.</p>
       
     </div>
     </section>
-    <section className='w-full h-auto flex' >
+    <section className='w-full h-auto flex bg-Platinum p-4 mb-4' >
      
       <div className='w-[60%] h-auto columns-3  p-4 space-y-4 break-inside-avoid '>
      
@@ -246,8 +246,16 @@ Shop now and elevate your style with our curated favorites.</p>
       
     
     </div>
-    <article>
+    <article className='w-[40%]'>
       <h1 className='text-2xl'>Sale</h1>
+      <h2>Unbeatable Deals on On Sale Products</h2>
+      <p>
+Get ready to snag some incredible deals on our on sale products!
+ Discover a wide range of discounted items that include everything 
+ from fashion essentials to lifestyle must-haves. Our on sale collection
+  features top-quality products at unbeatable prices, giving you the chance
+   to save big while still enjoying premium items. Don't miss out on these 
+   limited-time offers – shop now and take advantage of the amazing discounts on offer!</p>
       </article>
     </section>
     </div>

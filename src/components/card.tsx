@@ -16,7 +16,7 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
   return (
     <>
     
-    <div className=' group  overflow-hidden relative shadow-md'
+    <div className=' group  overflow-hidden relative'
       
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
