@@ -1,10 +1,15 @@
 'use client'
+import { RootState } from '@/redux/store'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import {CiShoppingCart, CiHeart} from 'react-icons/ci'
+import {PiHeartLight} from 'react-icons/pi'
+import { useSelector } from 'react-redux'
 
 const navbar = () => {
   const[isloggedin, setIsloggedin]=useState(false)
   const[useremail, setUseremail]=useState('')
+ 
   useEffect(()=>{
     const sessionToken=localStorage.getItem('session-token')
     const email=localStorage.getItem('email')
@@ -21,18 +26,40 @@ const navbar = () => {
     setIsloggedin(false)
     
   }
+  
+  const {item, status, error} = useSelector((state:RootState)=>state.category)
+  const totalItems=useSelector((state:RootState)=>state.cart.cartQuantity)
   return (
     <nav className='w-full flex justify-around bg-Platinum p-4 items-center'>
         <ul>
             <li className='text-3xl'>GlamEdge</li>
         </ul>
-        <div>
-            <ul className='flex w-96 justify-between text-lg'>
+        <div className='flex justify-center items-center'>
+            <ul className='flex w-96 justify-between text-lg items-center'>
                 <li><Link href='/'>Home</Link></li>
-                <li><Link href='/'>Shop</Link></li>
+                <div className='relative group'>
+        <span className='group-hover:scale-125 cursor-pointer'>
+          Shop
+          <div className='hidden group-hover:block absolute left-0 mt-2 py-2 bg-white border rounded shadow-lg'>
+            {item.map((item)=>(
+              <div key={item.id}>
+            <Link href ={`/product/${item.id}`} className='block px-4 py-2'>{item.id}</Link>
+            
+            </div>
+            ))}
+          </div>
+        </span>
+      </div>
                 <li><Link href='/'>Sale</Link></li>
-                <li><Link href='/shoppingcart'>cart</Link></li>
-                <li><Link href='/wishlist'>Wishlist</Link></li>
+                
+                <div className='relative'>
+                  <Link href='/shoppingcart'><CiShoppingCart size={30}/></Link>
+                <div className='absolute bottom-4 left-6'>
+                  {totalItems}
+                  </div>
+
+                </div>
+                <li><Link href='/wishlist'><PiHeartLight size={30}/> </Link></li>
                 {isloggedin ? (
                   <div>
                 
@@ -40,7 +67,7 @@ const navbar = () => {
                 
                 <li>{useremail}</li>
                 </div>):(
-                   <button ><Link href='/signin'>Login</Link></button>
+                   <button ><Link href='/signin'>SignIn</Link></button>
                    )
 }
 

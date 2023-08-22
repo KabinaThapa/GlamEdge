@@ -4,7 +4,6 @@ import {PayloadAction} from '@reduxjs/toolkit'
 
 export interface Category{
     id:number,
-   
     image:string
 }
 
