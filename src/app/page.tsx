@@ -34,7 +34,7 @@ export default function Home() {
       category:'women',
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_35559729-bb4f-477a-afbb-d695451b9719_1120x.jpg?v=1615530706',
       name:'ECO AWARE ORGANIC COTTON TOP',
-      price:'39.00',
+      price:39.00,
     },
     {
       id:2,
@@ -42,7 +42,7 @@ export default function Home() {
       category:'men',
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_fb07f6fc-f4bb-46a9-966d-1a0b66e6960a_1120x.jpg?v=1614067794',
      name:'CLASSIC ONE-BREASTED JACKET',
-      price:'$179.00',
+      price:179.00,
     },
     {
       id:3,
@@ -50,7 +50,7 @@ export default function Home() {
       category:'women',
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_7bb38758-0669-4713-864a-f6723b07f307_1120x.jpg?v=1616638533',
      name:'Embosses knit cardigon',
-     price:'$118.00'
+     price:118.00
     },
     {
       id:4,
@@ -59,7 +59,7 @@ export default function Home() {
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_e6fe8d6a-e054-4a68-ae4c-84dfb4f66d48_1120x.jpg?v=1613984692',
        
       name:'T-shirt with logo',
-      price:'$68.00'
+      price:68.00
     },{
       id:5,
       subcategory:'Tshirt',
@@ -67,7 +67,7 @@ export default function Home() {
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_5c0c329d-da3c-4361-a786-e33ac5ea5498_1120x.jpg?v=1614070750',
       
       name:'Cardigon with pockets',
-      price:'$89.00'
+      price:89.00
     },{
       id:6,
       subcategory:'Tshirt',
@@ -75,7 +75,7 @@ export default function Home() {
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_1120x.jpg?v=1613984550',
       
       name:'The Simpsons T-shirt',
-      price:'$179.00'
+      price:179.00
     }
   ]
   //On Sale products
@@ -87,7 +87,7 @@ export default function Home() {
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_4b6df0cc-511d-4f31-8475-08b1346b1921_1120x.jpg?v=1614072211',
       
       name:'HIGH TURTLENECK JUMPER',
-      price:'$45.00'
+      price:45.00
     },
       {
         id:2,
@@ -96,7 +96,7 @@ export default function Home() {
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/4_bf88b3aa-813f-423a-8e55-46fee7f68db9_1120x.jpg?v=1614073956',
        
       name:'Basic sweat joggers',
-      price:'$26.00'
+      price:26.00
       },
       {
         id:3,
@@ -105,7 +105,7 @@ export default function Home() {
       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_65b663d9-5f7a-4a9c-905a-2679b7edf4db_360x.jpg?v=1614073469',
        
       name:'Loose fit blazor and trouser set',
-      price:'$78.00'
+      price:78.00
       },
       {
       id:4,
@@ -115,7 +115,7 @@ export default function Home() {
        image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_9bf4a17f-966d-4386-a7f4-424ce07c310d_1120x.jpg?v=1613984616',
     
       name:'Long-Sleeved Shirt',
-      price:'$32.00'
+      price:32.00
       },
       {
         id:5,
@@ -124,7 +124,7 @@ export default function Home() {
         image:'https://skudmart.myshopify.com/cdn/shop/products/s-p-8-1_grande.jpg?v=1569978781', 
      
       name:'Strappy Summer Beach Floral Flared',
-      price:'$40.00'
+      price:40.00
       },
       
       {
@@ -134,7 +134,7 @@ export default function Home() {
       image:'https://websitedemos.net/t-shirts-store-04/wp-content/uploads/sites/1115/2022/07/product-10-a.jpg',
       
       name:'Cotton white t-shirt',
-      price:'$24.00'
+      price:24.00
   }
 ]
   const handleAddtocart=(product)=>{
@@ -159,11 +159,11 @@ export default function Home() {
       </div>
     </section>
 
-    <section className='bg-Platinum p-4'>
+    <section className='bg-Platinum flex flex-col justify-center items-center p-12'>
     <h1 className={styles.kabi + ' text-4xl text-center mb-8'}>Our Category</h1>
-    <div className='h-auto grid grid-cols-3  gap-4'>
+    <div className='w-[80%] h-auto grid grid-cols-3  gap-12'>
       {item.map((item)=>(
-        <div key={item.id} className='relative group gap-4 capitalize text-2xl overflow-hidden'>
+        <div key={item.id} className='relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg'>
           <Link href={`/product/${item.id}`}>
 
            <img className=' object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 ' src={item.image} loading='lazy' alt='image'/>
@@ -178,9 +178,11 @@ export default function Home() {
       ))}
     </div>
     </section>
-    <section className='w-full'>
+    <section className='w-full flex'>
+      <article className='w-[40%]'>
     <h1 className='text-2xl'> Featured products</h1>
-    <div className='w-[80%] h-auto grid grid-cols-3 place-items-center p-4 space-y-4 border-2 mx-auto'>
+    </article>
+    <div className='w-[60%] h-auto columns-3  p-4 space-y-4'>
      {featuredProducts.map((product)=>(
       <Card
       img={product.image}
