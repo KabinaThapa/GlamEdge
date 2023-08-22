@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import { PiHeartLight } from 'react-icons/pi';
 
-const ProductCard = ({ img, width, title, children, price, loading, addtocart, savetowishlist }) => {
+const ProductCard = ({ img, width, title, children, price, loading, addtocart, savetowishlist, size }) => {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
 
   const handleMouseEnter = () => {
@@ -15,12 +15,13 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
 
   return (
     <>
-    <div className='flex flex-col'>
-    <div
-      className=" group w-[80%] h-auto  overflow-hidden relative  shadow-md "
+    
+    <div className=' group  overflow-hidden relative shadow-md'
+      
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      <div className={` ${size==='large' ? ' w-[120%]': 'h-84'} overflow-hidden relative`}>
       <img src={img} width={width} className=" object-cover w-full h-full transition-transform duration-800 transform group-hover:scale-125" loading='lazy' />
       {isOptionsVisible && (
         <div className=" absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white">
@@ -28,13 +29,14 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
           <button onClick={savetowishlist} className="bg-Charcoal p-4 rounded-full mx-2"><PiHeartLight size={30}/></button>
         </div>
       )}
-     
-    </div>
-     <div className=" p-4 text-black">
-     <h2>{title}</h2>
+      </div>
+    <h2>{title}</h2>
      <h2>{price}</h2>
-     </div>
-   </div>
+    </div>
+     
+    
+     
+   
    </>
   );
 };
