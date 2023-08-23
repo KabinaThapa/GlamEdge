@@ -11,7 +11,130 @@ import Card from '@/components/card'
 import { Item, addtocart } from '@/redux/features/cartslice'
 import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishlistslice'
 import { subcategory } from './../redux/features/subcategoryslice';
-
+ //featured Products
+ export const featuredProducts=[
+  {
+    id:1,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_35559729-bb4f-477a-afbb-d695451b9719_1120x.jpg?v=1615530706',
+    name:'Eco Aware Organic Cotton Top',
+    price:39.00,
+  },
+  {
+    id:2,
+    size:'large',
+    subcategory:'Tshirt',
+    category:'men',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_fb07f6fc-f4bb-46a9-966d-1a0b66e6960a_1120x.jpg?v=1614067794',
+   name:'Classic One-breasted Jacket',
+    price:179.00,
+  },
+  {
+    id:3,
+    size:'large',
+    subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_7bb38758-0669-4713-864a-f6723b07f307_1120x.jpg?v=1616638533',
+   name:'Embosses knit cardigon',
+   price:118.00
+  },
+  {
+    id:4,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'men',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_e6fe8d6a-e054-4a68-ae4c-84dfb4f66d48_1120x.jpg?v=1613984692',
+     
+    name:'T-shirt with logo',
+    price:68.00
+  },{
+    id:5,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_5c0c329d-da3c-4361-a786-e33ac5ea5498_1120x.jpg?v=1614070750',
+    
+    name:'Cardigon with pockets',
+    price:89.00
+  },{
+    id:6,
+    size:'large',
+    subcategory:'Tshirt',
+    category:'men',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_1120x.jpg?v=1613984550',
+    
+    name:'The Simpsons T-shirt',
+    price:179.00
+  }
+]
+//On Sale products
+export const onsale=[
+  {
+    id:1,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_4b6df0cc-511d-4f31-8475-08b1346b1921_1120x.jpg?v=1614072211',
+    
+    name:'HIGH TURTLENECK JUMPER',
+    price:45.00
+  },
+    {
+      id:2,
+      size:'large',
+      subcategory:'Pants',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/4_bf88b3aa-813f-423a-8e55-46fee7f68db9_1120x.jpg?v=1614073956',
+     
+    name:'Basic sweat joggers',
+    price:26.00
+    },
+    {
+      id:3,
+      size:'large',
+      subcategory:'Tshirt',
+    category:'women',
+      image:'https://skudmart.myshopify.com/cdn/shop/products/s-p-8-1_grande.jpg?v=1569978781', 
+   
+    name:'Strappy Summer Beach Floral Flared',
+    price:40.00
+    },
+    {
+      id:4,
+      size:'small',
+      subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_65b663d9-5f7a-4a9c-905a-2679b7edf4db_360x.jpg?v=1614073469',
+     
+    name:'Loose fit blazor and trouser set',
+    price:78.00
+    },
+    
+    {
+    id:5,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'men',
+     image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_9bf4a17f-966d-4386-a7f4-424ce07c310d_1120x.jpg?v=1613984616',
+  
+    name:'Long-Sleeved Shirt',
+    price:32.00
+    },
+    
+    
+    {
+      id:6,
+      size:'large',
+      subcategory:'Tshirt',
+    category:'men',
+    image:'https://websitedemos.net/t-shirts-store-04/wp-content/uploads/sites/1115/2022/07/product-10-a.jpg',
+    
+    name:'Cotton white t-shirt',
+    price:24.00
+}
+]
 export default function Home() {
   const {item, status, error} = useSelector((state:RootState)=>state.category);
   const items=useSelector((state:RootState)=>state.wishlist.item)
@@ -27,130 +150,7 @@ export default function Home() {
     return <p>Error:{error}</p>;
   }
   
-  //featured Products
-  const featuredProducts=[
-    {
-      id:1,
-      size:'small',
-      subcategory:'Tshirt',
-      category:'women',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_35559729-bb4f-477a-afbb-d695451b9719_1120x.jpg?v=1615530706',
-      name:'Eco Aware Organic Cotton Top',
-      price:39.00,
-    },
-    {
-      id:2,
-      size:'large',
-      subcategory:'Tshirt',
-      category:'men',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_fb07f6fc-f4bb-46a9-966d-1a0b66e6960a_1120x.jpg?v=1614067794',
-     name:'Classic One-breasted Jacket',
-      price:179.00,
-    },
-    {
-      id:3,
-      size:'large',
-      subcategory:'Tshirt',
-      category:'women',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_7bb38758-0669-4713-864a-f6723b07f307_1120x.jpg?v=1616638533',
-     name:'Embosses knit cardigon',
-     price:118.00
-    },
-    {
-      id:4,
-      size:'small',
-      subcategory:'Tshirt',
-      category:'men',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_e6fe8d6a-e054-4a68-ae4c-84dfb4f66d48_1120x.jpg?v=1613984692',
-       
-      name:'T-shirt with logo',
-      price:68.00
-    },{
-      id:5,
-      size:'small',
-      subcategory:'Tshirt',
-      category:'women',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_5c0c329d-da3c-4361-a786-e33ac5ea5498_1120x.jpg?v=1614070750',
-      
-      name:'Cardigon with pockets',
-      price:89.00
-    },{
-      id:6,
-      size:'large',
-      subcategory:'Tshirt',
-      category:'men',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_1120x.jpg?v=1613984550',
-      
-      name:'The Simpsons T-shirt',
-      price:179.00
-    }
-  ]
-  //On Sale products
-  const onsale=[
-    {
-      id:1,
-      size:'small',
-      subcategory:'Tshirt',
-      category:'women',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_4b6df0cc-511d-4f31-8475-08b1346b1921_1120x.jpg?v=1614072211',
-      
-      name:'HIGH TURTLENECK JUMPER',
-      price:45.00
-    },
-      {
-        id:2,
-        size:'large',
-        subcategory:'Pants',
-      category:'women',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/4_bf88b3aa-813f-423a-8e55-46fee7f68db9_1120x.jpg?v=1614073956',
-       
-      name:'Basic sweat joggers',
-      price:26.00
-      },
-      {
-        id:3,
-        size:'large',
-        subcategory:'Tshirt',
-      category:'women',
-        image:'https://skudmart.myshopify.com/cdn/shop/products/s-p-8-1_grande.jpg?v=1569978781', 
-     
-      name:'Strappy Summer Beach Floral Flared',
-      price:40.00
-      },
-      {
-        id:4,
-        size:'small',
-        subcategory:'Tshirt',
-      category:'women',
-      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_65b663d9-5f7a-4a9c-905a-2679b7edf4db_360x.jpg?v=1614073469',
-       
-      name:'Loose fit blazor and trouser set',
-      price:78.00
-      },
-      
-      {
-      id:5,
-      size:'small',
-      subcategory:'Tshirt',
-      category:'men',
-       image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_9bf4a17f-966d-4386-a7f4-424ce07c310d_1120x.jpg?v=1613984616',
-    
-      name:'Long-Sleeved Shirt',
-      price:32.00
-      },
-      
-      
-      {
-        id:6,
-        size:'large',
-        subcategory:'Tshirt',
-      category:'men',
-      image:'https://websitedemos.net/t-shirts-store-04/wp-content/uploads/sites/1115/2022/07/product-10-a.jpg',
-      
-      name:'Cotton white t-shirt',
-      price:24.00
-  }
-]
+ 
   const handleAddtocart=(product:Items)=>{
     dispatch(addtocart(product))
   }
@@ -214,6 +214,7 @@ Shop now and elevate your style with our curated favorites.</p>
     <div className=' w-[60%] columns-3 space-y- gap-4 space-y-4 p-4 '>
      {featuredProducts.map((product)=>(
       <div key={product.id}>
+        <Link href={`/product/featured/${product.id}`}>
       <Card
       img={product.image}
       title={product.name}
@@ -223,6 +224,7 @@ Shop now and elevate your style with our curated favorites.</p>
       size={product.size}
       heartfill={items.find((item)=>item.id===product.id)}
       />
+      </Link>
       </div>
 
      ))}
@@ -238,6 +240,7 @@ Shop now and elevate your style with our curated favorites.</p>
      
       {onsale.map((product)=>(
         <div key={product.id}>
+          <Link href={`/product/onsale/${product.id}`}>
       <Card
       img={product.image}
       size={product.size}
@@ -247,6 +250,7 @@ Shop now and elevate your style with our curated favorites.</p>
       savetowishlist={()=>handleSavetowishlist(product)}
       heartfill={items.find((item)=>item.id===product.id)}
       />
+      </Link>
 </div>
      ))}
       
