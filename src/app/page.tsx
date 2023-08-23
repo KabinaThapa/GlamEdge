@@ -8,12 +8,13 @@ import { AppDispatch, RootState } from '@/redux/store'
 import Link from 'next/link'
 import styles from '@/style.module.css'
 import Card from '@/components/card'
-import { addtocart } from '@/redux/features/cartslice'
-import { addtowishlist } from '@/redux/features/wishlistslice'
+import { Item, addtocart } from '@/redux/features/cartslice'
+import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishlistslice'
 import { subcategory } from './../redux/features/subcategoryslice';
 
 export default function Home() {
   const {item, status, error} = useSelector((state:RootState)=>state.category);
+  const items=useSelector((state:RootState)=>state.wishlist.item)
   console.log(item)
   const dispatch=useDispatch<AppDispatch>()
   useEffect(()=>{
@@ -150,14 +151,19 @@ export default function Home() {
       price:24.00
   }
 ]
-  const handleAddtocart=(product)=>{
+  const handleAddtocart=(product:Items)=>{
     dispatch(addtocart(product))
   }
-  const handleSavetowishlist=(product)=>{
-    dispatch(addtowishlist(product))
+  
+
+  const handleSavetowishlist=(product:Items)=>{
+    if(items.find((item)=>item.id===product.id)){
+      dispatch(removefromwishlist(product.id))
+    }
+    else{
+      dispatch(addtowishlist(product))
+    }
   }
-
-
   return (
     <>
     
@@ -215,6 +221,7 @@ Shop now and elevate your style with our curated favorites.</p>
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSavetowishlist(product)}
       size={product.size}
+      heartfill={items.find((item)=>item.id===product.id)}
       />
       </div>
 
@@ -238,6 +245,7 @@ Shop now and elevate your style with our curated favorites.</p>
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSavetowishlist(product)}
+      heartfill={items.find((item)=>item.id===product.id)}
       />
 </div>
      ))}

@@ -51,6 +51,7 @@ export default function Page({ params }: { params: { category: string, subcatego
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSave(product)}
+      heartfill={items.find((item)=>item.id===product.id)}
       />
        
         </div>

@@ -9,7 +9,7 @@ export interface Item{
     category?:string,
     price:number,
     image:string,
-    quantity:number,
+    quantity?:number,
 }
  export interface State{
 data:Item[],

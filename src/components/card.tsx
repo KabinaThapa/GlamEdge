@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
-import { PiHeartLight } from 'react-icons/pi';
+import { PiHeartFill, PiHeartLight } from 'react-icons/pi';
 
-const ProductCard = ({ img, width, title, children, price, loading, addtocart, savetowishlist, size }) => {
+
+const ProductCard = ({ img, width, title, children, price, loading, addtocart, savetowishlist, size, heartfill }) => {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
+ 
 
   const handleMouseEnter = () => {
     setOptionsVisible(true);
@@ -26,7 +28,12 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
       {isOptionsVisible && (
         <div className=" absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white">
           <button onClick={addtocart} className="rounded-full bg-Charcoal p-4 mx-2"><CiShoppingCart size={30}/></button>
-          <button onClick={savetowishlist} className="bg-Charcoal p-4 rounded-full mx-2"><PiHeartLight size={30}/></button>
+          <button onClick={savetowishlist} className="bg-Charcoal p-4 rounded-full mx-2">
+            {heartfill ? (
+                      <PiHeartFill size={28} />
+                    ) : (
+                      <PiHeartLight size={28} />
+                    )}</button>
         </div>
       )}
       </div>
