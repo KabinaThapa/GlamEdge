@@ -31,7 +31,7 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
       )}
       </div>
     <h2>{title}</h2>
-     <h2>{price}</h2>
+     <h2>${price}</h2>
     </div>
      
     
