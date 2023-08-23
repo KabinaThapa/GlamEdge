@@ -5,8 +5,10 @@ import React, { useEffect, useState } from 'react'
 import {CiShoppingCart, CiHeart} from 'react-icons/ci'
 import {PiHeartLight} from 'react-icons/pi'
 import { useSelector } from 'react-redux'
+import Searchbar from './searchbar';
+import { subcategory } from './../redux/features/subcategoryslice';
 
-const navbar = () => {
+const navbar = ({category, subcategory}) => {
   const[isloggedin, setIsloggedin]=useState(false)
   const[useremail, setUseremail]=useState('')
  
@@ -51,6 +53,7 @@ const navbar = () => {
         </span>
       </div>
                 <li><Link href='/'>Sale</Link></li>
+                <Searchbar params={{category, subcategory}}/>
                 
                 <div className='relative'>
                   <Link href='/shoppingcart'><CiShoppingCart size={30}/></Link>

@@ -6,6 +6,7 @@ import {  fetchProduct } from '@/redux/features/productslice';
 import { Item, addtocart } from '@/redux/features/cartslice';
 import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import Card from '@/components/card'
+import Link from 'next/link';
 
 
 
@@ -38,13 +39,14 @@ export default function Page({ params }: { params: { category: string, subcatego
         dispatch(addtowishlist(product))
       }
     }
-    return <>
+    return(
+     <>
     {params.subcategory}
     <div className=' grid grid-cols-4' > 
     {filterCategory.map((product)=>(
         <div className=''>
           
-       
+       <Link href={`/product/${params.category}/${params.subcategory}/${product.id}`}>
         <Card
       img={product.image}
       title={product.name}
@@ -53,11 +55,12 @@ export default function Page({ params }: { params: { category: string, subcatego
       savetowishlist={()=>handleSave(product)}
       heartfill={items.find((item)=>item.id===product.id)}
       />
-       
+       </Link>
         </div>
     ))}
     
     
     </div>
     </>
+    )
   }
