@@ -168,7 +168,7 @@ export default function Home() {
     <>
     
     <div className=' flex flex-col gap-12 w-full items-center justify-center'>
-    <section className='w-full h-auto bg-babypowder flex  justify-center items-center gap-6 p-4'>
+    <section className='w-full h-auto  flex  justify-center items-center gap-6 p-4'>
       <div className='w-[60%] h-auto  flex'>
       <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
       </div>
