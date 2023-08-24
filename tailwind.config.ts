@@ -18,9 +18,15 @@ const config: Config = {
         Alabaster:'#DEE2D6',
         Platinum:'#E6E6E9',
         Antiflashwhite:'#F4F4F6',
-        PaleDogwood:'#EBCCC2',
+        Paledogwood:'#EBCCC2',
         Jet:'#3E363F',
-        Charcoal:'#474954'
+        Charcoal:'#474954',
+        coolgray:'#9FA2B2',
+        frenchgray:'#BFBDC1',
+        khaki:'#C4AF9A',
+        battleshipgray:'#798478',
+        dimgray:'#736F72',
+        wenge:'#615756'
 
 
       }

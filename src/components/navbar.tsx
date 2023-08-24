@@ -11,6 +11,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
 const Navbar = () => {
   const [isloggedin, setIsloggedin] = useState(false);
   const [useremail, setUseremail] = useState('');
+  const [open, setOpen]=useState(false)
 
   useEffect(() => {
     const sessionToken = localStorage.getItem('session-token');
@@ -20,22 +21,28 @@ const Navbar = () => {
       setUseremail(email);
     }
   }, []);
+ 
 
   const handleLogout = () => {
     localStorage.removeItem('session-token');
     localStorage.removeItem('email');
     setUseremail('');
     setIsloggedin(false);
+    setOpen(false)
   };
+  const handleOpen=()=>{
+    setOpen(!open)
+  }
 
   const { item, status, error } = useSelector((state: RootState) => state.category);
   const totalItems = useSelector((state: RootState) => state.cart.cartQuantity);
 
   return (
-    <nav className='w-full flex justify-around bg-Platinum p-4 items-center'>
+    <>
+    <nav className='w-full flex justify-around bg-dimgray p-4 items-center'>
       <ul>
-        <div className='text-3xl flex justify-bottom'>
-          Glam<h1 className='text-4xl'>Edge</h1>
+        <div className='text-3xl flex items-baseline'>
+          <h1>Glam </h1><h1 className='text-4xl'>Edge</h1>
         </div>
       </ul>
       <div className='w-[40%] flex justify-center items-center'>
@@ -76,17 +83,11 @@ const Navbar = () => {
             </Link>
           </li>
           {isloggedin ? (
-            <div className='flex items-center'>
-              <div className='bg-Antiflashwhite rounded-full w-10 h-10 text-2xl text-center flex items-center justify-center mr-2'>
+            <div className=' flex items-center'>
+              <div onClick={handleOpen} className='bg-Antiflashwhite capitalize cursor-pointer rounded-full w-10 h-10 text-2xl text-center flex items-center justify-center mr-2'>
                 {useremail[0]}
               </div>
-              <div className='text-sm'>{useremail}</div>
-              <button
-                className='bg-Antiflashwhite p-2 rounded-md ml-2'
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
+             
             </div>
           ) : (
             <button>
@@ -94,8 +95,27 @@ const Navbar = () => {
             </button>
           )}
         </ul>
-      </div>
+        </div>
     </nav>
+
+   
+      {open ?
+      (
+        <div className=' absolute right-0 top-20 rounded-md w-72 h-72 bg-Platinum flex flex-col justify-center items-center '>
+           <div  className='bg-Paledogwood rounded-full w-12 h-12 text-2xl text-center flex items-center justify-center mr-2'>
+                {useremail[0]}
+              </div>
+           {useremail}
+              <button
+                className='bg-Antiflashwhite p-2 rounded-md ml-2'
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+        </div>
+      ):null
+      }
+      </>
   );
 };
 

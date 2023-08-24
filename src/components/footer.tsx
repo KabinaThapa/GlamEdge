@@ -3,7 +3,7 @@ import {BiLogoFacebook,BiLogoInstagram,BiLogoTwitter,BiLogoYoutube} from 'react-
 
 const footer = () => {
   return (
-    <div className='bg-Platinum p-4 gap-2 space-y-8'>
+    <div className='bg-dimgray p-4 gap-2 space-y-8'>
     <div className='flex justify-around w-full h-auto'>
         
         <ul className='space-y-4'>

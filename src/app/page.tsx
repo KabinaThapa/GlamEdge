@@ -178,7 +178,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className='bg-Platinum flex flex-col justify-center items-center p-12'>
+    <section className='bg-khaki flex flex-col justify-center items-center p-12'>
     <h1 className={styles.kabi + ' text-4xl text-center mb-8'}>Our Category</h1>
     <div className='w-[80%] h-auto grid grid-cols-3  gap-12'>
       {item.map((item)=>(
