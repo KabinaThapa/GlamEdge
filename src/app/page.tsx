@@ -135,6 +135,71 @@ export const onsale=[
     price:24.00
 }
 ]
+export const toptrending=[
+  {
+    id:7,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_4b6df0cc-511d-4f31-8475-08b1346b1921_1120x.jpg?v=1614072211',
+    
+    name:'HIGH TURTLENECK JUMPER',
+    price:45.00
+  },
+    {
+      id:8,
+      size:'large',
+      subcategory:'Pants',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/4_bf88b3aa-813f-423a-8e55-46fee7f68db9_1120x.jpg?v=1614073956',
+     
+    name:'Basic sweat joggers',
+    price:26.00
+    },
+    {
+      id:9,
+      size:'large',
+      subcategory:'Tshirt',
+    category:'women',
+      image:'https://skudmart.myshopify.com/cdn/shop/products/s-p-8-1_grande.jpg?v=1569978781', 
+   
+    name:'Strappy Summer Beach Floral Flared',
+    price:40.00
+    },
+    {
+      id:10,
+      size:'small',
+      subcategory:'Tshirt',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_65b663d9-5f7a-4a9c-905a-2679b7edf4db_360x.jpg?v=1614073469',
+     
+    name:'Loose fit blazor and trouser set',
+    price:78.00
+    },
+    
+    {
+    id:11,
+    size:'small',
+    subcategory:'Tshirt',
+    category:'men',
+     image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_9bf4a17f-966d-4386-a7f4-424ce07c310d_1120x.jpg?v=1613984616',
+  
+    name:'Long-Sleeved Shirt',
+    price:32.00
+    },
+    
+    
+    {
+      id:12,
+      size:'large',
+      subcategory:'Tshirt',
+    category:'men',
+    image:'https://websitedemos.net/t-shirts-store-04/wp-content/uploads/sites/1115/2022/07/product-10-a.jpg',
+    
+    name:'Cotton white t-shirt',
+    price:24.00
+}
+]
 export default function Home() {
   const {item, status, error} = useSelector((state:RootState)=>state.category);
   const items=useSelector((state:RootState)=>state.wishlist.item)
@@ -253,10 +318,6 @@ Shop now and elevate your style with our curated favorites.</p>
       </Link>
 </div>
      ))}
-      
-     
-      
-    
     </div>
     <article className='w-[40%]'>
       <h1 className='text-2xl'>Sale</h1>
@@ -270,6 +331,44 @@ Get ready to snag some incredible deals on our on sale products!
    limited-time offers – shop now and take advantage of the amazing discounts on offer!</p>
       </article>
     </section>
+    <section className='w-full h-auto flex'>
+      <article className='w-[40%] p-4'>
+    <h1 className='text-2xl'>Top Trending</h1>
+    <h2>Discover Our Top Trending Products</h2>
+    <p>
+    Explore the latest and most sought-after items in our collection of top trending products. 
+    From stylish apparel to must-have accessories, these products are capturing the attention 
+    of our customers and setting new fashion standards. Our expertly curated selection brings 
+    you the best of what's popular right now, ensuring that you stay ahead of the curve and make
+     a statement with your style. Whether you're looking for a standout outfit, a unique accessory, 
+     or something that's currently making waves in the fashion world, our top trending products are 
+     here to inspire and elevate your look. Shop now and join the trendsetters with these coveted pieces
+    </p>
+    </article>
+    <div className=' w-[60%] columns-3 space-y- gap-4 space-y-4 p-4 '>
+     {toptrending.map((product)=>(
+      <div key={product.id}>
+        <Link href={`/product/toptrending/${product.id}`}>
+      <Card
+      img={product.image}
+      title={product.name}
+      price={product.price}
+      addtocart={()=>handleAddtocart(product)}
+      savetowishlist={()=>handleSavetowishlist(product)}
+      size={product.size}
+      heartfill={items.find((item)=>item.id===product.id)}
+      />
+      </Link>
+      </div>
+
+     ))}
+     
+
+    
+      
+    </div>
+    </section>
+    
     </div>
     </>
   )
