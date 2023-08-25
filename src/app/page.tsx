@@ -254,6 +254,7 @@ export default function Home() {
           
           <div className='absolute top-[50%] right-[30%] bg-babypowder w-32 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110'>
             <h1>{item.id}</h1>
+            
           </div>
           
           </Link>

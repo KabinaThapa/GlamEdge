@@ -30,23 +30,56 @@
        
             {
             "id":"women",
-            "image":"https://images.pexels.com/photos/14711708/pexels-photo-14711708.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image":"https://images.unsplash.com/photo-1602122412015-227d33be1a4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60",
             "subcategory":"Tshirt"},
        
       {
        
             "id":"women",
-            "image":"https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/latest2.jpg.webp",
+            "image":"https://images.unsplash.com/photo-1626295125332-77bbc4593765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
             "subcategory":"Pants"
         },
+        {
+        
+            "id":"women",
+            "image":"https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+            "subcategory":"Footwear"
+      },
+      {
+        
+            "id":"women",
+            "image":"https://images.unsplash.com/photo-1589363358751-ab05797e5629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=327&q=80",
+            "subcategory":"Accessories"
+      },
        
         
       {
         
        
-            "id":"Sunscreen",
-            "image":"https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-gallery-img-3.jpg",
-            "subcategory":"Beauty"
+            "id":"beauty",
+            "image":"https://images.unsplash.com/photo-1552046122-03184de85e08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+            "subcategory":"SkinCare"
+      },
+      {
+        
+       
+            "id":"beauty",
+            "image":"https://images.unsplash.com/photo-1548112129-b5cf67e9558d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+            "subcategory":"Makeup"
+      },
+      {
+        
+       
+            "id":"beauty",
+            "image":"https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+            "subcategory":"BodyCare"
+      },
+      {
+        
+       
+            "id":"beauty",
+            "image":"https://images.unsplash.com/photo-1574621100236-d25b64cfd647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+            "subcategory":"HairCare"
       }
     ]
     }

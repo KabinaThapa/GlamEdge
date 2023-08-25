@@ -4,7 +4,8 @@ import {PayloadAction} from '@reduxjs/toolkit'
 
 export interface Category{
     id:number,
-    image:string
+    image:string,
+    desc:string,
 }
 
 export const fetchCategory=createAsyncThunk("category/fetchcategory",

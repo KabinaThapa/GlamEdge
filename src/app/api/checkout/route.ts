@@ -1,13 +1,15 @@
 // /api/checkout-session.js
-
+import { NextApiRequest, NextApiResponse } from 'next'
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export default async function handler(req, res) {
+export  async function handler(req:NextApiRequest, res:NextApiResponse) {
+ 
   if (req.method === 'POST') {
     try {
+      const { items } = JSON.parse(req.body)
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
-        line_items: items.map(item => ({
+        line_items: items.map((item) => ({
           price_data: {
             currency: 'usd',
             product_data: {

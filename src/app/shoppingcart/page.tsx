@@ -6,8 +6,9 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {loadStripe} from '@stripe/stripe-js'
 import {AiOutlineDelete} from 'react-icons/ai'
+import axios from 'axios'
 
-
+const stripePromise=loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
 const page = () => {
   const items=useSelector((state:RootState)=>state.cart.data)
@@ -28,10 +29,27 @@ const page = () => {
     dispatch(removefromcart(id))
 
   }
- 
- 
-
-
+  const handleCheckout = async () => {
+    const stripe = await stripePromise;
+    const response = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ items }),
+    });
+  console.log(response)
+    const session = await response.json();
+    console.log(session)
+    const result = await stripe?.redirectToCheckout({
+      sessionId: session.id
+    });
+  
+    if (result.error) {
+      console.error(result.error);
+    }
+  };
+  
   
   return (
     <>

@@ -4,22 +4,29 @@
       {
         
             "id":"men",
-            "image":"https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_afb70b63-ea30-4380-b7d3-8e5e765569aa_1120x.jpg?v=1614067624"},
-        
+            "image":"https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_afb70b63-ea30-4380-b7d3-8e5e765569aa_1120x.jpg?v=1614067624",
+            "desc":"Step into the realm of men's fashion and uncover a spectrum of style possibilities. Our men's category is a sartorial haven, offering a curated collection of subcategories to refine your look. From essential t-shirts that blend comfort with flair, to meticulously designed pants that cater to any setting, our range ensures you're dressed with finesse. Step up your shoe game with a diverse footwear selection, and add that final flourish with accessories that mirror your personality. Elevate your wardrobe today and embrace a new echelon of style."
+     
+      },
+            
     
        
            
       {
        
             "id":"women",
-            "image":"https://skudmart.myshopify.com/cdn/shop/products/s-p-2-1_grande.jpg?v=1569975478"},
+            "image":"https://skudmart.myshopify.com/cdn/shop/products/s-p-2-1_grande.jpg?v=1569975478",
+            "desc":"Embark on a journey through our women's fashion wonderland, where every click opens doors to a realm of exquisite style. Discover a myriad of subcategories thoughtfully tailored to embody your essence. Emanate confidence in our carefully curated tops, embrace grace with skirts and functionality with pants in our bottoms selection, and put your best foot forward with footwear that marries comfort and allure. Elevate your ensemble with our accessories, from statement jewelry to captivating handbags. Unveil a world of endless sartorial possibilities and let your wardrobe tell your story."
+      },
        
         
       {
         
        
-            "id":"Beauty",
-            "image":"https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-gallery-img-3.jpg"}
+            "id":"beauty",
+            "image":"https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-gallery-img-3.jpg",
+            "desc":"Immerse yourself in a realm of self-care through our comprehensive collection of skincare, makeup, body care, and hair care products. Discover skincare solutions that rejuvenate and enhance your natural radiance, delve into a spectrum of makeup essentials to express your unique beauty, indulge in body care that pampers and revitalizes, and unlock the secrets to luscious locks with our meticulously curated hair care range. Elevate your self-care routine with products designed to nurture your body from head to toe, because you deserve nothing less than the best in holistic well-being."
+      }
         
     ]
     }

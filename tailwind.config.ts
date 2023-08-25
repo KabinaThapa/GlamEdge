@@ -26,7 +26,8 @@ const config: Config = {
         khaki:'#C4AF9A',
         battleshipgray:'#798478',
         dimgray:'#736F72',
-        wenge:'#615756'
+        wenge:'#615756',
+        raisinblack:'#191923'
 
 
       }
