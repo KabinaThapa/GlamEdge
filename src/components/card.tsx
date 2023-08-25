@@ -18,13 +18,15 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
   return (
     <>
     
-    <div className=' group  overflow-hidden relative'
+    <div className=' group  overflow-hidden relative '
       
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className={` ${size==='large' ? ' w-[120%]': 'h-84'} overflow-hidden relative`}>
+      <div className='overflow-hidden relative w-full h-96 '>
+       
       <img src={img} width={width} className=" object-cover w-full h-full transition-transform duration-800 transform group-hover:scale-125" loading='lazy' />
+      
       {isOptionsVisible && (
         <div className=" absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white">
           <button onClick={addtocart} className="rounded-full bg-Charcoal p-4 mx-2"><CiShoppingCart size={30}/></button>
@@ -35,12 +37,15 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
                       <PiHeartLight size={28} />
                     )}</button>
         </div>
+       
       )}
+      
       </div>
+      <div className='p-2 text-lg font-serif'>
     <h2>{title}</h2>
      <h2>${price}</h2>
+     </div>
     </div>
-     
     
      
    

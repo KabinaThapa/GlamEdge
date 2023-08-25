@@ -41,8 +41,9 @@ export default function Page({ params }: { params: { category: string, subcatego
     }
     return(
      <>
-    {params.subcategory}
-    <div className=' grid grid-cols-4' > 
+     <div className='flex flex-col items-center justify-center w-full p-[5%] gap-10 '>
+    <h1 className='text-4xl underline'>{params.subcategory}</h1>
+    <div className=' grid grid-cols-4 gap-4  w-[90%]' > 
     {filterCategory.map((product)=>(
         <div className=''>
           
@@ -60,6 +61,7 @@ export default function Page({ params }: { params: { category: string, subcatego
     ))}
     
     
+    </div>
     </div>
     </>
     )

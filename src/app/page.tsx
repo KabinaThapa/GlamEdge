@@ -263,7 +263,7 @@ export default function Home() {
       ))}
     </div>
     </section>
-    <section className='w-full h-auto flex'>
+    <section className='w-full h-auto flex p-8'>
       <article className='w-[40%] p-4'>
     <h1 className='text-2xl'> Featured products</h1>
     <h2>Discover Our Featured Products</h2>
@@ -277,7 +277,7 @@ From stylish apparel to must-have accessories, our featured products
  our featured collection has something for everyone. 
 Shop now and elevate your style with our curated favorites.</p>
     </article>
-    <div className=' w-[60%] columns-3 space-y- gap-4 space-y-4 p-4 '>
+    <div className=' w-[60%] grid grid-cols-3  gap-2 p-2 '>
      {featuredProducts.map((product)=>(
       <div key={product.id}>
         <Link href={`/product/featured/${product.id}`}>
@@ -287,7 +287,7 @@ Shop now and elevate your style with our curated favorites.</p>
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSavetowishlist(product)}
-      size={product.size}
+     
       heartfill={items.find((item)=>item.id===product.id)}
       />
       </Link>
@@ -300,9 +300,9 @@ Shop now and elevate your style with our curated favorites.</p>
       
     </div>
     </section>
-    <section className='w-full h-auto flex bg-Platinum p-4 mb-4' >
+    <section className='w-full h-auto flex bg-khaki p-8 mb-4' >
      
-      <div className='w-[60%] h-auto columns-3  p-4 space-y-4 break-inside-avoid '>
+      <div className='w-[60%] h-auto grid grid-cols-3 p-2 gap-4  '>
      
       {onsale.map((product)=>(
         <div key={product.id}>
@@ -320,7 +320,7 @@ Shop now and elevate your style with our curated favorites.</p>
 </div>
      ))}
     </div>
-    <article className='w-[40%]'>
+    <article className='w-[40%] p-2'>
       <h1 className='text-2xl'>Sale</h1>
       <h2>Unbeatable Deals on On Sale Products</h2>
       <p>
@@ -332,8 +332,8 @@ Get ready to snag some incredible deals on our on sale products!
    limited-time offers – shop now and take advantage of the amazing discounts on offer!</p>
       </article>
     </section>
-    <section className='w-full h-auto flex'>
-      <article className='w-[40%] p-4'>
+    <section className='w-full h-auto flex p-8'>
+      <article className='w-[40%] p-2'>
     <h1 className='text-2xl'>Top Trending</h1>
     <h2>Discover Our Top Trending Products</h2>
     <p>
@@ -346,7 +346,7 @@ Get ready to snag some incredible deals on our on sale products!
      here to inspire and elevate your look. Shop now and join the trendsetters with these coveted pieces
     </p>
     </article>
-    <div className=' w-[60%] columns-3 space-y- gap-4 space-y-4 p-4 '>
+    <div className=' w-[60%] grid grid-cols-3 gap-2 p-2 '>
      {toptrending.map((product)=>(
       <div key={product.id}>
         <Link href={`/product/toptrending/${product.id}`}>
