@@ -140,20 +140,20 @@ export const toptrending=[
     id:7,
     size:'small',
     subcategory:'Tshirt',
-    category:'women',
-    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_4b6df0cc-511d-4f31-8475-08b1346b1921_1120x.jpg?v=1614072211',
+    category:'men',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/5_600x.jpg?v=1613984550',
     
-    name:'HIGH TURTLENECK JUMPER',
+    name:'Light green simpsons T-shirt',
     price:45.00
   },
     {
       id:8,
       size:'large',
       subcategory:'Pants',
-    category:'women',
-    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/4_bf88b3aa-813f-423a-8e55-46fee7f68db9_1120x.jpg?v=1614073956',
+    category:'men',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/3_8577e617-d687-43a4-bd96-d1950e73ecaf_600x.jpg?v=1614067794',
      
-    name:'Basic sweat joggers',
+    name:'Classic one-breasted jacket',
     price:26.00
     },
     {
@@ -161,9 +161,9 @@ export const toptrending=[
       size:'large',
       subcategory:'Tshirt',
     category:'women',
-      image:'https://skudmart.myshopify.com/cdn/shop/products/s-p-8-1_grande.jpg?v=1569978781', 
+      image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_5cb5d1e1-2c31-499b-9010-ccac2fecf49e_600x.jpg?v=1615530706', 
    
-    name:'Strappy Summer Beach Floral Flared',
+    name:'Pink long Blazor',
     price:40.00
     },
     {
@@ -171,9 +171,9 @@ export const toptrending=[
       size:'small',
       subcategory:'Tshirt',
     category:'women',
-    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_65b663d9-5f7a-4a9c-905a-2679b7edf4db_360x.jpg?v=1614073469',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_81452fd6-1818-4c32-923b-302b3d879a3a_600x.jpg?v=1615531056',
      
-    name:'Loose fit blazor and trouser set',
+    name:'Organic cotton oversize blazor',
     price:78.00
     },
     
@@ -182,9 +182,9 @@ export const toptrending=[
     size:'small',
     subcategory:'Tshirt',
     category:'men',
-     image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_9bf4a17f-966d-4386-a7f4-424ce07c310d_1120x.jpg?v=1613984616',
+     image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_0ae182fa-8c71-468e-850b-23fc81cb3bf4_600x.jpg?v=1613984721',
   
-    name:'Long-Sleeved Shirt',
+    name:'Blue Hoodie with zip',
     price:32.00
     },
     
@@ -193,11 +193,11 @@ export const toptrending=[
       id:12,
       size:'large',
       subcategory:'Tshirt',
-    category:'men',
-    image:'https://websitedemos.net/t-shirts-store-04/wp-content/uploads/sites/1115/2022/07/product-10-a.jpg',
+    category:'women',
+    image:'https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_e64bc63a-735c-4c2c-9542-81681cff4891_540x.jpg?v=1614070027',
     
-    name:'Cotton white t-shirt',
-    price:24.00
+    name:'Faux suede biker jacket',
+    price:60.00
 }
 ]
 export default function Home() {
