@@ -178,18 +178,18 @@
     },
     {
       "id": 23,
-      "subcategory": "Skin care",
-      "name": "Sky Toner",
-      "category": "beauty",
-      "price": 24.99,
-      "image": ""
-    },
-    {
-      "id": 24,
       "subcategory": "Footwear",
       "name": "Classic Leather Loafers",
       "category": "men",
       "price": 1999.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 24,
+      "subcategory": "Footwear",
+      "name": "Sneaker Collection",
+      "category": "men",
+      "price": 1499.99,
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
@@ -250,14 +250,102 @@
     },
     {
       "id": 32,
-      "subcategory": "Tshirt",
-      "name": "Graphic Logo T-Shirt",
-      "category": "women",
-      "price": 24.99,
+      "subcategory": "Footwear",
+      "name": "Classic Leather Loafers",
+      "category": "men",
+      "price": 1999.99,
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
       "id": 33,
+      "subcategory": "Footwear",
+      "name": "Classic Leather Loafers",
+      "category": "men",
+      "price": 1999.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 34,
+      "subcategory": "Tshirt",
+      "name": " Black shirt full sleeve",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/6_bcd1a33d-2c02-407b-a5a5-6c1b3e43199b_1120x.jpg?v=1615019404"
+    },
+    {
+      "id": 35,
+      "subcategory": "Tshirt",
+      "name": "Eco aware long sleeve blouse",
+      "category": "women",
+      "price": 32.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_bc70b428-ba01-434a-87f7-7fc276929722_1120x.jpg?v=1615532041"
+    },
+    {
+      "id": 36,
+      "subcategory": "Tshirt",
+      "name": "Dark blue shirt",
+      "category": "women",
+      "price": 54.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/5_f62fb2aa-d8ef-418a-8dad-74136f239794_1120x.jpg?v=1615019404"
+    },
+    {
+      "id": 37,
+      "subcategory": "Tshirt",
+      "name": "Palin pink shirt",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/7_7d379fe4-a861-4ff4-a474-15b70e999b6a_600x.jpg?v=1615019404"
+    },
+    {
+      "id": 38,
+      "subcategory": "Tshirt",
+      "name": "Micky mouse T-shirt",
+      "category": "women",
+      "price": 32,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/3_f8a2f87a-fe30-4049-827b-2630811a2969_1120x.jpg?v=1617437879"
+    },
+    {
+      "id": 39,
+      "subcategory": "Tshirt",
+      "name": "Black blouse",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_f6a59132-972a-4035-a0e3-ba5806c1991b_600x.jpg?v=1615532041"
+    },
+    {
+      "id": 40,
+      "subcategory": "Tshirt",
+      "name": "High neck full sleeve blouse",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_44fa7cf5-c1cc-4995-bd74-89db441fe099_540x.jpg?v=1614072543"
+    },
+    {
+      "id": 41,
+      "subcategory": "Tshirt",
+      "name": "Linen white T-shirt",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_e8cad962-8c18-4be2-8b4a-ce5d2ffe4697_600x.jpg?v=1615532486"
+    },
+    {
+      "id": 42,
+      "subcategory": "Tshirt",
+      "name": "White baggy shirt",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/products/8_b8d90671-8d80-42b4-88d0-fc9a87bf5ef9_600x.jpg?v=1615019404"
+    },
+    {
+      "id": 43,
+      "subcategory": "Tshirt",
+      "name": "Graphic cropped T-Shirt",
+      "category": "women",
+      "price": 24.99,
+      "image": "https://minion-vinovatheme.myshopify.com/cdn/shop/files/img-1_7dd86fb4-81ac-4752-840a-f799986aa590_720x.jpg?v=1617764970"
+    },
+    {
+      "id": 44,
       "subcategory": "Pants",
       "name": "Slim Fit Denim Jeans",
       "category": "women",
@@ -265,7 +353,7 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
-      "id": 34,
+      "id": 45,
       "subcategory": "Pants",
       "name": "High-Waisted Leggings",
       "category": "women",
@@ -273,7 +361,71 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
-      "id": 35,
+      "id": 46,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 47,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 48,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 49,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 50,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 51,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 51,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 52,
+      "subcategory": "Pants",
+      "name": "Slim Fit Denim Jeans",
+      "category": "women",
+      "price": 49.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 53,
       "subcategory": "Footwear",
       "name": "Casual Sneakers",
       "category": "women",
@@ -281,7 +433,23 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
-      "id": 36,
+      "id": 54,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 55,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 56,
       "subcategory": "Footwear",
       "name": "Ankle Strap Sandals",
       "category": "women",
@@ -289,12 +457,204 @@
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
     },
     {
-      "id": 37,
+      "id": 57,
       "subcategory": "Footwear",
       "name": "Classic Ballet Flats",
       "category": "women",
       "price": 44.99,
       "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    }, 
+    {
+      "id": 58,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 59,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 60,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 61,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 62,
+      "subcategory": "Footwear",
+      "name": "Casual Sneakers",
+      "category": "women",
+      "price": 59.99,
+      "image": "https://preview.colorlib.com/theme/fashe/images/banner-02.jpg.webp"
+    },
+    {
+      "id": 63,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 64,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 65,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 66,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 67,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 68,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 69,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 70,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 71,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 72,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 73,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 74,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 75,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 76,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 77,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 78,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 79,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 80,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
+    },
+    {
+      "id": 81,
+      "subcategory": "Skin care",
+      "name": "Sky Toner",
+      "category": "beauty",
+      "price": 24.99,
+      "image": ""
     }
   ]
 }
