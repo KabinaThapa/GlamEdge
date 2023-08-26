@@ -16,17 +16,18 @@ export async function POST(req:Request){
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
-          price: '55',
-          quantity: 5,  
+          name: 'My Product',
+          description: 'A description of my product',
+          amount: 1000, // 10.00 USD in cents
+          currency: 'usd',
+          quantity: 1,
         },
       ],
       mode: 'payment',
-      success_url: `${req.headers.origin}/?success=true`,
-      cancel_url: `${req.headers.origin}/?canceled=true`,
+      success_url: `http://localhost:3000/?success=true`,
+      cancel_url: `http://localhost:3000/?canceled=true`,
     });
-    return new Response(err.message,{
-      status:500
-    });
+    ;
   } catch (err) {
     return new Response(err.message,{
       status:500
