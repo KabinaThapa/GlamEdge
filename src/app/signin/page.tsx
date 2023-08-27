@@ -44,6 +44,7 @@ const Signin: React.FC = () => {
       router.push("/");
       localStorage.setItem("session-token", response.data.accessToken);
       localStorage.setItem("email", response.data.user.email);
+      
       console.log(response.data.user.email);
     } catch (error) {
       toast.error("Could not sign in");

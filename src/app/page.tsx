@@ -346,7 +346,7 @@ Get ready to snag some incredible deals on our on sale products!
      here to inspire and elevate your look. Shop now and join the trendsetters with these coveted pieces
     </p>
     </article>
-    <div className=' w-[60%] grid grid-cols-3 gap-2 p-2 '>
+    <div className=' w-[60%]  grid grid-cols-3 gap-2 p-2 '>
      {toptrending.map((product)=>(
       <div key={product.id}>
         <Link href={`/product/toptrending/${product.id}`}>

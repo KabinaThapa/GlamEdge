@@ -20,7 +20,11 @@ const Navbar = () => {
       setIsloggedin(true);
       setUseremail(email);
     }
-  }, []);
+    else{
+      setIsloggedin(false)
+      
+    }
+  }, [isloggedin, useremail]);
  
 
   const handleLogout = () => {
