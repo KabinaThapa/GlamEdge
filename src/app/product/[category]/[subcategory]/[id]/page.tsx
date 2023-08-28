@@ -18,12 +18,19 @@ console.log(product)
     }
 
     return (
-        <div>
+        <div className='w-full flex justify-between items-center p-12'>
+            <div className='w-[40%] overflow-hidden '>
             
-            <img src={product.image} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>Price: {product.price}</p>
-            {/* Other product details */}
+            <img className='w-full h-full transition transform-transition hover:scale-125 duration-500' src={product.image} alt={product.name} />
+            </div>
+            <div className='w-[50%] border-2 h-96 '>
+            <h2 className='text-2xl'>{product.name}</h2>
+            <p>{product.description}</p>
+            <p> {product.price}</p>
+            <p>{product.rating}</p>
+            
+            </div>
+           
         </div>
     );
 };

@@ -24,11 +24,14 @@ const searchbar = () => {
 }
 const handleItemClick=(product:Product)=>{
   setSelectitem(product)
+  console.log(selectitem)
   setInput(product.name)
   setFilterdata([])
+ 
 }
   const handleSearch=()=>{
-    router.push(`/product/${selectitem.category}/${selectitem.subcategory}/${selectitem.id}`)
+    router.push(`/product/${selectitem?.category}/${selectitem?.subcategory}/${selectitem?.id}`)
+    setInput('')
   }
  
   return (

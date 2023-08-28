@@ -43,7 +43,8 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='w-full flex justify-between bg-dimgray bg-opacity-10 p-4 items-center'>
+    <nav className='w-full flex  justify-between p-2 items-center mt-6'>
+     
       <ul>
         <div className='text-3xl flex items-baseline'>
           <h1>Glam </h1><h1 className='text-4xl'>Edge</h1>
@@ -104,7 +105,7 @@ const Navbar = () => {
         </ul>
         </div>
     </nav>
-
+    <div className='border-b-2 border-khaki w-[90%] mx-auto'></div>
    
       {open ?
       (

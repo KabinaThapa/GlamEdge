@@ -10,6 +10,8 @@ export interface Product{
     price:number,
     image:string,
     quantity:number,
+    description:string,
+    rating:number,
    
     
 }

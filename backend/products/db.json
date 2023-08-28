@@ -6,7 +6,9 @@
       "name": "TaySon White T-shirt",
       "category": "men",
       "price": 999.99,
-      "image": "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+      "image": "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+      "description": "A classic white T-shirt by TaySon, perfect for any casual occasion. The 'TaySon White T-shirt' is a classic and versatile wardrobe staple that adds a touch of timeless elegance to any outfit. Designed by TaySon, this white t-shirt is the epitome of casual sophistication. Crafted from high-quality materials, it offers a comfortable and relaxed fit, making it perfect for everyday wear. Whether paired with jeans for a laid-back look or dressed up with chinos for a more polished appearance, this t-shirt is a must-have for those who appreciate effortless style. With its clean lines and minimalistic design, the 'TaySon White T-shirt' is a versatile piece that seamlessly transitions from day to night.",
+      "rating": 4.8
     },
     {
       "id": 2,
@@ -14,7 +16,9 @@
       "name": "Plain Pink T-shirt",
       "category": "men",
       "price": 799.99,
-      "image": "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+      "image": "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "description": "A simple and stylish plain pink T-shirt, suitable for various occasions. Elevate your casual wardrobe with the 'Plain Pink T-shirt.' This simple yet stylish t-shirt features a soft pink hue that adds a pop of color to your ensemble. Whether you're going for a relaxed daytime look or planning a casual evening out, this t-shirt fits the bill. Designed with comfort in mind, it offers a comfortable fit that flatters all body types. The clean design allows for easy mix-and-match with various bottoms, making it a versatile addition to your collection. Crafted for both comfort and style, the 'Plain Pink T-shirt' is a go-to choice for effortlessly chic outfits.",
+      "rating": 4.5
     },
     {
       "id": 3,
@@ -22,7 +26,9 @@
       "name": "TaySon Black T-shirt",
       "category": "men",
       "price": 649.99,
-      "image": "https://images.unsplash.com/photo-1627225925683-1da7021732ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+      "image": "https://images.unsplash.com/photo-1627225925683-1da7021732ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+      "description": "A classic black T-shirt by TaySon, suitable for both casual and formal occasions. The 'TaySon Black T-shirt' strikes the perfect balance between sophistication and casual appeal. Created by TaySon, this black t-shirt is a versatile essential that transcends fashion trends. The sleek black color complements a wide range of outfits, making it suitable for both formal and casual occasions. Crafted from premium materials, it offers a comfortable fit that is sure to make it a go-to choice in your closet. With its timeless design and impeccable craftsmanship, the 'TaySon Black T-shirt' is a versatile investment piece that embodies understated elegance.",
+      "rating": 4.9
     },
     {
       "id": 4,
@@ -30,16 +36,22 @@
       "name": "Printed On Back Nguyen Hue T-shirt",
       "category": "men",
       "price": 549.99,
-      "image": "https://images.unsplash.com/photo-1627225925129-daf115268cda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80"
+      "image": "https://images.unsplash.com/photo-1627225925129-daf115268cda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80",
+      "description": "A unique T-shirt with a printed design on the back, inspired by Nguyen Hue street. Stand out from the crowd with the 'Printed On Back Nguyen Hue T-shirt.' This unique piece features an eye-catching printed design on the back, inspired by the vibrant energy of Nguyen Hue street. The artistic print adds a touch of creativity and personality to your look, making it a conversation starter. Crafted with attention to detail, this t-shirt boasts both style and comfort. The intriguing design element sets it apart from ordinary tees, allowing you to showcase your individuality in a fashionable way.",
+      "rating": 4.7
     },
     {
       "id": 5,
       "subcategory": "Tshirt",
-      "name": "Red Tshirt With Logo ",
+      "name": "Red Tshirt With Logo",
       "category": "men",
       "price": 699.99,
-      "image": "https://images.unsplash.com/photo-1624373607006-348f61ea2d76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+      "image": "https://images.unsplash.com/photo-1624373607006-348f61ea2d76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "description": "A stylish red T-shirt with a logo design, perfect for adding a pop of color to your outfit. Add a pop of color and a dash of style to your attire with the 'Red Tshirt With Logo.' This red t-shirt features a bold logo design that exudes confidence and flair. Whether you're dressing up for a casual event or looking to make a statement, this t-shirt has got you covered. The vibrant red hue instantly draws attention, while the logo adds a trendy touch. Crafted for comfort and longevity, this t-shirt ensures you look and feel your best no matter where you go. Elevate your street style game with the 'Red Tshirt With Logo' and make a lasting impression.",
+      "rating": 4.6
     },
+ 
+
     {
       "id": 6,
       "subcategory": "Tshirt",

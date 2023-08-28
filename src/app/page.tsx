@@ -2,7 +2,7 @@
 import './globals.css'
 import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import { fetchProduct } from '@/redux/features/productslice'
+import { Product, fetchProduct } from '@/redux/features/productslice'
 import { fetchCategory } from '@/redux/features/categoryslice'
 import { AppDispatch, RootState } from '@/redux/store'
 import Link from 'next/link'
@@ -10,11 +10,11 @@ import styles from '@/style.module.css'
 import Card from '@/components/card'
 import { Item, addtocart } from '@/redux/features/cartslice'
 import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishlistslice'
-import { subcategory } from './../redux/features/subcategoryslice';
+import {useRouter} from 'next/navigation'
  //featured Products
  export const featuredProducts=[
   {
-    id:1,
+    id:201,
     size:'small',
     subcategory:'Tshirt',
     category:'women',
@@ -23,7 +23,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
     price:39.00,
   },
   {
-    id:2,
+    id:202,
     size:'large',
     subcategory:'Tshirt',
     category:'men',
@@ -32,7 +32,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
     price:179.00,
   },
   {
-    id:3,
+    id:203,
     size:'large',
     subcategory:'Tshirt',
     category:'women',
@@ -41,7 +41,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
    price:118.00
   },
   {
-    id:4,
+    id:204,
     size:'small',
     subcategory:'Tshirt',
     category:'men',
@@ -50,7 +50,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
     name:'T-shirt with logo',
     price:68.00
   },{
-    id:5,
+    id:205,
     size:'small',
     subcategory:'Tshirt',
     category:'women',
@@ -59,7 +59,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
     name:'Cardigon with pockets',
     price:89.00
   },{
-    id:6,
+    id:206,
     size:'large',
     subcategory:'Tshirt',
     category:'men',
@@ -72,7 +72,7 @@ import { subcategory } from './../redux/features/subcategoryslice';
 //On Sale products
 export const onsale=[
   {
-    id:1,
+    id:207,
     size:'small',
     subcategory:'Tshirt',
     category:'women',
@@ -82,7 +82,7 @@ export const onsale=[
     price:45.00
   },
     {
-      id:2,
+      id:208,
       size:'large',
       subcategory:'Pants',
     category:'women',
@@ -92,7 +92,7 @@ export const onsale=[
     price:26.00
     },
     {
-      id:3,
+      id:209,
       size:'large',
       subcategory:'Tshirt',
     category:'women',
@@ -102,7 +102,7 @@ export const onsale=[
     price:40.00
     },
     {
-      id:4,
+      id:210,
       size:'small',
       subcategory:'Tshirt',
     category:'women',
@@ -113,7 +113,7 @@ export const onsale=[
     },
     
     {
-    id:5,
+    id:211,
     size:'small',
     subcategory:'Tshirt',
     category:'men',
@@ -125,7 +125,7 @@ export const onsale=[
     
     
     {
-      id:6,
+      id:212,
       size:'large',
       subcategory:'Tshirt',
     category:'men',
@@ -137,7 +137,7 @@ export const onsale=[
 ]
 export const toptrending=[
   {
-    id:7,
+    id:213,
     size:'small',
     subcategory:'Tshirt',
     category:'men',
@@ -147,7 +147,7 @@ export const toptrending=[
     price:45.00
   },
     {
-      id:8,
+      id:214,
       size:'large',
       subcategory:'Pants',
     category:'men',
@@ -157,7 +157,7 @@ export const toptrending=[
     price:26.00
     },
     {
-      id:9,
+      id:215,
       size:'large',
       subcategory:'Tshirt',
     category:'women',
@@ -167,7 +167,7 @@ export const toptrending=[
     price:40.00
     },
     {
-      id:10,
+      id:216,
       size:'small',
       subcategory:'Tshirt',
     category:'women',
@@ -178,7 +178,7 @@ export const toptrending=[
     },
     
     {
-    id:11,
+    id:217,
     size:'small',
     subcategory:'Tshirt',
     category:'men',
@@ -190,7 +190,7 @@ export const toptrending=[
     
     
     {
-      id:12,
+      id:218,
       size:'large',
       subcategory:'Tshirt',
     category:'women',
@@ -205,6 +205,7 @@ export default function Home() {
   const items=useSelector((state:RootState)=>state.wishlist.item)
   console.log(item)
   const dispatch=useDispatch<AppDispatch>()
+  const router=useRouter()
   useEffect(()=>{
     dispatch(fetchCategory())
   },[])
@@ -228,6 +229,11 @@ export default function Home() {
     else{
       dispatch(addtowishlist(product))
     }
+
+  }
+
+  const handleClick=(product:Product)=>{
+    router.push(`/product/${product.category}/${product.subcategory}/${product.id}`)
   }
   return (
     <>
@@ -349,8 +355,8 @@ Get ready to snag some incredible deals on our on sale products!
     <div className=' w-[60%]  grid grid-cols-3 gap-2 p-2 '>
      {toptrending.map((product)=>(
       <div key={product.id}>
-        <Link href={`/product/toptrending/${product.id}`}>
-      <Card
+        
+      <Card 
       img={product.image}
       title={product.name}
       price={product.price}
@@ -359,7 +365,7 @@ Get ready to snag some incredible deals on our on sale products!
       size={product.size}
       heartfill={items.find((item)=>item.id===product.id)}
       />
-      </Link>
+      
       </div>
 
      ))}
