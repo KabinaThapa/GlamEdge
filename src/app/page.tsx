@@ -11,6 +11,8 @@ import Card from '@/components/card'
 import { Item, addtocart } from '@/redux/features/cartslice'
 import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishlistslice'
 import {useRouter} from 'next/navigation'
+import Carousel from '@/components/carousel'
+import images from '@/static-data/images'
  //featured Products
  export const featuredProducts=[
   {
@@ -245,8 +247,7 @@ export default function Home() {
       <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
       </div>
       <div className=' w-[32%] h-auto grid grid-cols-1 gap-6'>
-      <img className='object-contain w-full h-full' src={'https://yanka-demos.myshopify.com/cdn/shop/files/demo08_08_1024x.jpg?v=1613771741'}/>
-      <img className='object-contain w-full h-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_01.jpg?3192'}/>
+      <Carousel images={images}/>
       </div>
     </section>
 

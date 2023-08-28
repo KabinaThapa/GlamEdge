@@ -1,4 +1,4 @@
-const images=[
+export const images=[
     {
     img:'https://minion-vinovatheme.myshopify.com/cdn/shop/files/bn-1_52a4ba95-a367-41d7-983b-d0995c332815_900x.jpg?v=1617786065',
     caption:'Image1'
