@@ -49,6 +49,9 @@ const Navbar = () => {
           <h1>Glam </h1><h1 className='text-4xl'>Edge</h1>
         </div>
       </ul>
+      <div>
+        <Searchbar/>
+      </div>
       <div className='w-[40%] flex justify-center items-center'>
         <ul className='flex w-full justify-between text-lg items-center'>
           <li>

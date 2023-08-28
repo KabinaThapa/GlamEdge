@@ -400,14 +400,7 @@
       "price": 23.99,
       "image": "https://images.unsplash.com/photo-1551854838-212c50b4c184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
     },
-    {
-      "id": 51,
-      "subcategory": "Pants",
-      "name": "Wide leg denim",
-      "category": "women",
-      "price": 43.99,
-      "image": "https://images.unsplash.com/photo-1616956455145-7c40e34a1c2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1915&q=80"
-    },
+   
     {
       "id": 51,
       "subcategory": "Pants",
