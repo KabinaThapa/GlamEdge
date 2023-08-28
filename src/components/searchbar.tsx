@@ -36,10 +36,10 @@ const handleItemClick=(product:Product)=>{
  
   return (
     <div>
-      <input type='text' placeholder='search....' className='outline-none border-2 text-black'
+      <input type='text' placeholder='search....' className='outline-none p-2 text-black border-b-2'
        onChange={inputHandler} value={input}/>
      <button onClick={handleSearch} >Search</button>
-      <div className='absolute backdrop-blur-md text-black' >
+      <div className='absolute backdrop-blur-md bg-black text-black' >
         {filterdata.map((product)=>(
           
           <div key={product.id} onClick={()=>handleItemClick(product)} className='cursor-pointer' >
