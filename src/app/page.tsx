@@ -12,7 +12,10 @@ import { Item, addtocart } from '@/redux/features/cartslice'
 import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishlistslice'
 import {useRouter} from 'next/navigation'
 import Carousel from '@/components/carousel'
-import images from '@/static-data/images'
+import {images} from '@/static-data/images'
+import { onsale } from '@/static-data/onsale'
+import { featuredProducts } from '@/static-data/featuredproduct'
+import { toptrending } from '@/static-data/toptrending'
  
  
 //On Sale products
@@ -62,9 +65,9 @@ export default function Home() {
       <div className='w-[60%] h-auto  flex'>
       <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
       </div>
-      <div className=' w-[32%] h-auto grid grid-cols-1 gap-6'>
+      
       <Carousel images={images}/>
-      </div>
+      
     </section>
 
     <section className='bg-khaki flex flex-col justify-center items-center p-12'>
