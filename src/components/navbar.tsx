@@ -105,7 +105,7 @@ const Navbar = () => {
         </ul>
         </div>
     </nav>
-    <div className='border-b-2 border-khaki w-[90%] mx-auto'></div>
+    <div className='border-b-2 border-khaki w-[95%] mx-auto'></div>
    
       {open ?
       (

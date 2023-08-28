@@ -28,7 +28,7 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
       <img src={img} width={width} className=" object-cover w-full h-full transition-transform duration-800 transform group-hover:scale-125" loading='lazy' />
       
       {isOptionsVisible && (
-        <div className=" absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white" onClick={onClick}>
+        <div className=" absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white">
           <button onClick={addtocart} className="rounded-full bg-Charcoal p-4 mx-2"><CiShoppingCart size={30}/></button>
           <button onClick={savetowishlist} className="bg-Charcoal p-4 rounded-full mx-2">
             {heartfill ? (
