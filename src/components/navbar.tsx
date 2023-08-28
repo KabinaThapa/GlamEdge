@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='w-full flex justify-around bg-dimgray p-4 items-center'>
+    <nav className='w-full flex justify-between bg-dimgray bg-opacity-10 p-4 items-center'>
       <ul>
         <div className='text-3xl flex items-baseline'>
           <h1>Glam </h1><h1 className='text-4xl'>Edge</h1>
@@ -76,7 +76,7 @@ const Navbar = () => {
             <Link href='/shoppingcart'>
               <CiShoppingCart size={30} />
             </Link>
-            <div className='absolute bottom-4 left-6 bg-Charcoal rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
+            <div className='absolute bottom-4 left-6 bg-khaki rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
               {totalItems}
             </div>
           </div>
