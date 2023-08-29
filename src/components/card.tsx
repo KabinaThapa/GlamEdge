@@ -23,7 +23,7 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className='overflow-hidden relative w-full h-96 '>
+      <div className='overflow-hidden relative w-full h-80'>
        
       <img src={img} width={width} className=" object-cover w-full h-full transition-transform duration-800 transform group-hover:scale-125" loading='lazy' />
       

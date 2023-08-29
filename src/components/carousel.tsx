@@ -24,8 +24,9 @@ const carousel = ({images}) => {
         {images.map((image, index) => (
           <div key={index} className='relative w-full h-80'>
             <img className='object-cover w-full h-full' src={image.img} alt={image.caption} />
-            <div className='absolute inset-0 flex items-center justify-center text-white'>
+            <div className='absolute top-[50%] left-[16%] bg-Jet bg-opacity-50 p-2 flex flex-col items-center justify-center text-center text-white  font-poppins text-md font-medium'>
             <p className="legend">{image.caption}</p>
+
             </div>
           </div>
         ))}

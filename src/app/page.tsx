@@ -62,8 +62,12 @@ export default function Home() {
     
     <div className=' flex flex-col gap-12 w-full items-center justify-center'>
     <section className='w-full h-auto  flex  justify-center items-center gap-6 p-4'>
-      <div className='w-[60%] h-auto  flex'>
+      <div className=' relative w-[80%] h-auto  flex'>
       <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
+      <div className='absolute overflow-hidden top-[50%] left-[10%] gap-8 font-opensans font-semibold  text-center  text-2xl text-raisinblack p-2 bg-white w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center'>
+        <p>Embrace Your Inner Glamour: Unleash the Swag with Luxurious Furry Fashion!</p>
+        <button className='bg-white p-2 w-72 rounded text-lg hover:text-xl'>Shop Collection</button>
+      </div>
       </div>
       
       <Carousel images={images}/>
@@ -90,11 +94,12 @@ export default function Home() {
       ))}
     </div>
     </section>
-    <section className='w-full h-auto flex p-8'>
-      <article className='w-[40%] p-4'>
-    <h1 className='text-2xl'> Featured products</h1>
-    <h2>Discover Our Featured Products</h2>
-    <p>
+
+    <section className='w-full h-auto flex p-8 font-opensans items-center'>
+      <article className='w-[50%] p-4 flex flex-col items-center gap-4'>
+    <h1 className='text-3xl'>  Our Featured products</h1>
+    <h2 className='text-xl'>Discover Our Featured Products</h2>
+    <p className='text-lg'>
       
 Explore our handpicked selection of featured products, carefully 
 chosen to bring you the latest trends and premium quality. 
@@ -103,6 +108,7 @@ From stylish apparel to must-have accessories, our featured products
  looking for a standout outfit or a unique statement piece, 
  our featured collection has something for everyone. 
 Shop now and elevate your style with our curated favorites.</p>
+<button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-8'>Shop Now</button>
     </article>
     <div className=' w-[60%] grid grid-cols-3  gap-2 p-2 '>
      {featuredProducts.map((product)=>(

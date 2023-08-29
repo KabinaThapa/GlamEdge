@@ -43,18 +43,18 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='w-full flex  justify-between p-2 items-center mt-6'>
+    <nav className='w-full flex pb-2 justify-around items-center mt-6 font-kreon'>
      
       <ul>
         <div className='text-3xl flex items-baseline'>
-          <h1>Glam </h1><h1 className='text-4xl'>Edge</h1>
+          <h1>Glam </h1><h1 className='text-4xl font-opensans'>Edge</h1>
         </div>
       </ul>
-      <div>
+      <div className='relative'>
         <Searchbar/>
       </div>
-      <div className='w-[40%] flex justify-center items-center'>
-        <ul className='flex w-full justify-between text-lg items-center'>
+      <div className='w-[40%] flex justify-center items-center font-kreon font-medium'>
+        <ul className='flex w-full justify-between text-xl items-center'>
           <li>
             <Link href='/'>Home</Link>
           </li>
@@ -80,7 +80,7 @@ const Navbar = () => {
             <Link href='/shoppingcart'>
               <CiShoppingCart size={30} />
             </Link>
-            <div className='absolute bottom-4 left-6 bg-khaki rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
+            <div className='absolute bottom-4 left-6 bg-wenge rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
               {totalItems}
             </div>
           </div>

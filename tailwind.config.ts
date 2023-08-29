@@ -27,10 +27,18 @@ const config: Config = {
         battleshipgray:'#798478',
         dimgray:'#736F72',
         wenge:'#615756',
-        raisinblack:'#191923'
+        raisinblack:'#191923',
 
 
-      }
+      },
+      fontFamily: {
+        custom:['Gelasio', 'serif'],
+        kreon:['Kreon', 'serif'],
+        poppins:['Poppins', 'sans-serif'],
+        roboto:['Roboto', 'sans-serif'],
+        opensans:[ 'Open Sans', 'sans-serif']
+      },
+
     },
   },
   plugins: [],
