@@ -30,7 +30,7 @@ export default function Page({ params }: { params: { category: string} }) {
       <div className=' w-[90%] '>
        
     <h1 className='capitalize text-4xl text-center underline mb-4'>{params.category}</h1>
-   <p>{filterdesc[0].des}</p>
+   <p>{filterdesc[0].desc}</p>
     </div>
     <div className='w-[80%] h-auto grid grid-cols-3 gap-4 '>
       
@@ -52,10 +52,10 @@ export default function Page({ params }: { params: { category: string} }) {
     ))}
     
     </div>
-    <div className=' absolute w-[40%] h-auto top-8 left-2 z-[-1] ' >
+    <div className=' absolute w-[35%] h-auto top-8 left-2 z-[-1] ' >
       <img src={blob2.src} className='object-cover w-full h-full'/>
      </div>
-    <div className=' absolute w-[30%]  bottom-0 right-1 z-[-1]' >
+    <div className=' absolute w-[35%]  bottom-0 right-0 z-[-1]' >
     <img src={blob2.src} className='object-cover w-full h-full'/>
      </div>
 

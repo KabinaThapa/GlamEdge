@@ -64,20 +64,25 @@ const page = () => {
   return (
     <>
     
-    <div className='flex  justify-between w-full  p-12 '>
+   
       {
         items.length===0 ? (
           <>
-        <div className=' mx-auto h-screen  flex justify-between items-center text-2xl  '>
-          <h1>Your Cart is Empty!</h1>
-        
+           <div className=' relative h-screen w-full flex items-center p-12  '>
+        <div className=' flex flex-col justify-around items-center text-2xl overflow-hidden gap-4 mx-auto'>
+          <h1 className='underline'>Your Cart is Empty!</h1>
+          <button className='w-full p-2 bg-wenge rounded text-lg hover:text-xl text-white'> 
+          <Link href='/'>Back To Shopping</Link></button>
         </div>
-        <div className=' absolute w-[45%] h-[100%] top-[15%] right-[25%] z-[-1] p-8' 
-        style={{ backgroundImage: `url(${blob3.src})`, backgroundSize: 'cover' }} >
+
+        <div className=' absolute w-[45%] h-[100%] top-2 right-80 z-[-1] p-8' >
+        <img src={blob3.src} className='w-full h-full object-cover'/>
+   </div>
    </div>
         </>
       ):(
         <>
+         <div className='flex  justify-between w-full  p-12 '>
      <div className="w-[60%] p-2 ">
        <table className=" w-full text-left text-lg ">
                 <thead>
@@ -141,12 +146,13 @@ const page = () => {
         Checkout</button>
         
         </div>
+        </div>
         </>
         )}
      
       
         
-    </div>
+   
     </>
   )
 
