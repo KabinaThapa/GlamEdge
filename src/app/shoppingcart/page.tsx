@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import {loadStripe} from '@stripe/stripe-js'
 import {AiOutlineDelete} from 'react-icons/ai'
 import axios from 'axios'
+import Stripe from '@stripe/stripe-js'
+import blob3 from '../../../public/blob3.svg'
 
 const stripePromise=loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
@@ -30,23 +32,31 @@ const page = () => {
 
   }
   const handleCheckout = async () => {
-    const stripe = await stripePromise;
-    const response = await fetch('/api/checkout', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ items }),
-    });
-  console.log(response)
-    const session = await response.json();
-    console.log(session)
-    const result = await stripe?.redirectToCheckout({
-      sessionId: session.id
-    });
-  
-    if (result.error) {
-      console.error(result.error);
+    try {
+      const stripe = await stripePromise;
+      if (!stripe) {
+        console.error('Stripe is not initialized.');
+        return;
+      }
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ items }),
+      });
+      if (!response.ok) {
+        throw new Error('Checkout request failed.');
+      }
+      const session = await response.json();
+      const result = await stripe.redirectToCheckout({
+        sessionId: session.id,
+      });
+      if (result.error) {
+        console.error('Stripe checkout error:', result.error);
+      }
+    } catch (error) {
+      console.error('Checkout process error:', error);
     }
   };
   
@@ -54,50 +64,48 @@ const page = () => {
   return (
     <>
     
-    <div className='flex flex-col w-[70%] mx-auto  m-12'>
-      <div className='text-3xl w-full justify-between items-center flex'>
-        <p>Your Cart</p> <p>Total: {cartQuantity}Items</p> 
-        </div>
-       <table className="w-full mx-auto text-left text-xl  mt-6 bg-white">
+    <div className='flex justify-between   w-full mx-auto p-12 '>
+     <div className="w-[60%] p-2 ">
+       <table className=" w-full text-left text-lg ">
                 <thead>
-                  <tr className=" font-serif border-b-2 p-2 shadow-md ">
+                  <tr className="  border-b-2 border-t-2 border-wenge p-2 font-roboto font-medium ">
                     
-                    <th className="px-4 py-4">Item</th>
-                    <th className="px-4 py-4">Quantity</th>
-                    <th className="px-4 py-4">Price</th>
-                    <th className="px-4 py-4">Total</th>
-                    <th className="px-4 py-4">Actions</th>
+                    <th className="px-4 py-4 text-center">Item</th>
+                    <th className="px-4 py-4 text-center">Quantity</th>
+                    <th className="px-4 py-4 text-center">Price</th>
+                    <th className="px-4 py-4 text-center">Total</th>
+                    <th className="px-4 py-4 text-center">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {items.map((item) => (
-                    <tr key={item.id} className=" pb-4 border-b-2 shadow-md">
-                      <td className=" px-4 py-8 ">
+                    <tr key={item.id} className=" border-b-2 border-wenge text-md text-center">
+                      <td className=" px-4 py-6">
                         <img
                           src={item.image}
-                          width="200px"
+                          width="150px"
                           
                           alt={item.name}
                         />
-                        <p>{item.name}</p>
+                        <p className='text-sm' >{item.name}</p>
                       </td>
                     
-                      <td className=" px-4 py-8">
-                        <div className="border-2 bg-Antiflashwhite rounded-md flex  w-44 justify-around p-1 text-2xl font-serif">
-                          <button onClick={() => handleIncrement(item.id)}>
-                            +
+                      <td className=" px-4 py-6 mx-auto">
+                        <div className=" bg-wenge text-white rounded-md flex  w-32 justify-around p-1  font-serif">
+                        <button onClick={() => handleDecrement(item.id)}>
+                            -
                           </button>
                           <p>{item.quantity}</p>
-                          <button onClick={() => handleDecrement(item.id)}>
-                            -
+                         <button onClick={() => handleIncrement(item.id)}>
+                            +
                           </button>
                         </div>
                       </td>
-                      <td className=" px-4 py-8 font-serif"> $ {item.price}</td>
-                      <td className=" px-4 py-8 font-serif">
+                      <td className=" px-4 py-6 font-serif"> $ {item.price}</td>
+                      <td className=" px-4 py-6 font-serif">
                         $ {item.price * item.quantity}
                       </td>
-                      <td className=" px-4 py-8">
+                      <td className=" px-4 py-6">
                         <button onClick={() => handleDelete(item.id)}>
                           <AiOutlineDelete size={25}/>
                         </button>
@@ -106,12 +114,23 @@ const page = () => {
                   ))}
                 </tbody>
               </table>
-              <div className='ms-auto'>
-     
-      <h1 className='text-2xl'>SubTotal:{cartAmount}</h1>
-      <button onClick={handleCheckout} className='border-2 p-4 rounded-md bg-slate-400'>
+              </div>
+              
+              <div className=' text-2xl font-roboto w-[30%]  flex flex-col gap-4'>
+              <div className=' absolute w-[45%] h-[100%] top-[8%] right-[3%] z-[-1]' 
+     style={{ backgroundImage: `url(${blob3.src})`, backgroundSize: 'cover' }} >
+
+     </div>
+        <p className='underline'>Your Shopping Cart</p> <p>Total Items: {cartQuantity}</p> 
+        <h1 className='text-2xl'>Sub Total: ${cartAmount}</h1>
+       
+      <button onClick={handleCheckout} className=' p-4 text-xl rounded-md bg-wenge text-white hover:text-2xl'>
         Checkout</button>
+        
         </div>
+     
+     
+        
     </div>
     </>
   )
