@@ -30,7 +30,7 @@ export default function Page({ params }: { params: { category: string} }) {
       <div className=' w-[90%] '>
        
     <h1 className='capitalize text-4xl text-center underline mb-4'>{params.category}</h1>
-   <p>{filterdesc[0].description}</p>
+   <p>{filterdesc[0].des}</p>
     </div>
     <div className='w-[80%] h-auto grid grid-cols-3 gap-4 '>
       
