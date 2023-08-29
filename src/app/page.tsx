@@ -64,7 +64,7 @@ export default function Home() {
     <section className='w-full h-auto  flex  justify-center items-center gap-6 p-4'>
       <div className=' relative w-[80%] h-auto  flex'>
       <img className='object-cover object-center w-full' src={'https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192'}/>
-      <div className='absolute overflow-hidden top-[50%] left-[10%] gap-8 font-opensans font-semibold  text-center  text-2xl text-raisinblack p-2 bg-white w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center'>
+      <div className='absolute overflow-hidden top-[50%] left-[10%] gap-8 font-roboto font-semibold  text-center  text-2xl text-raisinblack p-2 bg-white w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center'>
         <p>Embrace Your Inner Glamour: Unleash the Swag with Luxurious Furry Fashion!</p>
         <button className='bg-white p-2 w-72 rounded text-lg hover:text-xl'>Shop Collection</button>
       </div>
@@ -95,12 +95,12 @@ export default function Home() {
     </div>
     </section>
 
-    <section className='w-full h-auto flex p-8 font-opensans items-center'>
-      <article className='w-[50%] p-4 flex flex-col items-center gap-4'>
-    <h1 className='text-3xl'>  Our Featured products</h1>
-    <h2 className='text-xl'>Discover Our Featured Products</h2>
-    <p className='text-lg'>
-      
+    <section className='w-full h-auto flex p-8 font-opensans'>
+      <article className='w-[50%] p-6 flex flex-col items-center justify-center gap-4'>
+    <h1 className='text-3xl font-medium'>  Our Featured Products</h1>
+    
+    <p className='text-lg mt-6'>
+    <h2 className='text-xl text-center mb-3 underline'>Discover Our Featured Products</h2>
 Explore our handpicked selection of featured products, carefully 
 chosen to bring you the latest trends and premium quality. 
 From stylish apparel to must-have accessories, our featured products
@@ -108,11 +108,11 @@ From stylish apparel to must-have accessories, our featured products
  looking for a standout outfit or a unique statement piece, 
  our featured collection has something for everyone. 
 Shop now and elevate your style with our curated favorites.</p>
-<button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-8'>Shop Now</button>
+<button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12'>Shop Now</button>
     </article>
     <div className=' w-[60%] grid grid-cols-3  gap-2 p-2 '>
-     {featuredProducts.map((product)=>(
-      <div key={product.id}>
+     {featuredProducts.map((product, index)=>(
+      <div key={product.id} >
         <Link href={`/product/featured/${product.id}`}>
       <Card
       img={product.image}
@@ -133,7 +133,7 @@ Shop now and elevate your style with our curated favorites.</p>
       
     </div>
     </section>
-    <section className='w-full h-auto flex bg-khaki p-8 mb-4' >
+    <section className='w-full h-auto flex p-8 font-opensans bg-khaki' >
      
       <div className='w-[60%] h-auto grid grid-cols-3 p-2 gap-4  '>
      
@@ -153,23 +153,26 @@ Shop now and elevate your style with our curated favorites.</p>
 </div>
      ))}
     </div>
-    <article className='w-[40%] p-2'>
-      <h1 className='text-2xl'>Sale</h1>
-      <h2>Unbeatable Deals on On Sale Products</h2>
-      <p>
+    <article className='w-[50%] p-6 flex flex-col items-center justify-center gap-4'>
+      <h1 className='text-3xl font-medium'>Sale</h1>
+      
+      <p className='text-lg mt-6 '>
+      <h2 className='text-xl text-center underline mb-3'>Unbeatable Deals on On Sale Products</h2>
 Get ready to snag some incredible deals on our on sale products!
  Discover a wide range of discounted items that include everything 
  from fashion essentials to lifestyle must-haves. Our on sale collection
   features top-quality products at unbeatable prices, giving you the chance
    to save big while still enjoying premium items. Don't miss out on these 
    limited-time offers – shop now and take advantage of the amazing discounts on offer!</p>
+   <button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12'>Find more deals</button>
       </article>
     </section>
     <section className='w-full h-auto flex p-8'>
-      <article className='w-[40%] p-2'>
+      <article className='w-[50%] p-6 flex flex-col items-center justify-center gap-4'>
     <h1 className='text-2xl'>Top Trending</h1>
-    <h2>Discover Our Top Trending Products</h2>
-    <p>
+   
+    <p className='text-lg mt-6 '>
+    <h2 className='text-xl text-center underline mb-3'>Discover Our Top Trending Products</h2>
     Explore the latest and most sought-after items in our collection of top trending products. 
     From stylish apparel to must-have accessories, these products are capturing the attention 
     of our customers and setting new fashion standards. Our expertly curated selection brings 
@@ -178,6 +181,7 @@ Get ready to snag some incredible deals on our on sale products!
      or something that's currently making waves in the fashion world, our top trending products are 
      here to inspire and elevate your look. Shop now and join the trendsetters with these coveted pieces
     </p>
+    <button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12'>Check our collections</button>
     </article>
     <div className=' w-[60%]  grid grid-cols-3 gap-2 p-2 '>
      {toptrending.map((product)=>(

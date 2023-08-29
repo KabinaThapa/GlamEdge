@@ -18,7 +18,7 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
   return (
     <>
     
-    <div className=' group  overflow-hidden relative '
+    <div className=' group  relative '
       
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -41,9 +41,9 @@ const ProductCard = ({ img, width, title, children, price, loading, addtocart, s
       )}
       
       </div>
-      <div className='p-2 text-lg font-serif'>
+      <div className='p-2 text-lg font-roboto'>
     <h2>{title}</h2>
-     <h2>${price}</h2>
+     <h2 className='font-serif'>${price}</h2>
      </div>
     </div>
     
