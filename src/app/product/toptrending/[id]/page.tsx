@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import {toptrending} from '@/app/page'
+import {toptrending} from '@/static-data/toptrending'
 
 
 const page = ({params}:{params :{id:string}}) => {

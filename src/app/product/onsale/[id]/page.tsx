@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import {onsale} from '@/app/page'
+import {onsale} from '@/static-data/onsale'
 
 
 const page = ({params}:{params :{id:string}}) => {

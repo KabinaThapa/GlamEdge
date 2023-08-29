@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import {featuredProducts} from '@/app/page'
+import {featuredProducts} from '@/static-data/featuredproduct'
 
 
 const page = ({params}:{params :{id:string}}) => {

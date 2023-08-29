@@ -15,11 +15,12 @@ import {persistReducer, persistStore, FLUSH,
 
 import { PersistPartial } from "redux-persist/es/persistReducer";
 const persistConfig={
-    key:'iws',
-   
+    key:'root',
+   version:1,
     storage,
+    
 }
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
     cart: cartReducer,
     wishlist:wishlistReducer,
     product: productReducer,
@@ -38,6 +39,6 @@ export const store=configureStore({
     
     
 })
-export type RootState=ReturnType<typeof store.getState> & PersistPartial
+export type RootState=ReturnType<typeof store.getState>
 export type AppDispatch=typeof store.dispatch
 export const persistor = persistStore(store)

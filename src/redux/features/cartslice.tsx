@@ -9,7 +9,7 @@ export interface Item{
     category?:string,
     price:number,
     image:string,
-    quantity?:number,
+    quantity:number,
 }
  export interface State{
 data:Item[],
@@ -18,7 +18,7 @@ cartAmount:number
 }
  const initialState:State={
     data:[],
-    cartQuantity:0,
+   cartQuantity:0,
     cartAmount:0
 }
 export const cartSlice =createSlice ({
@@ -37,7 +37,7 @@ export const cartSlice =createSlice ({
             
             state.data.push({...action.payload, quantity:1})
         }
-        state.cartQuantity+=1
+        state.cartQuantity=state.data.reduce((total, item) => total + item.quantity, 0)
         state.cartAmount+=action.payload.price
 
         },

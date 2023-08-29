@@ -14,9 +14,9 @@ const stripePromise=loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
 const page = () => {
   const items=useSelector((state:RootState)=>state.cart.data)
-  const {cartQuantity}=useSelector((state:RootState)=>state.cart)
+  const cartQuantity=useSelector((state:RootState)=>state.cart.cartQuantity)
   const {cartAmount}=useSelector((state:RootState)=>state.cart)
-  
+  console.log(cartQuantity)
   console.log(items)
   const dispatch=useDispatch()
   const handleIncrement=(id:number)=>{
@@ -64,7 +64,20 @@ const page = () => {
   return (
     <>
     
-    <div className='flex justify-between   w-full mx-auto p-12 '>
+    <div className='flex  justify-between w-full  p-12 '>
+      {
+        items.length===0 ? (
+          <>
+        <div className=' mx-auto h-screen  flex justify-between items-center text-2xl  '>
+          <h1>Your Cart is Empty!</h1>
+        
+        </div>
+        <div className=' absolute w-[45%] h-[100%] top-[15%] right-[25%] z-[-1] p-8' 
+        style={{ backgroundImage: `url(${blob3.src})`, backgroundSize: 'cover' }} >
+   </div>
+        </>
+      ):(
+        <>
      <div className="w-[60%] p-2 ">
        <table className=" w-full text-left text-lg ">
                 <thead>
@@ -128,8 +141,10 @@ const page = () => {
         Checkout</button>
         
         </div>
+        </>
+        )}
      
-     
+      
         
     </div>
     </>
