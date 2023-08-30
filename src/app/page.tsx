@@ -1,6 +1,6 @@
 'use client'
 import './globals.css'
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Product, fetchProduct } from '@/redux/features/productslice'
 import { fetchCategory } from '@/redux/features/categoryslice'
@@ -13,13 +13,8 @@ import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishl
 import {useRouter} from 'next/navigation'
 import Carousel from '@/components/carousel'
 import {images} from '@/static-data/images'
-
- 
- 
-//On Sale products
-
-
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const {item, status, error} = useSelector((state:RootState)=>state.category);
   const items=useSelector((state:RootState)=>state.wishlist.item)
   useEffect(()=>{
@@ -61,10 +56,36 @@ export default function Home() {
 
   }
 
-  const handleClick=(product:Product)=>{
-    router.push(`/product/${product.category}/${product.subcategory}/${product.id}`)
+  const Imagesetting = {
+    dots: false,
+    infinite: true,
+    vertical: true,
+    verticalSwiping: true,
+    autoplay: true,
+    autoplaySpeed: 3000, 
+    slidesToShow: 2, 
+    slidesToScroll: 2, 
+    
+   
   }
- 
+  const Cardsetting={
+    arrows:false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    
+  }
+  const goToNextImage = () => {
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const goToPreviousImage = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
   return (
     <>
     
@@ -77,9 +98,19 @@ export default function Home() {
         <button className='bg-white p-2 w-72 rounded text-lg hover:text-xl'>Shop Collection</button>
       </div>
       </div>
-      
-      <Carousel images={images}/>
-      
+      <div className='w-[32%] '>
+      <Carousel items={images} settings={Imagesetting}>
+      {images.map((image, index) => (
+          <div key={index} className='relative h-80'>
+            <img className='object-cover w-full h-full' src={image.img} alt={image.caption} />
+            <div className='absolute top-[50%] left-[16%] bg-Jet bg-opacity-50 p-2 flex flex-col items-center justify-center text-center text-white  font-poppins text-md font-medium'>
+            <p className="legend">{image.caption}</p>
+
+            </div>
+          </div>
+        ))}
+      </Carousel>
+      </div>
     </section>
 
     <section className='bg-khaki flex flex-col justify-center items-center p-12'>
@@ -103,7 +134,7 @@ export default function Home() {
     </div>
     </section>
 
-    <section className='w-full h-auto flex p-8 font-opensans'>
+    <section className='w-full h-auto flex p-8 font-opensans bg-wenge'>
       <article className='w-[50%] p-6 flex flex-col items-center justify-center gap-4'>
     <h1 className='text-3xl font-medium'>  Our Featured Products</h1>
     
@@ -116,12 +147,13 @@ From stylish apparel to must-have accessories, our featured products
  looking for a standout outfit or a unique statement piece, 
  our featured collection has something for everyone. 
 Shop now and elevate your style with our curated favorites.</p>
-<button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12'>Shop Now</button>
+<button className=' text-white p-2 w-72 rounded text-lg hover:text-xl mt-12'>Shop Now</button>
     </article>
-    <div className=' w-[60%] grid grid-cols-3  gap-2 p-2 '>
+    <div className=' w-[60%]  p-2 '>
+    <Carousel items={featuredproducts} settings={Cardsetting}>
+      
      {featuredproducts.map((product, index)=>(
-      <div key={product.id} >
-        
+      <div key={product.id} className=' h-80  p-4' >
       <Card
       img={product.image}
       title={product.name}
@@ -131,16 +163,16 @@ Shop now and elevate your style with our curated favorites.</p>
       href={`/product/${product.category}/${product.subcategory}/${product.id}`}
       heartfill={items.find((item)=>item.id===product.id)}
       />
-      
       </div>
+      
 
      ))}
-     
-
     
-      
+    </Carousel>
     </div>
+    
     </section>
+
     <section className='w-full h-auto flex p-8 font-opensans bg-khaki' >
      
       <div className='w-[60%] h-auto grid grid-cols-3 p-2 gap-4  '>
