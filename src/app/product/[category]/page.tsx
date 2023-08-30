@@ -53,9 +53,9 @@ export default function Page({ params }: { params: { category: string} }) {
     
     </div>
     <div className=' absolute w-[35%] h-auto top-8 left-2 z-[-1] ' >
-      <img src={blob2.src} className='object-cover w-full h-full'/>
+      <img src={blob.src} className='object-cover w-full h-full'/>
      </div>
-    <div className=' absolute w-[35%]  bottom-0 right-0 z-[-1]' >
+    <div className=' absolute w-[30%]  bottom-0 right-0 z-[-1]' >
     <img src={blob2.src} className='object-cover w-full h-full'/>
      </div>
 

@@ -13,9 +13,7 @@ import { addtowishlist, removefromwishlist, Items } from '@/redux/features/wishl
 import {useRouter} from 'next/navigation'
 import Carousel from '@/components/carousel'
 import {images} from '@/static-data/images'
-import { onsale } from '@/static-data/onsale'
-import { featuredProducts } from '@/static-data/featuredproduct'
-import { toptrending } from '@/static-data/toptrending'
+
  
  
 //On Sale products
@@ -24,6 +22,16 @@ import { toptrending } from '@/static-data/toptrending'
 export default function Home() {
   const {item, status, error} = useSelector((state:RootState)=>state.category);
   const items=useSelector((state:RootState)=>state.wishlist.item)
+  useEffect(()=>{
+    dispatch(fetchProduct())
+  },[])
+  const products=useSelector((state:RootState)=>state.product.item)
+  const featuredproducts=products.filter((product)=>product.isfeatured)
+  const onsale=products.filter((product)=>product.onsale)
+  const toptrending=products.filter((product)=>product.toptrending)
+
+  console.log(products)
+  console.log(featuredproducts)
   console.log(item)
   const dispatch=useDispatch<AppDispatch>()
   const router=useRouter()
@@ -111,19 +119,19 @@ Shop now and elevate your style with our curated favorites.</p>
 <button className='bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12'>Shop Now</button>
     </article>
     <div className=' w-[60%] grid grid-cols-3  gap-2 p-2 '>
-     {featuredProducts.map((product, index)=>(
+     {featuredproducts.map((product, index)=>(
       <div key={product.id} >
-        <Link href={`/product/featured/${product.id}`}>
+        
       <Card
       img={product.image}
       title={product.name}
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSavetowishlist(product)}
-     
+      href={`/product/${product.category}/${product.subcategory}/${product.id}`}
       heartfill={items.find((item)=>item.id===product.id)}
       />
-      </Link>
+      
       </div>
 
      ))}
@@ -139,17 +147,17 @@ Shop now and elevate your style with our curated favorites.</p>
      
       {onsale.map((product)=>(
         <div key={product.id}>
-          <Link href={`/product/onsale/${product.id}`}>
+          
       <Card
       img={product.image}
-      size={product.size}
       title={product.name}
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSavetowishlist(product)}
       heartfill={items.find((item)=>item.id===product.id)}
+      href={`/product/${product.category}/${product.subcategory}/${product.id}`}
       />
-      </Link>
+      
 </div>
      ))}
     </div>
@@ -193,8 +201,8 @@ Get ready to snag some incredible deals on our on sale products!
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSavetowishlist(product)}
-      size={product.size}
       heartfill={items.find((item)=>item.id===product.id)}
+      href={`/product/${product.category}/${product.subcategory}/${product.id}`}
       />
       
       </div>

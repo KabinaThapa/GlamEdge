@@ -5,8 +5,10 @@ export interface Items{
     id:number,
     name:string,
     price:number,
-    quantity?:number,
+    quantity:number,
     image:string,
+    category?:string,
+    subcategory?:string
 }
 export interface State{
     item:Items[],

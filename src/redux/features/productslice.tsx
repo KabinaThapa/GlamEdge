@@ -12,7 +12,9 @@ export interface Product{
     quantity:number,
     description?:string,
     rating?:number,
-   
+   isfeatured?:boolean,
+   onsale?:boolean,
+   toptrending?:boolean,
     
 }
 
