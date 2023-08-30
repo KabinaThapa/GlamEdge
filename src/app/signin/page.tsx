@@ -52,7 +52,13 @@ const Signin: React.FC = () => {
   };
 
   return (
-    <div className="bg-custom-sage p-24 h-auto flex justify-center items-center">
+    <>
+    <div className=" min-h-screen  w-full  p-[2%] ">
+      <div className='mx-auto grid grid-cols-3 border-2  '>
+        <div className='w-full h-full col-span-2'>
+        <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
+        </div>
+        <div className="ml-[-100px] z-[100] w-full mt-4 mb-4 bg-babypowder p-4">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -60,12 +66,12 @@ const Signin: React.FC = () => {
       >
         {({ handleSubmit, values, handleChange }) => {
           return (
-            <div className=" w-[60%] h-auto  font-medium border-2">
+            <>
               <Form
                 onSubmit={handleSubmit}
-                className="h-auto w-full bg-opacity-50  p-8 flex flex-col justify-center"
+                className="  flex flex-col justify-center"
               >
-                <h1 className="text-3xl mb-4 mt-4">LOGIN</h1>
+                <h1 className="text-3xl mb-4 mt-4">SIGNIN</h1>
                 <Inputfield
                   type="text"
                   name="email"
@@ -100,12 +106,16 @@ const Signin: React.FC = () => {
                   <CiTwitter size={30} />
                 </div>
               </Form>
+              
               <ToastContainer className="ml-auto" />
-            </div>
+              </>
           );
         }}
       </Formik>
+      </div>
+      </div>
     </div>
+    </>
   );
 };
 

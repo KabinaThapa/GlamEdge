@@ -98,7 +98,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-[32%] ">
-            <Carousel items={images} settings={Imagesetting}>
+            <Carousel  settings={Imagesetting}>
               {images.map((image, index) => (
                 <div key={index} className="relative h-80">
                   <img
