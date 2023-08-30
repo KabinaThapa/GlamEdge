@@ -47,7 +47,7 @@ export const cartSlice =createSlice ({
                 state.data=state.data.filter((item)=>item.id !== action.payload)
 
             
-            state.cartQuantity-=1
+            state.cartQuantity-=item.quantity
             state.cartAmount-=item.price*item.quantity
             
             }
