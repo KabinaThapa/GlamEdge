@@ -76,7 +76,7 @@ export default function Page({ params }: { params: { category: string, subcatego
     {sortedProducts.map((product)=>(
         <div className=''>
           
-       <Link href={`/product/${params.category}/${params.subcategory}/${product.id}`}>
+       
         <Card
       img={product.image}
       title={product.name}
@@ -84,8 +84,9 @@ export default function Page({ params }: { params: { category: string, subcatego
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSave(product)}
       heartfill={items.find((item)=>item.id===product.id)}
+      href={`/product/${params.category}/${params.subcategory}/${product.id}`}
       />
-       </Link>
+       
         </div>
     ))}
     
