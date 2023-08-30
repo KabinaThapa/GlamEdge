@@ -17,7 +17,7 @@ const config: Config = {
         babypowder:'#F9F7F3',
         Alabaster:'#DEE2D6',
         Platinum:'#E6E6E9',
-        Antiflashwhite:'#F4F4F6',
+        antiwhite:'#EEEEEE',
         Paledogwood:'#EBCCC2',
         Jet:'#3E363F',
         Charcoal:'#474954',
@@ -28,6 +28,10 @@ const config: Config = {
         dimgray:'#736F72',
         wenge:'#615756',
         raisinblack:'#191923',
+        magnolia:"#F3EFF5",
+        azure:"#CDDDDD",
+        ghost:'#E9ECF5',
+        silver:'#CCCCCC'
 
 
       },

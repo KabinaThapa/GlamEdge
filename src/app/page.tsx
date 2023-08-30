@@ -78,7 +78,7 @@ export default function Home() {
  
   return (
     <>
-      <div className=" flex flex-col gap-12 w-full items-center justify-center">
+      <div className=" flex flex-col  w-full items-center justify-center">
         <section className="w-full h-auto  flex  justify-center items-center gap-6 p-4">
           <div className=" relative w-[80%] h-auto  flex">
             <img
@@ -142,12 +142,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-auto flex p-8 font-opensans bg-wenge">
-          <article className="w-[50%] p-6 flex flex-col items-center justify-center gap-4">
-            <h1 className="text-3xl font-medium"> Our Featured Products</h1>
+        <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
+          <article className="w-[50%] p-4 flex flex-col gap-8 border-2 border-khaki">
+            <h1 className="text-3xl "> Our Featured Products</h1>
 
-            <p className="text-lg mt-6">
-              <h2 className="text-xl text-center mb-3 underline">
+            <p className=" text-lg ">
+              <h2 className="text-xl   underline">
                 Discover Our Featured Products
               </h2>
               Explore our handpicked selection of featured products, carefully
@@ -158,14 +158,14 @@ export default function Home() {
               featured collection has something for everyone. Shop now and
               elevate your style with our curated favorites.
             </p>
-            <button className=" text-white p-2 w-72 rounded text-lg hover:text-xl mt-12">
+            <button className=" text-white p-2 w-72 rounded text-lg hover:text-xl ms-end bg-wenge ">
               Shop Now
             </button>
           </article>
-          <div className=" w-[60%]  ">
+          <div className=" w-[60%] bg-babypowder p-[3%] ">
             <Carousel  settings={Cardsetting}>
               {featuredproducts.map((product, index) => (
-                <div key={product.id} className=" h-80  p-4">
+                <div key={product.id} className=" h-auto pl-2 pr-2 ">
                   <Card
                     img={product.image}
                     title={product.name}
@@ -182,11 +182,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-auto flex p-8 font-opensans bg-khaki">
-        <div className=" w-[60%] ">
+        <section className="w-full h-auto flex p-[5%] gap-8 font-opensans bg-khaki justify-between">
+        <div className=" w-[60%] bg-babypowder  p-[3%] ">
             <Carousel  settings={Cardsetting}>
               {onsale.map((product, index) => (
-                <div key={product.id} className=" h-80  p-4">
+                <div key={product.id} className=" h-auto pl-2 pr-2 capitalize">
                   <Card
                     img={product.image}
                     title={product.name}
@@ -201,12 +201,12 @@ export default function Home() {
             </Carousel>
             
           </div>
-          <article className="w-[50%] p-6 flex flex-col items-center justify-center gap-4">
-            <h1 className="text-3xl font-medium">Sale</h1>
+          <article className="w-[50%] p-2 flex flex-col gap-8">
+            <h1 className="text-3xl">OnSale</h1>
 
-            <p className="text-lg mt-6 ">
-              <h2 className="text-xl text-center underline mb-3">
-                Unbeatable Deals on On Sale Products
+            <p className="text-lg ">
+              <h2 className="text-xl  underline ">
+                Unbeatable Deals on OnSale Products
               </h2>
               Get ready to snag some incredible deals on our on sale products!
               Discover a wide range of discounted items that include everything
@@ -216,40 +216,35 @@ export default function Home() {
               items. Don't miss out on these limited-time offers – shop now and
               take advantage of the amazing discounts on offer!
             </p>
-            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12">
+            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl ">
               Find more deals
             </button>
           </article>
         </section>
 
-        <section className="w-full h-auto flex p-8">
-          <article className="w-[50%] p-6 flex flex-col items-center justify-center gap-4">
-            <h1 className="text-2xl">Top Trending</h1>
+        <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
+          <article className="w-[50%] p-4 flex flex-col gap-8 border-khaki border-2">
+            <h1 className="text-3xl">Top Trending</h1>
 
-            <p className="text-lg mt-6 ">
-              <h2 className="text-xl text-center underline mb-3">
+            <p className="text-lg ">
+              <h2 className="text-xl  underline ">
                 Discover Our Top Trending Products
               </h2>
               Explore the latest and most sought-after items in our collection
-              of top trending products. From stylish apparel to must-have
-              accessories, these products are capturing the attention of our
-              customers and setting new fashion standards. Our expertly curated
-              selection brings you the best of what's popular right now,
-              ensuring that you stay ahead of the curve and make a statement
-              with your style. Whether you're looking for a standout outfit, a
+              of top trending products.  Whether you're looking for a standout outfit, a
               unique accessory, or something that's currently making waves in
               the fashion world, our top trending products are here to inspire
               and elevate your look. Shop now and join the trendsetters with
               these coveted pieces
             </p>
-            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl mt-12">
+            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl ">
               Check our collections
             </button>
           </article>
-          <div className=" w-[60%] ">
+          <div className=" w-[60%] capitalize bg-babypowder p-[3%]">
             <Carousel  settings={Cardsetting}>
               {toptrending.map((product, index) => (
-                <div key={product.id} className=" h-80  p-4">
+                <div key={product.id} className="pl-2 pr-2 ">
                   <Card
                     img={product.image}
                     title={product.name}
