@@ -49,7 +49,7 @@ const page = () => {
           <div key={item.id}>
           <Card
       img={item.image}
-    
+      href={`/product/${item.category}/${item.subcategory}/${item.id}`}
       title={item.name}
       price={item.price}
       addtocart={()=>handleAddtocart(item)}
