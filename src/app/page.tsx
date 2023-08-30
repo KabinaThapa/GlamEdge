@@ -70,7 +70,7 @@ export default function Home() {
     arrows:false,
   };
   const Cardsetting = {
-    arrows: true,
+    arrows:true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -142,7 +142,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-auto flex p-8 font-opensans ">
+        <section className="w-full h-auto flex p-8 font-opensans bg-wenge">
           <article className="w-[50%] p-6 flex flex-col items-center justify-center gap-4">
             <h1 className="text-3xl font-medium"> Our Featured Products</h1>
 
@@ -162,8 +162,8 @@ export default function Home() {
               Shop Now
             </button>
           </article>
-          <div className=" w-[60%] ">
-            <Carousel items={featuredproducts} settings={Cardsetting}>
+          <div className=" w-[60%]  ">
+            <Carousel  settings={Cardsetting}>
               {featuredproducts.map((product, index) => (
                 <div key={product.id} className=" h-80  p-4">
                   <Card
@@ -183,20 +183,23 @@ export default function Home() {
         </section>
 
         <section className="w-full h-auto flex p-8 font-opensans bg-khaki">
-          <div className="w-[60%] h-auto grid grid-cols-3 p-2 gap-4  ">
-            {onsale.map((product) => (
-              <div key={product.id}>
-                <Card
-                  img={product.image}
-                  title={product.name}
-                  price={product.price}
-                  addtocart={() => handleAddtocart(product)}
-                  savetowishlist={() => handleSavetowishlist(product)}
-                  heartfill={items.find((item) => item.id === product.id)}
-                  href={`/product/${product.category}/${product.subcategory}/${product.id}`}
-                />
-              </div>
-            ))}
+        <div className=" w-[60%] ">
+            <Carousel  settings={Cardsetting}>
+              {onsale.map((product, index) => (
+                <div key={product.id} className=" h-80  p-4">
+                  <Card
+                    img={product.image}
+                    title={product.name}
+                    price={product.price}
+                    addtocart={() => handleAddtocart(product)}
+                    savetowishlist={() => handleSavetowishlist(product)}
+                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
+                    heartfill={items.find((item) => item.id === product.id)}
+                  />
+                </div>
+              ))}
+            </Carousel>
+            
           </div>
           <article className="w-[50%] p-6 flex flex-col items-center justify-center gap-4">
             <h1 className="text-3xl font-medium">Sale</h1>
@@ -243,20 +246,23 @@ export default function Home() {
               Check our collections
             </button>
           </article>
-          <div className=" w-[60%]  grid grid-cols-3 gap-2 p-2 ">
-            {toptrending.map((product) => (
-              <div key={product.id}>
-                <Card
-                  img={product.image}
-                  title={product.name}
-                  price={product.price}
-                  addtocart={() => handleAddtocart(product)}
-                  savetowishlist={() => handleSavetowishlist(product)}
-                  heartfill={items.find((item) => item.id === product.id)}
-                  href={`/product/${product.category}/${product.subcategory}/${product.id}`}
-                />
-              </div>
-            ))}
+          <div className=" w-[60%] ">
+            <Carousel  settings={Cardsetting}>
+              {toptrending.map((product, index) => (
+                <div key={product.id} className=" h-80  p-4">
+                  <Card
+                    img={product.image}
+                    title={product.name}
+                    price={product.price}
+                    addtocart={() => handleAddtocart(product)}
+                    savetowishlist={() => handleSavetowishlist(product)}
+                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
+                    heartfill={items.find((item) => item.id === product.id)}
+                  />
+                </div>
+              ))}
+            </Carousel>
+            
           </div>
         </section>
       </div>
