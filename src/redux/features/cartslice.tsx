@@ -49,6 +49,7 @@ export const cartSlice =createSlice ({
             
             state.cartQuantity-=item.quantity
             state.cartAmount-=item.price*item.quantity
+            state.cartAmount=parseFloat(state.cartAmount.toFixed(2))
             
             }
 
