@@ -17,20 +17,20 @@ console.log(product)
     }
 
     return (
-        <div className='w-full flex justify-between items-center p-12 font-serif'>
-            <div className='w-[40%] overflow-hidden '>
+        <div className='w-full h-auto flex justify-around items-center p-[5%] font-roboto'>
+            <div className='w-[40%] h-[40rem] overflow-hidden '>
             
-            <img className='w-full h-full transition transform-transition hover:scale-150 duration-50' src={product.image} alt={product.name} />
+            <img className='object-cover w-full h-full transition transform-transition hover:scale-150 duration-50' src={product.image} alt={product.name} />
             </div>
             <div className='w-[50%]  h-auto p-4 grid gap-4 '>
             <h2 className='text-2xl font-semibold'>{product.name}</h2>
             <p>{product.rating}</p>
             <p>{product.description}</p>
             <p> ${product.price}</p>
-            <div className='flex flex-col items-center text-lg overflow-hidden border-2'>
-            <button className='w-full bg-khaki rounded p-2 hover:text-xl  text-white'>Add to cart</button>
+            <div className='flex flex-col items-center text-lg overflow-hidden'>
+            <button className='w-full bg-wenge rounded p-2 hover:text-xl  text-white'>Add to cart</button>
             <h1>Or</h1>
-            <button className='w-full bg-khaki rounded  p-2 hover:text-xl text-white'>Add to wishlist</button>
+            <button className='w-full bg-wenge rounded  p-2 hover:text-xl text-white'>Add to wishlist</button>
             </div>
             
 

@@ -17,9 +17,10 @@ import {
 import { useRouter } from "next/navigation";
 import Carousel from "@/components/carousel";
 import { images } from "@/static-data/images";
+import Skeleton from 'react-loading-skeleton'
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { item, status, error } = useSelector(
+ 
+  const { item, status, error, isloading } = useSelector(
     (state: RootState) => state.category
   );
   const items = useSelector((state: RootState) => state.wishlist.item);
@@ -98,7 +99,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-[32%] ">
-            <Carousel items={images} settings={Imagesetting}>
+            <Carousel  settings={Imagesetting}>
               {images.map((image, index) => (
                 <div key={index} className="relative h-80">
                   <img
@@ -125,6 +126,7 @@ export default function Home() {
                 key={item.id}
                 className="relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg"
               >
+                {isloading ?(<Skeleton width={300} height={400}/>):(
                 <Link href={`/product/${item.id}`}>
                   <img
                     className=" object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 "
@@ -137,6 +139,7 @@ export default function Home() {
                     <h1>{item.id}</h1>
                   </div>
                 </Link>
+                )}
               </div>
             ))}
           </div>

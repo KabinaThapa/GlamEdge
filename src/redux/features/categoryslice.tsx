@@ -18,13 +18,15 @@ async()=>{
 export interface Categorystate{
     item: Category[],
     status:'idle'|'loading'|'succeeded'|'failed',
-    error:string|null
+    error:string|null,
+    isloading:boolean,
 
 } 
 const initialState:Categorystate={
     item:[],
     status:'idle',
     error:null,
+    isloading:false,
 }
 
  const categorySlice= createSlice({
@@ -35,16 +37,19 @@ const initialState:Categorystate={
         builder
         .addCase(fetchCategory.pending, (state )=>{
             state.status='loading'
+            state.isLoading = true;
             
         })
         .addCase(fetchCategory.fulfilled, (state, action:PayloadAction<Category[]>)=>{
             state.status='succeeded',
             state.item=action.payload
+            state.isLoading = false;
 
         })
         .addCase(fetchCategory.rejected, (state, action)=>{
             state.status='failed',
             state.error=action.error.message
+            state.isLoading = false;
 
         })
     },
