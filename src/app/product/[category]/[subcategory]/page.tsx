@@ -7,6 +7,7 @@ import { Item, addtocart } from '@/redux/features/cartslice';
 import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import Card from '@/components/card'
 import Link from 'next/link';
+import Skeleton from 'react-loading-skeleton'
 
 
 
@@ -73,9 +74,10 @@ export default function Page({ params }: { params: { category: string, subcatego
    
  
     <div className=' grid grid-cols-4 gap-4  w-[90%]' > 
+
     {sortedProducts.map((product)=>(
         <div className=''>
-          
+          {sortedProducts.length===0 ? (<Skeleton width={300} height={400}/>):(
        
         <Card
       img={product.image}
@@ -86,7 +88,7 @@ export default function Page({ params }: { params: { category: string, subcatego
       heartfill={items.find((item)=>item.id===product.id)}
       href={`/product/${params.category}/${params.subcategory}/${product.id}`}
       />
-       
+      )}
         </div>
     ))}
     

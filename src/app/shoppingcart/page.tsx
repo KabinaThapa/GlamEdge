@@ -9,6 +9,8 @@ import {AiOutlineDelete} from 'react-icons/ai'
 import axios from 'axios'
 import Stripe from '@stripe/stripe-js'
 import blob3 from '../../../public/blob3.svg'
+import "react-toastify/dist/ReactToastify.css"
+import {toast, ToastContainer} from 'react-toastify'
 
 const stripePromise=()=>loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
@@ -32,6 +34,10 @@ const page = () => {
 
   }
   const handleCheckout = async () => {
+    const token=localStorage.getItem('session-token')
+    console.log(token)
+    if(token){
+   
     const stripe = await stripePromise();
     console.log(items)
     const { error } = await stripe.redirectToCheckout({
@@ -42,8 +48,14 @@ const page = () => {
       customerEmail: 'customer@email.com',
     });
     console.warn(error.message);
-  };
-    
+  }
+
+else{
+  toast.error("Please signin to checkout")
+
+}
+}
+
   
   return (
     <>
@@ -136,7 +148,7 @@ const page = () => {
         )}
      
       
-        
+        <ToastContainer/>
    
     </>
   )

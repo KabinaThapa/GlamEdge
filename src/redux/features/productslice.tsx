@@ -15,6 +15,7 @@ export interface Product{
    isfeatured?:boolean,
    onsale?:boolean,
    toptrending?:boolean,
+   priceId:string
     
 }
 
