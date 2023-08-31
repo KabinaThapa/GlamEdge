@@ -17,8 +17,6 @@ import { onsale } from '@/static-data/onsale'
 import { featuredProducts } from '@/static-data/featuredproduct'
 import { toptrending } from '@/static-data/toptrending'
  
- 
-//On Sale products
 
 
 export default function Home() {

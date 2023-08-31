@@ -6,16 +6,14 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {loadStripe} from '@stripe/stripe-js'
 import {AiOutlineDelete} from 'react-icons/ai'
-import axios from 'axios'
 
-const stripePromise=loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+const stripePromise=()=>loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
 const page = () => {
   const items=useSelector((state:RootState)=>state.cart.data)
   const {cartQuantity}=useSelector((state:RootState)=>state.cart)
   const {cartAmount}=useSelector((state:RootState)=>state.cart)
   
-  console.log(items)
   const dispatch=useDispatch()
   const handleIncrement=(id:number)=>{
     dispatch(increment(id))
@@ -30,30 +28,22 @@ const page = () => {
 
   }
   const handleCheckout = async () => {
-    const stripe = await stripePromise;
-    const response = await fetch('/api/checkout', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ items }),
+    const stripe = await stripePromise();
+    console.log(items)
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: items.map(product=>({price:product.priceId.toString() , quantity:product.quantity})),
+      mode: 'payment',
+      successUrl: `http://localhost:3000/success`,
+      cancelUrl: `http://localhost:3000/cancel`,
+      customerEmail: 'customer@email.com',
     });
-  console.log(response)
-    const session = await response.json();
-    console.log(session)
-    const result = await stripe?.redirectToCheckout({
-      sessionId: session.id
-    });
-  
-    if (result.error) {
-      console.error(result.error);
-    }
+    console.warn(error.message);
   };
-  
+    
   
   return (
     <>
-    
+    {/* <PaymentElement/> */}
     <div className='flex flex-col w-[70%] mx-auto  m-12'>
       <div className='text-3xl w-full justify-between items-center flex'>
         <p>Your Cart</p> <p>Total: {cartQuantity}Items</p> 
