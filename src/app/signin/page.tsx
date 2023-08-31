@@ -58,7 +58,7 @@ const Signin: React.FC = () => {
         <div className='w-full h-full col-span-2'>
         <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
         </div>
-        <div className="ml-[-150px] z-[100] w-full mt-8 mb-8 bg-khaki ">
+        <div className="ml-[-150px] z-[100] w-full mt-8 mb-8 bg-dun ">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}

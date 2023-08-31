@@ -45,15 +45,18 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-custom-sage p-24 h-auto flex justify-center items-center">
+    <div className="p-[2%] h-auto grid grid-cols-4 place-items-center">
+      <div className='w-full col-span-3 '>
+        <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/banner_1_1512x.jpg?v=1616993329'}/>
+        </div>
       <Formik
         initialValues={initialvalues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <div className="w-[60%] h-auto backdrop-blur-sm">
-          <Form className="w-full h-auto p-8 flex flex-col justify-center border-2">
-            <h1 className="text-3xl mb-4 mt-4">REGISTER</h1>
+        <div className="w-[28rem] ml-[-150px] h-auto bg-timber">
+          <Form className="h-auto p-8 flex flex-col justify-center gap-6 text-base ">
+            <h1 className="text-3xl text-center">SignUp</h1>
             <Inputfield
               type="text"
               name="name"
@@ -87,7 +90,7 @@ const Signup = () => {
 
             <button
               type="submit"
-              className="border-2 w-full mb-6 border-black p-1 mb-8 mt-6 rounded-md text-lg backdrop-blur-md hover:scale-95"
+              className=" w-full bg-wenge p-2 rounded text-lg  hover:text-xl"
             >
               Register
             </button>

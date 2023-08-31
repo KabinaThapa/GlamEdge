@@ -31,7 +31,12 @@ const config: Config = {
         magnolia:"#F3EFF5",
         azure:"#CDDDDD",
         ghost:'#E9ECF5',
-        silver:'#CCCCCC'
+        silver:'#CCCCCC',
+        rosy:'#B79D94',
+        thistle:'#D5CAD6',
+        khakib:'#BCAA99',
+        dun:'#C7B7A9',
+        timber:'#D7CBC1'
 
 
       },
