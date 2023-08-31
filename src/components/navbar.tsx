@@ -58,13 +58,15 @@ const Navbar = () => {
           <li>
             <Link href='/'>Home</Link>
           </li>
-          <div className='relative group'>
-            <span className='group-hover:scale-125 cursor-pointer'>
+          <div className='relative group '>
+            <span className=' cursor-pointer'>
               Shop
-              <div className='hidden group-hover:block absolute z-[1000] left-0 mt-2 py-2 bg-white border rounded shadow-lg'>
+            
+              <div className='hidden  group-hover:block absolute z-[1000] left-0 mt-2 bg-babypowder p-2  rounded shadow-lg '>
+              <div className='group-hover:block absolute bg-babypowder w-4 h-4 rotate-45 top-[-8px] left-5 border-r-0 border-b-0 '></div>
                 {item.map((item) => (
-                  <div key={item.id}>
-                    <Link href={`/product/${item.id}`} className='block px-4 py-2'>
+                  <div key={item.id} className='capitalize py-2 px-2'>
+                    <Link href={`/product/${item.id}`}>
                       {item.id}
                     </Link>
                   </div>
