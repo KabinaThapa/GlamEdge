@@ -54,11 +54,11 @@ const Signin: React.FC = () => {
   return (
     <>
     <div className=" min-h-screen  w-full  p-[2%] ">
-      <div className='mx-auto grid grid-cols-3 place-items-center '>
-        <div className='w-full h-full col-span-2'>
+      <div className='mx-auto grid grid-cols-4 place-items-center '>
+        <div className='w-full h-full col-span-3'>
         <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
         </div>
-        <div className="ml-[-150px] z-[100] w-full mt-8 mb-8 bg-dun ">
+        <div className="ml-[-150px] z-[100] w-[28rem] mt-8 mb-8 bg-timber ">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
