@@ -10,7 +10,7 @@ import axios from 'axios'
 import Stripe from '@stripe/stripe-js'
 import blob3 from '../../../public/blob3.svg'
 
-const stripePromise=loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+const stripePromise=()=>loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
 const page = () => {
   const items=useSelector((state:RootState)=>state.cart.data)
@@ -32,34 +32,18 @@ const page = () => {
 
   }
   const handleCheckout = async () => {
-    try {
-      const stripe = await stripePromise;
-      if (!stripe) {
-        console.error('Stripe is not initialized.');
-        return;
-      }
-      const response = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items }),
-      });
-      if (!response.ok) {
-        throw new Error('Checkout request failed.');
-      }
-      const session = await response.json();
-      const result = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-      if (result.error) {
-        console.error('Stripe checkout error:', result.error);
-      }
-    } catch (error) {
-      console.error('Checkout process error:', error);
-    }
+    const stripe = await stripePromise();
+    console.log(items)
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: items.map(product=>({price:product.priceId.toString() , quantity:product.quantity})),
+      mode: 'payment',
+      successUrl: `http://localhost:3000/success`,
+      cancelUrl: `http://localhost:3000/cancel`,
+      customerEmail: 'customer@email.com',
+    });
+    console.warn(error.message);
   };
-  
+    
   
   return (
     <>

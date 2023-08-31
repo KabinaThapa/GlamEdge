@@ -143,7 +143,7 @@ export default function Home() {
         </section>
 
         <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
-          <article className="w-[50%] p-4 flex flex-col gap-8 border-2 border-khaki">
+          <article className="w-[50%] p-4 flex flex-col gap-8 border-r-2 border-khaki">
             <h1 className="text-3xl "> Our Featured Products</h1>
 
             <p className=" text-lg ">
@@ -223,7 +223,7 @@ export default function Home() {
         </section>
 
         <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
-          <article className="w-[50%] p-4 flex flex-col gap-8 border-khaki border-2">
+          <article className="w-[50%] p-4 flex flex-col gap-8 border-khaki border-r-2">
             <h1 className="text-3xl">Top Trending</h1>
 
             <p className="text-lg ">

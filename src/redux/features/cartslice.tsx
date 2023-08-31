@@ -39,6 +39,7 @@ export const cartSlice =createSlice ({
         }
         state.cartQuantity=state.data.reduce((total, item) => total + item.quantity, 0)
         state.cartAmount+=action.payload.price
+        state.cartAmount=parseFloat(state.cartAmount.toFixed(2))
 
         },
         removefromcart:(state,action:PayloadAction<number>)=>{
@@ -47,8 +48,9 @@ export const cartSlice =createSlice ({
                 state.data=state.data.filter((item)=>item.id !== action.payload)
 
             
-            state.cartQuantity-=1
+            state.cartQuantity-=item.quantity
             state.cartAmount-=item.price*item.quantity
+            state.cartAmount=parseFloat(state.cartAmount.toFixed(2))
             
             }
 
@@ -59,6 +61,7 @@ export const cartSlice =createSlice ({
                 item.quantity+=1
                 state.cartQuantity+=1
                 state.cartAmount+=item.price
+                state.cartAmount=parseFloat(state.cartAmount.toFixed(2))
             }
         },
         decrement:(state, action:PayloadAction<number>)=>{
@@ -67,6 +70,7 @@ export const cartSlice =createSlice ({
                 item.quantity-=1
                 state.cartQuantity-=1
                 state.cartAmount-=item.price
+                state.cartAmount=parseFloat(state.cartAmount.toFixed(2))
             }
         }
 

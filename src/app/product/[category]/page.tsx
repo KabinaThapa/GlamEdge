@@ -25,12 +25,12 @@ export default function Page({ params }: { params: { category: string} }) {
     console.log(filterCategory)
     return (
     <>
-    <div className='relative w-full h-full flex flex-col items-center gap-10 p-[5%]'>
+    <div className='relative w-full h-full flex flex-col items-center gap-10 p-[5%] font-opensans'>
      
       <div className=' w-[90%] '>
        
     <h1 className='capitalize text-4xl text-center underline mb-4'>{params.category}</h1>
-   <p>{filterdesc[0].desc}</p>
+   <p className='text-lg'>{filterdesc[0].desc}</p>
     </div>
     <div className='w-[80%] h-auto grid grid-cols-3 gap-4 '>
       
