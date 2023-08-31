@@ -52,7 +52,13 @@ const Signin: React.FC = () => {
   };
 
   return (
-    <div className="bg-custom-sage p-24 h-auto flex justify-center items-center">
+    <>
+    <div className=" min-h-screen  w-full  p-[2%] ">
+      <div className='mx-auto grid grid-cols-4 place-items-center '>
+        <div className='w-full h-full col-span-3'>
+        <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
+        </div>
+        <div className="ml-[-150px] z-[100] w-[28rem] mt-8 mb-8 bg-timber ">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -60,12 +66,12 @@ const Signin: React.FC = () => {
       >
         {({ handleSubmit, values, handleChange }) => {
           return (
-            <div className=" w-[60%] h-auto  font-medium border-2">
+            <>
               <Form
                 onSubmit={handleSubmit}
-                className="h-auto w-full bg-opacity-50  p-8 flex flex-col justify-center"
+                className="  flex flex-col justify-center gap-6 text-lg font-opensans p-6"
               >
-                <h1 className="text-3xl mb-4 mt-4">LOGIN</h1>
+                <h1 className="text-3xl text-center">SignIn</h1>
                 <Inputfield
                   type="text"
                   name="email"
@@ -78,34 +84,38 @@ const Signin: React.FC = () => {
                   label="Password"
                   icon={<BsLock />}
                 />
-                <p className="text-right mb-8">Forgot Password?</p>
+                <p className="text-right ">Forgot Password?</p>
 
                 <button
                   type="submit"
-                  className="border-2 w-full  border-black p-1 mb-8 mt-6 rounded-md text-lg backdrop-blur-md hover:scale-95"
+                  className="w-full  p-2 bg-wenge rounded text-lg text-white hover:text-xl"
                 >
                   {" "}
                   LogIn
                 </button>
                 <Link href="/signup">
-                  <p className="text-center underline mb-4">
+                  <p className="text-center underline ">
                     Don't have an Account? Sign Up
                   </p>
                 </Link>
-                <p className="text-center mb-4">OR</p>
+                <p className="text-center ">OR</p>
                 <p className="text-center">Sign Up Using</p>
-                <div className="flex items-center justify-between w-24 mx-auto mt-4">
+                <div className="flex items-center justify-between w-28 mx-auto ">
                   <CiFacebook size={30} />
                   <PiGoogleLogo size={30} />
-                  <CiTwitter size={30} />
+                  <CiTwitter size={32} />
                 </div>
               </Form>
+              
               <ToastContainer className="ml-auto" />
-            </div>
+              </>
           );
         }}
       </Formik>
+      </div>
+      </div>
     </div>
+    </>
   );
 };
 
