@@ -37,19 +37,19 @@ const initialState:Categorystate={
         builder
         .addCase(fetchCategory.pending, (state )=>{
             state.status='loading'
-            state.isLoading = true;
+            state.isloading = true;
             
         })
         .addCase(fetchCategory.fulfilled, (state, action:PayloadAction<Category[]>)=>{
             state.status='succeeded',
             state.item=action.payload
-            state.isLoading = false;
+            state.isloading = false;
 
         })
         .addCase(fetchCategory.rejected, (state, action)=>{
             state.status='failed',
             state.error=action.error.message
-            state.isLoading = false;
+            state.isloading = false;
 
         })
     },

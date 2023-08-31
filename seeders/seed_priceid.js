@@ -4,7 +4,7 @@ const axios = require('axios');
  * 
  * Note : Dont provide any process.env data it might not work ( feel free to check it out ,it might :p )
  */
-const stripe = require('stripe')('SECRET_KEY_GOES_HERE');
+const stripe = require('stripe')('sk_test_51Nhb3pC9LEQj4rjsxYp52k2vaqCFRUAS4sGD4fcsQZROCxpW1s0R1AHi1YpNNytZfvU6RNXwMfL4D3CZttipgMGY00OCUoKxX6');
 
 /**
  * The API to get all the datas(products) from the database should be mentioned here

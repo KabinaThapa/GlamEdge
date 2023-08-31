@@ -126,7 +126,7 @@ export default function Home() {
                 key={item.id}
                 className="relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg"
               >
-                {isloading ?(<Skeleton width={300} height={400}/>):(
+                {isloading?(<Skeleton width={300} height={400}/>):(
                 <Link href={`/product/${item.id}`}>
                   <img
                     className=" object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 "

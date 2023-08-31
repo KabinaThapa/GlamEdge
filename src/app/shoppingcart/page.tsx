@@ -35,7 +35,7 @@ const page = () => {
     const stripe = await stripePromise();
     console.log(items)
     const { error } = await stripe.redirectToCheckout({
-      lineItems: items.map(product=>({price:product.priceId.toString() , quantity:product.quantity})),
+      lineItems: items.map(product=>({price:product.priceId.toString(), quantity:product.quantity})),
       mode: 'payment',
       successUrl: `http://localhost:3000/success`,
       cancelUrl: `http://localhost:3000/cancel`,

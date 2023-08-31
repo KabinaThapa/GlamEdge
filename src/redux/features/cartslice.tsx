@@ -10,6 +10,7 @@ export interface Item{
     price:number,
     image:string,
     quantity:number,
+    priceId:string,
 }
  export interface State{
 data:Item[],
