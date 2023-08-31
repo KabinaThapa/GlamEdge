@@ -54,11 +54,11 @@ const Signin: React.FC = () => {
   return (
     <>
     <div className=" min-h-screen  w-full  p-[2%] ">
-      <div className='mx-auto grid grid-cols-3 border-2  '>
+      <div className='mx-auto grid grid-cols-3 place-items-center '>
         <div className='w-full h-full col-span-2'>
         <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
         </div>
-        <div className="ml-[-100px] z-[100] w-full mt-4 mb-4 bg-babypowder p-4">
+        <div className="ml-[-100px] z-[100] w-full mt-6 mb-6 bg-babypowder p-4">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -69,9 +69,9 @@ const Signin: React.FC = () => {
             <>
               <Form
                 onSubmit={handleSubmit}
-                className="  flex flex-col justify-center"
+                className="  flex flex-col justify-center gap-6"
               >
-                <h1 className="text-3xl mb-4 mt-4">SIGNIN</h1>
+                <h1 className="text-3xl">SignIn</h1>
                 <Inputfield
                   type="text"
                   name="email"
@@ -84,26 +84,26 @@ const Signin: React.FC = () => {
                   label="Password"
                   icon={<BsLock />}
                 />
-                <p className="text-right mb-8">Forgot Password?</p>
+                <p className="text-right ">Forgot Password?</p>
 
                 <button
                   type="submit"
-                  className="border-2 w-full  border-black p-1 mb-8 mt-6 rounded-md text-lg backdrop-blur-md hover:scale-95"
+                  className="border-2 w-full  border-black p-1  rounded-md text-lg backdrop-blur-md hover:scale-95"
                 >
                   {" "}
                   LogIn
                 </button>
                 <Link href="/signup">
-                  <p className="text-center underline mb-4">
+                  <p className="text-center underline ">
                     Don't have an Account? Sign Up
                   </p>
                 </Link>
-                <p className="text-center mb-4">OR</p>
+                <p className="text-center ">OR</p>
                 <p className="text-center">Sign Up Using</p>
-                <div className="flex items-center justify-between w-24 mx-auto mt-4">
+                <div className="flex items-center justify-between w-28 mx-auto ">
                   <CiFacebook size={30} />
                   <PiGoogleLogo size={30} />
-                  <CiTwitter size={30} />
+                  <CiTwitter size={32} />
                 </div>
               </Form>
               

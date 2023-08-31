@@ -13,7 +13,7 @@ const Inputfield:React.FC<IInputfield> = ({label,name,type,className,icon}) => {
   return (
     <div className={className}>
         <label htmlFor={name}>{label}</label>
-       <div className='flex flex-col  mt-2 mb-6 '>
+       <div className='flex flex-col  mt-2  '>
         <div className='flex items-center'>
        <span>{icon}</span>
         <Field type={type} name={name} className='flex flex-col bg-transparent  outline-none border-b-2 border-Platinum w-full ml-2' />
