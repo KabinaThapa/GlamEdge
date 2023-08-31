@@ -46,26 +46,26 @@ const Navbar = () => {
     <nav className='w-full flex pb-2 justify-around items-center mt-6 font-kreon'>
      
       <ul>
-        <div className='text-3xl flex items-baseline'>
-          <h1>Glam </h1><h1 className='text-4xl font-opensans'>Edge</h1>
+        <div className='text-3xl flex items-baseline font-aclonica'>
+          <h1>Glam </h1><h1 className='text-4xl font-aclonica font-bold text-wenge'>Edge</h1>
         </div>
       </ul>
       <div className='relative'>
         <Searchbar/>
       </div>
-      <div className='w-[40%] flex justify-center items-center font-kreon font-medium'>
-        <ul className='flex w-full justify-between text-xl items-center'>
-          <li>
+      <div className='w-[40%] flex justify-center items-center font-noto uppercase font-medium'>
+        <ul className='flex w-full justify-between text-lg items-center'>
+          <li className='hover:font-semibold'>
             <Link href='/'>Home</Link>
           </li>
           <div className='relative group '>
-            <span className=' cursor-pointer'>
+            <span className=' cursor-pointer hover:font-semibold'>
               Shop
             
               <div className='hidden  group-hover:block absolute z-[1000] left-0 mt-2 bg-babypowder p-2  rounded shadow-lg '>
               <div className='group-hover:block absolute bg-babypowder w-4 h-4 rotate-45 top-[-8px] left-5 border-r-0 border-b-0 '></div>
                 {item.map((item) => (
-                  <div key={item.id} className='capitalize py-2 px-2'>
+                  <div key={item.id} className='capitalize py-2 px-2 font-medium'>
                     <Link href={`/product/${item.id}`}>
                       {item.id}
                     </Link>
@@ -74,20 +74,20 @@ const Navbar = () => {
               </div>
             </span>
           </div>
-          <li>
+          <li className='hover:font-semibold'>
             <Link href='/'>Sale</Link>
           </li>
 
-          <div className='relative'>
+          <div className='relative hover:scale-105'>
             <Link href='/shoppingcart'>
               <CiShoppingCart size={30} />
             </Link>
-            <div className='absolute bottom-4 left-6 bg-wenge rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
+            <div className='absolute bottom-4  shadow-md left-6 bg-wenge rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
               {totalItems}
             </div>
           </div>
 
-          <li>
+          <li  className='relative hover:scale-105'>
             <Link href='/wishlist'>
               <PiHeartLight size={30} />{' '}
             </Link>
@@ -100,8 +100,8 @@ const Navbar = () => {
              
             </div>
           ) : (
-            <button>
-              <Link href='/signin'>SignIn</Link>
+            <button className='uppercase w-32 bg-wenge p-1 rounded text-white shadow-md hover:text-xl'>
+              <Link href='/signin'>Sign In</Link>
             </button>
           )}
         </ul>
