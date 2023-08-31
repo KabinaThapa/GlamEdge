@@ -87,7 +87,7 @@ else{
      </div>
      <div className=' w-[60%] z-0 '>
      
-       <table className=" w-full text-left text-lg bg-silver z-[-1]">
+       <table className=" w-full text-left text-lg bg-timber z-[-1]">
                 <thead>
                   <tr className=" border-b-8  border-babypowder p-2 uppercase ">
                     
