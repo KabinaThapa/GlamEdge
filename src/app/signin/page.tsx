@@ -58,7 +58,7 @@ const Signin: React.FC = () => {
         <div className='w-full h-full col-span-2'>
         <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
         </div>
-        <div className="ml-[-100px] z-[100] w-full mt-6 mb-6 bg-babypowder p-4">
+        <div className="ml-[-150px] z-[100] w-full mt-8 mb-8 bg-khaki ">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -69,9 +69,9 @@ const Signin: React.FC = () => {
             <>
               <Form
                 onSubmit={handleSubmit}
-                className="  flex flex-col justify-center gap-6"
+                className="  flex flex-col justify-center gap-6 text-lg font-opensans p-6"
               >
-                <h1 className="text-3xl">SignIn</h1>
+                <h1 className="text-3xl text-center">SignIn</h1>
                 <Inputfield
                   type="text"
                   name="email"
@@ -88,7 +88,7 @@ const Signin: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="border-2 w-full  border-black p-1  rounded-md text-lg backdrop-blur-md hover:scale-95"
+                  className="w-full  p-2 bg-wenge rounded text-lg text-white hover:text-xl"
                 >
                   {" "}
                   LogIn
