@@ -25,12 +25,12 @@ export default function Page({ params }: { params: { category: string} }) {
     console.log(filterCategory)
     return (
     <>
-    <div className='w-full h-full flex flex-col items-center gap-10 p-[5%]'>
+    <div className='relative w-full h-full flex flex-col items-center gap-10 p-[5%] font-opensans'>
      
-      <div className='relative w-[90%]'>
+      <div className=' w-[90%] '>
        
     <h1 className='capitalize text-4xl text-center underline mb-4'>{params.category}</h1>
-   <p>{filterdesc[0].desc}</p>
+   <p className='text-lg'>{filterdesc[0].desc}</p>
     </div>
     <div className='w-[80%] h-auto grid grid-cols-3 gap-4 '>
       
@@ -52,13 +52,11 @@ export default function Page({ params }: { params: { category: string} }) {
     ))}
     
     </div>
-    <div className=' absolute w-[40%] h-[80%] top-20 left-5 z-[-1] rounded-full' 
-     style={{ backgroundImage: `url(${blob.src})`, backgroundSize: 'cover' }} >
-
+    <div className=' absolute w-[35%] h-auto top-8 left-2 z-[-1] ' >
+      <img src={blob.src} className='object-cover w-full h-full'/>
      </div>
-    <div className=' absolute w-[40%] h-[80%] bottom-[-90%] right-[-5%] z-[-1] rounded-full' 
-     style={{ backgroundImage: `url(${blob2.src})`, backgroundSize: 'cover' }} >
-      
+    <div className=' absolute w-[30%]  bottom-0 right-0 z-[-1]' >
+    <img src={blob2.src} className='object-cover w-full h-full'/>
      </div>
 
     </div>

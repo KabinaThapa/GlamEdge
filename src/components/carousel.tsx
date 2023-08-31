@@ -4,37 +4,35 @@ import React from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'
+import {HiChevronRight,HiChevronLeft} from 'react-icons/hi2'
 
+const NextArrow=({onClick})=>(
+  <button onClick ={onClick} className='w-10 h-10 bg-wenge hover:scale-110 rounded-full p-2  flex items-center absolute right-0 top-44'>
+  <HiChevronRight size={28} style={{color:'white'}}/>
+  </button>
+)
+const PrevArrow=({onClick})=>(
+  <button onClick ={onClick} className='w-10 h-10 bg-wenge hover:scale-110 rounded-full p-2  flex items-center absolute left-0 z-[100] top-44'>
+  <HiChevronLeft size={28} style={{color:'white'}}/>
+  </button>
+)
 
-
-const carousel = ({images}) => {
-  
-  const settings = {
-    dots: false,
-    infinite: true,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: true,
-    autoplaySpeed: 3000, 
-    slidesToShow: 2, 
-    slidesToScroll: 2, 
-    
-   
+const carousel = ({settings, children}) => {
+  const customSettings={
+    ...settings,
+    nextArrow:<NextArrow/>,
+    prevArrow: <PrevArrow/>,
   }
-  return (
-    <div className=" w-[32%] h-auto">
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className='relative w-full h-80'>
-            <img className='object-cover w-full h-full' src={image.img} alt={image.caption} />
-            <div className='absolute top-[50%] left-[16%] bg-Jet bg-opacity-50 p-2 flex flex-col items-center justify-center text-center text-white  font-poppins text-md font-medium'>
-            <p className="legend">{image.caption}</p>
+ 
 
-            </div>
-          </div>
-        ))}
+  
+  
+  return (
+    
+      <Slider {...customSettings}>
+       {children}
       </Slider>
-    </div>
+    
   )
 }
 

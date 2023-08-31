@@ -15,6 +15,7 @@
     "start-all-servers": "concurrently \"npm run server-products\" \"npm run server-category\" \"npm run server-subcategory\" \"npm run server-users\""
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.19.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@stripe/react-stripe-js": "^2.1.2",
     "@stripe/stripe-js": "^2.1.0",

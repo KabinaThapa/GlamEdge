@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className='relative group'>
             <span className='group-hover:scale-125 cursor-pointer'>
               Shop
-              <div className='hidden group-hover:block absolute left-0 mt-2 py-2 bg-white border rounded shadow-lg'>
+              <div className='hidden group-hover:block absolute z-[1000] left-0 mt-2 py-2 bg-white border rounded shadow-lg'>
                 {item.map((item) => (
                   <div key={item.id}>
                     <Link href={`/product/${item.id}`} className='block px-4 py-2'>
@@ -109,7 +109,7 @@ const Navbar = () => {
    
       {open ?
       (
-        <div className=' absolute right-0 top-20 rounded-md w-72 h-72 bg-Platinum flex flex-col justify-center items-center '>
+        <div className=' absolute  right-0 top-20 rounded-md w-72 h-72 bg-Platinum flex flex-col justify-center items-center '>
            <div  className='bg-Paledogwood rounded-full w-12 h-12 text-2xl text-center flex items-center justify-center mr-2'>
                 {useremail[0]}
               </div>

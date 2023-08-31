@@ -27,10 +27,10 @@ console.log(product)
             <p>{product.rating}</p>
             <p>{product.description}</p>
             <p> ${product.price}</p>
-            <div className='flex flex-col items-center text-lg overflow-hidden'>
-            <button className='w-full bg-khaki rounded mx-auto p-2 hover:text-xl  text-white'>Add to cart</button>
+            <div className='flex flex-col items-center text-lg overflow-hidden border-2'>
+            <button className='w-full bg-khaki rounded p-2 hover:text-xl  text-white'>Add to cart</button>
             <h1>Or</h1>
-            <button className='w-full bg-khaki rounded mx-auto p-2 hover:text-xl text-white'>Add to wishlist</button>
+            <button className='w-full bg-khaki rounded  p-2 hover:text-xl text-white'>Add to wishlist</button>
             </div>
             
 
