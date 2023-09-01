@@ -39,12 +39,14 @@ const Signin: React.FC = () => {
         password: values.password,
       });
 
-      toast.success("Successfully signed in");
+     
       console.log(response.data);
-      router.push("/");
+     
       localStorage.setItem("session-token", response.data.accessToken);
       localStorage.setItem("email", response.data.user.email);
-      
+      console.log(response.data.user.email);
+      toast.success("Successfully signed in");
+      router.push("/");
       console.log(response.data.user.email);
     } catch (error) {
       toast.error("Could not sign in");

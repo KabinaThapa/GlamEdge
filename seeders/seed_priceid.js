@@ -44,7 +44,7 @@ const seedProducttoStripe = async () =>{
       images: productData.image !== "" ?[productData.image]: [defaultImageIfnoImage]
     });
     const price = await stripe.prices.create({
-      unit_amount: Math.round(productData.price),
+      unit_amount: Math.round(productData.price*100),
       currency: "USD",
       product: product.id,
     });
