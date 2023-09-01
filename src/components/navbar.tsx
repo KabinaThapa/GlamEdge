@@ -12,7 +12,8 @@ const Navbar = () => {
   const [isloggedin, setIsloggedin] = useState(false);
   const [useremail, setUseremail] = useState('');
   const [open, setOpen]=useState(false)
-
+  const sessionToken = localStorage.getItem('session-token');
+  const email = localStorage.getItem('email');
   useEffect(() => {
     const sessionToken = localStorage.getItem('session-token');
     const email = localStorage.getItem('email');
@@ -24,7 +25,7 @@ const Navbar = () => {
       setIsloggedin(false)
       setUseremail('')
     }
-  }, [isloggedin, useremail]);
+  }, []);
  
 
   const handleLogout = () => {
