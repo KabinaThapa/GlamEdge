@@ -79,22 +79,28 @@ else{
         </>
       ):(
         <>
-         <div className='flex  justify-around  w-full  p-12 '>
-     <div className="w-[60%] p-2 ">
-       <table className=" w-full text-left text-lg bg-babypowder ">
+         <div className='  flex  justify-around  w-full    p-[2%] '>
+     <div className="  relative w-full  flex  justify-around bg-babypowder p-[3%]">
+     <div className=' absolute w-[20%] bottom-0 left-1 z-1 ' >
+                <img src={blob3.src} className='object-cover w-full h-full'/>
+    
+     </div>
+     <div className=' w-[60%] z-0 '>
+     
+       <table className=" w-full text-left text-lg bg-timber z-[-1]">
                 <thead>
-                  <tr className="  border-2 border-t-2 border-wenge p-2 font-roboto font-medium ">
+                  <tr className=" border-b-8  border-babypowder p-2 uppercase ">
                     
-                    <th className="px-4 py-4 text-center">Item</th>
-                    <th className="px-4 py-4 text-center">Quantity</th>
-                    <th className="px-4 py-4 text-center">Price</th>
-                    <th className="px-4 py-4 text-center">Total</th>
-                    <th className="px-4 py-4 text-center">Actions</th>
+                    <th className="px-4 py-4 text-center font-medium">Item</th>
+                    <th className="px-4 py-4 text-center font-medium">Quantity</th>
+                    <th className="px-4 py-4 text-center font-medium">Price</th>
+                    <th className="px-4 py-4 text-center font-medium">Total</th>
+                    <th className="px-4 py-4 text-center font-medium">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {items.map((item) => (
-                    <tr key={item.id} className=" border-2 border-wenge text-base">
+                    <tr key={item.id} className="border-b-8  border-babypowder text-base ">
                       <td className=" px-4 py-6">
                         <img
                           src={item.image}
@@ -102,7 +108,7 @@ else{
                           
                           alt={item.name}
                         />
-                        <p className='text-md' >{item.name}</p>
+                        <p className='text-md z-[-1]' >{item.name}</p>
                       </td>
                     
                       <td className=" px-4 py-6 mx-auto">
@@ -125,23 +131,30 @@ else{
                           <AiOutlineDelete size={25}/>
                         </button>
                       </td>
+                     
+              
                     </tr>
+                    
+                      
                   ))}
                 </tbody>
               </table>
               </div>
               
-              <div className=' text-2xl font-roboto w-[30%] h-96 p-4  flex flex-col gap-4'>
-              <div className=' absolute w-[45%] h-[100%] top-8 right-0 z-[-1]' 
-     style={{ backgroundImage: `url(${blob3.src})`, backgroundSize: 'cover' }} >
-
+              
+              <div className='relative text-2xl font-roboto w-[30%] h-96 p-4  flex flex-col gap-4 '>
+              <div className=' absolute w-[100%]  bottom-8 left-12 p-2  z-0 ' >
+                <img src={blob3.src} className='object-cover w-full h-full'/>
+    
      </div>
-        <p className='underline'>Your Shopping Cart</p> <p>Total Items: {cartQuantity}</p> 
-        <h1 className='text-2xl'>Sub Total: ${cartAmount}</h1>
+        <p className='underline  z-[1]'>Your Shopping Cart</p> 
+        <p className='z-[1]'>Total Items: {cartQuantity}</p> 
+        <h1 className='text-2xl z-[1]'>Sub Total: ${cartAmount}</h1>
        
-      <button onClick={handleCheckout} className=' p-4 text-lg rounded-md bg-wenge text-white hover:text-xl'>
-        Checkout</button>
+      <button onClick={handleCheckout} className=' p-4 text-lg rounded-md bg-wenge text-white hover:text-xl z-[1]'>
+        CheckOut</button>
         
+        </div>
         </div>
         </div>
         </>
