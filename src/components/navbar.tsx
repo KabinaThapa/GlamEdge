@@ -22,7 +22,7 @@ const Navbar = () => {
     }
     else{
       setIsloggedin(false)
-      
+      setUseremail('')
     }
   }, [isloggedin, useremail]);
  
@@ -92,9 +92,10 @@ const Navbar = () => {
               <PiHeartLight size={30} />{' '}
             </Link>
           </li>
+          <li>
           {isloggedin ? (
-            <div className=' flex items-center'>
-              <div onClick={handleOpen} className='bg-Antiflashwhite capitalize cursor-pointer rounded-full w-10 h-10 text-2xl text-center flex items-center justify-center mr-2'>
+            <div className=' '>
+              <div onClick={handleOpen} className='bg-wenge text-white capitalize cursor-pointer rounded-full w-8 h-8 text-xl text-center flex items-center justify-center mr-2'>
                 {useremail[0]}
               </div>
              
@@ -104,6 +105,7 @@ const Navbar = () => {
               <Link href='/signin'>Sign In</Link>
             </button>
           )}
+          </li>
         </ul>
         </div>
     </nav>
@@ -111,7 +113,7 @@ const Navbar = () => {
    
       {open ?
       (
-        <div className=' absolute  right-0 top-20 rounded-md w-72 h-72 bg-Platinum flex flex-col justify-center items-center '>
+        <div className=' absolute z-[100] right-0 top-20 rounded-md w-72 h-72 bg-babypowder flex flex-col justify-center items-center '>
            <div  className='bg-Paledogwood rounded-full w-12 h-12 text-2xl text-center flex items-center justify-center mr-2'>
                 {useremail[0]}
               </div>
