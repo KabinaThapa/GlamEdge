@@ -25,7 +25,7 @@ const Navbar = () => {
       setIsloggedin(false)
       setUseremail('')
     }
-  }, []);
+  }, [isloggedin]);
  
 
   const handleLogout = () => {
@@ -114,17 +114,22 @@ const Navbar = () => {
    
       {open ?
       (
-        <div className=' absolute z-[100] right-0 top-20 rounded-md w-72 h-72 bg-babypowder flex flex-col justify-center items-center '>
-           <div  className='bg-Paledogwood rounded-full w-12 h-12 text-2xl text-center flex items-center justify-center mr-2'>
+        <div className=' absolute z-[1000] right-0 top-20 rounded-md w-72 h-72  bg-babypowder flex flex-col items-center'>
+          <div className='w-full  h-32 bg-timber flex '>
+          
+              </div>
+              <div  className='bg-wenge capitalize rounded-full w-12 h-12 mt-[-28px]  mx-auto text-2xl text-center text-white flex items-center justify-center '>
                 {useremail[0]}
               </div>
-           {useremail}
+              
+           <h2 className='font-semibold'>{useremail}</h2>
               <button
-                className='bg-Antiflashwhite p-2 rounded-md ml-2'
+                className='bg-wenge p-2 rounded w-32 mt-auto mb-2 text-white'
                 onClick={handleLogout}
               >
-                Logout
+                LogOut
               </button>
+              
         </div>
       ):null
       }
