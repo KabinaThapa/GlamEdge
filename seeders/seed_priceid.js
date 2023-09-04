@@ -4,7 +4,7 @@ const axios = require('axios');
  * 
  * Note : Dont provide any process.env data it might not work ( feel free to check it out ,it might :p )
  */
-const stripe = require('stripe')('sk_test_51Nhb3pC9LEQj4rjsxYp52k2vaqCFRUAS4sGD4fcsQZROCxpW1s0R1AHi1YpNNytZfvU6RNXwMfL4D3CZttipgMGY00OCUoKxX6');
+const stripe = require('stripe')('sk_test_51NmkfqIlpKLHGbbziCSri6tPjAdID1Ps9rjRnQaU2nN6RhszbIF4iI6ECFx1iyzJvp69EPVtl8laXVpwO0HfD3JS00G5sdxzNm');
 
 /**
  * The API to get all the datas(products) from the database should be mentioned here
@@ -48,7 +48,7 @@ const seedProducttoStripe = async () =>{
       currency: "USD",
       product: product.id,
     });
-    await axios.put(getProductPutUrl(productData.id),{ ...productData, priceId:price.id})
+    await axios.put(getProductPutUrl(productData.id),{ ...productData, priceId:price.id, price:price.unit_amount/100})
     console.log(`Product "${productData.name}" created with price id ${price.id}`);
   }
   }
