@@ -18,6 +18,8 @@ import { useRouter } from "next/navigation";
 import Carousel from "@/components/carousel";
 import { images } from "@/static-data/images";
 import Skeleton from 'react-loading-skeleton'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 export default function Home() {
  
   const { item, status, error, isloading } = useSelector(
@@ -49,13 +51,16 @@ export default function Home() {
 
   const handleAddtocart = (product: Items) => {
     dispatch(addtocart(product));
+    toast.success(`${product.name} added to cart!`)
   };
 
   const handleSavetowishlist = (product: Items) => {
     if (items.find((item) => item.id === product.id)) {
       dispatch(removefromwishlist(product.id));
+      toast.success(`${product.name} removed from wishlist!`)
     } else {
       dispatch(addtowishlist(product));
+      toast.success(`${product.name} saved to wishlist!`)
     }
   };
 
@@ -263,6 +268,7 @@ export default function Home() {
             
           </div>
         </section>
+        
       </div>
     </>
   );

@@ -9,7 +9,8 @@ import Card from '@/components/card'
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton'
 
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 
 
 
@@ -47,15 +48,18 @@ export default function Page({ params }: { params: { category: string, subcatego
     
     const handleAddtocart=(product:Item)=>{
       dispatch(addtocart(product))
+      toast.success(`${product.name} added to cart!`)
 
     }
     //addtowishlist functionality
     const handleSave=(product:Items)=>{
       if(items.find((item)=>item.id===product.id)){
         dispatch(removefromwishlist(product.id))
+        toast.success(`${product.name} removed from wishlist!`)
       }
       else{
         dispatch(addtowishlist(product))
+        toast.success(`${product.name} added to wishlist!`)
       }
     }
     const handleSortByPrice = () => {
