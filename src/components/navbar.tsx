@@ -4,42 +4,30 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
 import { PiHeartLight } from 'react-icons/pi';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Searchbar from './searchbar';
-import { subcategory } from './../redux/features/subcategoryslice';
+import {logout} from '@/redux/features/userauthslice'
+
 
 const Navbar = () => {
-  const [isloggedin, setIsloggedin] = useState(false);
-  const [useremail, setUseremail] = useState('');
+ 
   const [open, setOpen]=useState(false)
-  const sessionToken = localStorage.getItem('session-token');
-  const email = localStorage.getItem('email');
-  useEffect(() => {
-    const sessionToken = localStorage.getItem('session-token');
-    const email = localStorage.getItem('email');
-    if (sessionToken && email) {
-      setIsloggedin(true);
-      setUseremail(email);
-    }
-    else{
-      setIsloggedin(false)
-      setUseremail('')
-    }
-  }, [isloggedin]);
+  const dispatch=useDispatch()
+  const {isAuthenticated, userEmail}=useSelector((state:RootState)=>state.auth)
+ 
  
 
   const handleLogout = () => {
     localStorage.removeItem('session-token');
     localStorage.removeItem('email');
-    setUseremail('');
-    setIsloggedin(false);
+    dispatch(logout())
     setOpen(false)
   };
   const handleOpen=()=>{
     setOpen(!open)
   }
 
-  const { item, status, error } = useSelector((state: RootState) => state.category);
+  const { item } = useSelector((state: RootState) => state.category);
   const totalItems = useSelector((state: RootState) => state.cart.cartQuantity);
 
   return (
@@ -94,10 +82,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-          {isloggedin ? (
+          {isAuthenticated ? (
             <div className=' '>
               <div onClick={handleOpen} className='bg-wenge text-white capitalize cursor-pointer rounded-full w-8 h-8 text-xl text-center flex items-center justify-center mr-2'>
-                {useremail[0]}
+                {userEmail[0]}
               </div>
              
             </div>
@@ -119,10 +107,10 @@ const Navbar = () => {
           
               </div>
               <div  className='bg-wenge capitalize rounded-full w-12 h-12 mt-[-28px]  mx-auto text-2xl text-center text-white flex items-center justify-center '>
-                {useremail[0]}
+                {userEmail[0]}
               </div>
               
-           <h2 className='font-semibold'>{useremail}</h2>
+           <h2 className='font-semibold'>{userEmail}</h2>
               <button
                 className='bg-wenge p-2 rounded w-32 mt-auto mb-2 text-white'
                 onClick={handleLogout}

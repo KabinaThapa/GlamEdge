@@ -13,6 +13,8 @@ import { BsLock } from "react-icons/bs";
 import { PiGoogleLogo } from "react-icons/pi";
 import { CiFacebook, CiTwitter } from "react-icons/ci";
 import { useRouter } from "next/navigation";
+import {login} from '@/redux/features/userauthslice'
+import {useSelector, useDispatch} from 'react-redux'
 
 interface FormValues {
   email: string;
@@ -31,6 +33,7 @@ const Signin: React.FC = () => {
   });
 
   const router = useRouter();
+  const dispatch=useDispatch()
 
   const handleSubmit = async (values: FormValues) => {
     try {
@@ -46,6 +49,7 @@ const Signin: React.FC = () => {
       localStorage.setItem("email", response.data.user.email);
       console.log(response.data.user.email);
       toast.success("Successfully signed in");
+      dispatch(login(response.data.user.email))
       router.push("/");
       console.log(response.data.user.email);
     } catch (error) {

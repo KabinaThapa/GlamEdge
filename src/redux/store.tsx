@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import authReducer from './features/userauthslice'
 import productReducer, { fetchProduct } from "./features/productslice";
 import categoryReducer, { fetchCategory } from "./features/categoryslice";
 import subcategoryReducer, { fetchSubCategory } from "./features/subcategoryslice";
@@ -26,6 +27,7 @@ export const rootReducer = combineReducers({
     product: productReducer,
     category: categoryReducer,
     subcategory:subcategoryReducer,
+    auth:authReducer,
 })
 const persistedReducer=persistReducer(persistConfig, rootReducer)
 export const store=configureStore({
