@@ -7,14 +7,14 @@ import { fetchCategory } from "@/redux/features/categoryslice";
 import { AppDispatch, RootState } from "@/redux/store";
 import Link from "next/link";
 import styles from "@/style.module.css";
-import Card from "@/components/card";
+import Card from "@/components/card/card";
 import {addtocart } from "@/redux/features/cartslice";
 import {
   addtowishlist,
   removefromwishlist,
 } from "@/redux/features/wishlistslice";
 import { useRouter } from "next/navigation";
-import Carousel from "@/components/carousel";
+import Carousel from "@/components/carousel/carousel";
 import { images } from "@/static-data/images";
 import Skeleton from 'react-loading-skeleton'
 import { toast } from "react-toastify";

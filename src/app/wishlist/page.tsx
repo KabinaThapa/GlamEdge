@@ -2,7 +2,7 @@
 import { RootState } from '@/redux/store'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import Card  from '@/components/card';
+import Card  from '@/components/card/card';
 import { useDispatch } from 'react-redux';
 import { addtocart } from '@/redux/features/cartslice';
 import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';

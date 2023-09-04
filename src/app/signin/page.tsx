@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import Inputfield from "@/components/inputfield";
+import Inputfield from "@/components/inputfield/inputfield";
 
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";

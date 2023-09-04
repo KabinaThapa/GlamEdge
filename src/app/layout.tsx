@@ -1,8 +1,8 @@
 import './globals.css'
 import { ReduxProvider } from '@/redux/provider'
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/navbar/navbar';
 
-import Footer from '@/components/footer';
+import Footer from '@/components/footer/footer';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 export default function RootLayout({

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Items } from '@/redux/types/items';
 import { RootState } from '@/redux/store';
-import Stars from '@/components/stars'
-import Card from '@/components/card'
+import Stars from '@/components/stars/stars'
+import Card from '@/components/card/card'
 import {  addtocart } from '@/redux/features/cartslice';
 import {  addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import { subcategory } from './../../../../../redux/features/subcategoryslice';

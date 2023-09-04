@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
 import { PiHeartLight } from 'react-icons/pi';
 import { useSelector, useDispatch } from 'react-redux';
-import Searchbar from './searchbar';
+import Searchbar from '../searchbar/searchbar';
 import {logout} from '@/redux/features/userauthslice'
 
 

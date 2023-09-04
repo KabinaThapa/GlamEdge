@@ -3,9 +3,9 @@ import { CiShoppingCart } from 'react-icons/ci';
 import { PiHeartFill, PiHeartLight } from 'react-icons/pi';
 import {TfiGallery} from 'react-icons/tfi'
 import Link from 'next/link'
+import {cardprops} from './types/cardprops'
 
-
-const ProductCard = ({ img, width, title, children, price, loading, addtocart, savetowishlist, size, heartfill, href }) => {
+const ProductCard: React.FC<cardprops>=({ img, width, title, children, price, loading, addtocart, savetowishlist, size, heartfill, href }) => {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
  
 

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {  fetchProduct, Product } from '@/redux/features/productslice';
 import { addtocart } from '@/redux/features/cartslice';
 import { addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
-import Card from '@/components/card'
+import Card from '@/components/card/card'
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton'
 import { Items } from '@/redux/types/items';
