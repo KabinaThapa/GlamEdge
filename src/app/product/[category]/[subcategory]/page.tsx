@@ -3,11 +3,12 @@ import React, {useEffect,useState} from 'react'
 import { RootState, AppDispatch } from '@/redux/store';
 import { useSelector, useDispatch } from 'react-redux';
 import {  fetchProduct, Product } from '@/redux/features/productslice';
-import { Item, addtocart } from '@/redux/features/cartslice';
-import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
+import { addtocart } from '@/redux/features/cartslice';
+import { addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import Card from '@/components/card'
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton'
+import { Items } from '@/redux/types/items';
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
@@ -46,7 +47,7 @@ export default function Page({ params }: { params: { category: string, subcatego
 
     //addtocart functionality
     
-    const handleAddtocart=(product:Item)=>{
+    const handleAddtocart=(product:Items)=>{
       dispatch(addtocart(product))
       toast.success(`${product.name} added to cart!`)
 

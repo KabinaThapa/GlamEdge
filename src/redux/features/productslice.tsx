@@ -1,33 +1,19 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import {PayloadAction} from '@reduxjs/toolkit'
+import { Items } from '../types/items'
 
 
-export interface Product{
-    id:number,
-    subcategory:string,
-    name:string,
-    category:string,
-    price:number,
-    image:string,
-    quantity:number,
-    description?:string,
-    rating?:number,
-   isfeatured?:boolean,
-   onsale?:boolean,
-   toptrending?:boolean,
-   priceId:string
-    
-}
+
 
 export const fetchProduct=createAsyncThunk("products/fetchproduct",
 async()=>{
     const response=await fetch('http://localhost:4001/products')
     const data=await response.json()
-    return data as Product[]
+    return data as Items[]
 }
 ) 
 export interface Productstate{
-    item: Product[],
+    item: Items[],
     status:'idle'|'loading'|'succeeded'|'failed',
     error:string|null
 
@@ -48,7 +34,7 @@ const initialState:Productstate={
             state.status='loading'
             
         })
-        .addCase(fetchProduct.fulfilled, (state, action:PayloadAction<Product[]>)=>{
+        .addCase(fetchProduct.fulfilled, (state, action:PayloadAction<Items[]>)=>{
             state.status='succeeded',
             state.item=action.payload
 

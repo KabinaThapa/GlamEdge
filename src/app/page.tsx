@@ -8,11 +8,10 @@ import { AppDispatch, RootState } from "@/redux/store";
 import Link from "next/link";
 import styles from "@/style.module.css";
 import Card from "@/components/card";
-import { Item, addtocart } from "@/redux/features/cartslice";
+import {addtocart } from "@/redux/features/cartslice";
 import {
   addtowishlist,
   removefromwishlist,
-  Items,
 } from "@/redux/features/wishlistslice";
 import { useRouter } from "next/navigation";
 import Carousel from "@/components/carousel";
@@ -20,6 +19,7 @@ import { images } from "@/static-data/images";
 import Skeleton from 'react-loading-skeleton'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import { Items } from "@/redux/types/items";
 export default function Home() {
  
   const { item, status, error, isloading } = useSelector(

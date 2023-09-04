@@ -1,0 +1,15 @@
+export interface Items{
+    id:number,
+    name:string,
+    price:number,
+    quantity:number,
+    image:string,
+    category:string,
+    subcategory:string,
+    priceId:string,
+    description?:string,
+    rating?:number,
+   isfeatured?:boolean,
+   onsale?:boolean,
+   toptrending?:boolean,
+}

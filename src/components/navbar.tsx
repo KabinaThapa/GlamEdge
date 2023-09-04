@@ -71,7 +71,7 @@ const Navbar = () => {
             <Link href='/shoppingcart'>
               <CiShoppingCart size={30} />
             </Link>
-            <div className='absolute bottom-4  shadow-md left-6 bg-wenge rounded-full w-6 h-6 text-white p-2 flex items-center justify-center'>
+            <div className='absolute bottom-4  shadow-md left-6 bg-wenge rounded-full w-6 h-6 text-white p-4 flex items-center justify-center'>
               {totalItems}
             </div>
           </div>

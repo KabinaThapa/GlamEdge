@@ -1,15 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
+import {Items} from '../types/items'
 
-export interface Items{
-    id:number,
-    name:string,
-    price:number,
-    quantity:number,
-    image:string,
-    category?:string,
-    subcategory?:string
-}
 export interface State{
     item:Items[],
 

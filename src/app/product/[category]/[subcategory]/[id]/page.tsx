@@ -1,12 +1,12 @@
 'use client'
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { Items } from '@/redux/types/items';
 import { RootState } from '@/redux/store';
 import Stars from '@/components/stars'
 import Card from '@/components/card'
-import { Item, addtocart } from '@/redux/features/cartslice';
-import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
+import {  addtocart } from '@/redux/features/cartslice';
+import {  addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import { subcategory } from './../../../../../redux/features/subcategoryslice';
 
 const ProductDetail = ({params}:{ params:{id: string, category:string, subcategory:string}}) => {
@@ -31,7 +31,7 @@ console.log(product)
     }
      //addtocart functionality
     
-     const handleAddtocart=(product:Item)=>{
+     const handleAddtocart=(product:Items)=>{
         dispatch(addtocart(product))
   
       }

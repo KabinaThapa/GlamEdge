@@ -1,19 +1,10 @@
 import React from 'react'
 import {createSlice} from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { Items } from '../types/items'
 
-export interface Item{
-    id:number,
-    subcategory?:string,
-    name:string,
-    category?:string,
-    price:number,
-    image:string,
-    quantity:number,
-    priceId:string,
-}
  export interface State{
-data:Item[],
+data:Items[],
 cartQuantity:number,
 cartAmount:number
 }
@@ -26,7 +17,7 @@ export const cartSlice =createSlice ({
     name:'cart',
     initialState,
     reducers:{
-        addtocart:(state, action:PayloadAction<Item>)=>{
+        addtocart:(state, action:PayloadAction<Items>)=>{
             const existingitem=state.data.find((item)=>item.id===action.payload.id)
             //console.log(existingitem)
             if(existingitem){
