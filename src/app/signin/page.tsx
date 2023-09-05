@@ -50,7 +50,7 @@ const Signin: React.FC = () => {
       console.log(response.data.user.email);
       toast.success("Successfully signed in");
       dispatch(login(response.data.user.email))
-      router.push("/");
+      router.push("/shoppingcart");
       console.log(response.data.user.email);
     } catch (error) {
       toast.error("Could not sign in");

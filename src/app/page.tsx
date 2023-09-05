@@ -20,6 +20,7 @@ import Skeleton from 'react-loading-skeleton'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { Items } from "@/redux/types/items";
+import Image from "next/image";
 export default function Home() {
  
   const { item, status, error, isloading } = useSelector(
@@ -90,8 +91,8 @@ export default function Home() {
             <img
               className="object-cover object-center w-full"
               src={
-                "https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192"
-              }
+                "https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192"}
+              alt='picture'
             />
             <div className="absolute overflow-hidden top-[50%] left-[10%] gap-8 font-noto font-bold  text-center  text-2xl text-raisinblack p-2 bg-babypowder w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center">
               <p>
