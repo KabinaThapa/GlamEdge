@@ -173,7 +173,7 @@ export default function Home() {
           <div className=" w-[60%] bg-babypowder p-[3%] ">
             <Carousel  settings={Cardsetting}>
               {featuredproducts.map((product, index) => (
-                <div key={product.id} className=" h-auto pl-2 pr-2 ">
+                <div key={product.id} className=" aspect-w-full aspect-h-auto pl-2 pr-2 gap-2 ">
                   <Card
                     img={product.image}
                     title={product.name}
@@ -252,7 +252,7 @@ export default function Home() {
           <div className=" w-[60%] capitalize bg-babypowder p-[3%]">
             <Carousel  settings={Cardsetting}>
               {toptrending.map((product, index) => (
-                <div key={product.id} className="pl-2 pr-2 ">
+                <div key={product.id} className="pl-2 pr-2 h-auto">
                   <Card
                     img={product.image}
                     title={product.name}

@@ -2,23 +2,26 @@
 import React, {useEffect,useState} from 'react'
 import { RootState, AppDispatch } from '@/redux/store';
 import { useSelector, useDispatch } from 'react-redux';
-import {  fetchProduct, Product } from '@/redux/features/productslice';
+import {  fetchProduct} from '@/redux/features/productslice';
 import { addtocart } from '@/redux/features/cartslice';
 import { addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import Card from '@/components/card/card'
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton'
 import { Items } from '@/redux/types/items';
-
+import {HiOutlineChevronDown} from 'react-icons/hi'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import {BsFillGridFill,BsFillGrid3X2GapFill,BsFillGrid3X3GapFill} from 'react-icons/bs'
 
 
 
 export default function Page({ params }: { params: { category: string, subcategory: string } }) {
     const dispatch=useDispatch<AppDispatch>()
-    const [sortedProducts, setSortedProducts] = useState<Product[]>([]);
+    const [sortedProducts, setSortedProducts] = useState<Items[]>([]);
     const [sortByPrice, setSortByPrice] = useState<boolean>(false)
+    const [dropmenu, setDropmenu]=useState<boolean>(false)
+    const[columns, setColumns]=useState<number>(4)
     useEffect(()=>{
       dispatch(fetchProduct())
     },[])
@@ -66,22 +69,38 @@ export default function Page({ params }: { params: { category: string, subcatego
     const handleSortByPrice = () => {
       setSortByPrice(!sortByPrice);
     }
+    const handleDropmenu=()=>{
+      setDropmenu(!dropmenu)
+    }
+    const handleColumns=(num:number)=>{
+      setColumns(num)
+      
+    }
     return(
      <>
-     <div className='flex flex-col items-center justify-center w-full p-[5%] gap-10 '>
-      <div className='w-[90%] text-2xl flex justify-between'>
-      <h1 className='text-4xl underline'>{params.subcategory}s</h1>
-      <select id='filter' onChange={handleSortByPrice} value='Filter'>
-          <option value=''>Filter</option>
-          <option value='price'>Price</option>
-        </select>
+     <div className='flex flex-col items-center justify-center w-full p-[5%] gap-10'>
+      <div className='relative w-[90%] text-xl flex justify-between'>
+      <h1 className='text-3xl underline'>{params.subcategory}</h1>
+      <div className='w-44 flex justify-around'>
+      <button onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
+      <button onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
+      <button onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
+     
+      <button onClick={handleDropmenu} className=' flex items-center justify-center cursor-pointer'>Filter <HiOutlineChevronDown size={20}/></button>
+      {dropmenu ?(
+        <div className=' absolute z-[1] w-20 p-1 h-20 rounded bg-babypowder right-0 top-9 text-center'>
+          <p onClick={handleSortByPrice} className='hover:font-semibold cursor-pointer'>Price</p>
+        </div>
+      )
+      :
+      (null)}
       </div>
    
- 
-    <div className=' grid grid-cols-4 gap-4  w-[90%]' > 
+      </div>
+    <div className={`grid grid-cols-${columns} gap-2 gap-y-4 w-[90%] p-2 `}  > 
 
     {sortedProducts.map((product)=>(
-        <div className=''>
+        <div className={`mx-auto ${columns===2 ?`w-[20rem]`:`w-[15rem]`}`}>
           {sortedProducts.length===0 ? (<Skeleton width={300} height={400}/>):(
        
         <Card
