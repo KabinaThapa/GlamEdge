@@ -81,7 +81,7 @@ export default function Page({ params }: { params: { category: string, subcatego
      <div className='flex flex-col items-center justify-center w-full p-[5%] gap-10'>
       <div className='relative w-[90%] text-xl flex justify-between'>
       <h1 className='text-3xl underline'>{params.subcategory}</h1>
-      <div className='w-44 flex justify-around'>
+      <div className='w-44 flex justify-around items-center'>
       <button onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
       <button onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
       <button onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
