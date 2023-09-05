@@ -50,12 +50,12 @@ const handleItemClick=(product:Product)=>{
   }, [])
  
   return (
-    <div className=' flex justify-center items-center'>
-      <input type='text' placeholder='Search....' className='outline-none  text-black border-b-2 border-raisinblack'
+    <div className=' flex justify-center items-center w-full'>
+      <input type='text' placeholder='Search....' className='outline-none  text-black border-b-2 border-wenge'
        onChange={inputHandler} value={input}/>
      <button className='hover:scale-110' onClick={handleSearch}> <CiSearch size={28}/></button>
      {filterdata.length > 0 &&
-      <div ref={filterRef} className='absolute top-[100%] z-[1000] w-96 p-2 backdrop-blur-md  text-black' >
+      <div ref={filterRef} className='absolute  grid grid-cols-4  top-12 left-[-20rem] z-[1000] w-[76rem] p-2  bg-babypowder backdrop-blur-md  text-black font-custom' >
         {filterdata.map((product)=>(
           
           <div key={product.id} onClick={()=>handleItemClick(product)} className='cursor-pointer w-full' >

@@ -48,12 +48,12 @@ console.log(product)
     return (
         <>
         <div className='w-full h-auto  p-[5%] font-opensans flex flex-col gap-8 items-center'>
-            <div className='flex justify-around items-center'>
-            <div className='w-[40%] h-[40rem] overflow-hidden '>
+            <div className='flex justify-center gap-8 items-center'>
+            <div className='w-[30%] overflow-hidden'>
             
-            <img className='object-cover w-full h-full transition transform-transition hover:scale-150 duration-50' src={product.image} alt={product.name} />
+            <img className='object-cover w-full h-full  transition transform-transition hover:scale-150 duration-50' src={product.image} alt={product.name} />
             </div>
-            <div className='w-[50%]  h-auto p-4 grid gap-4 border-l-2 border-khaki '>
+            <div className='w-[60%]  h-auto p-4 grid gap-4 border-l-2 border-khaki '>
             <h2 className='text-2xl font-semibold'>{product.name}</h2>
            
              <div className='flex items-center'>
@@ -68,8 +68,8 @@ console.log(product)
                 {['XXL', 'XL', 'L', 'M', 'S', 'XS'].map((size) => (
                     <li
                         key={size}
-                        className={`border-2 rounded p-2 cursor-pointer ${
-                            selectedsize === size ? 'bg-khaki text-white border-0' : 'border-khaki'
+                        className={` rounded p-2 cursor-pointer ${
+                            selectedsize === size ? 'bg-khaki text-white' : 'border-khaki border'
                         }`}
                         onClick={() => handleSizeClick(size)}
                     >

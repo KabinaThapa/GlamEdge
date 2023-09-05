@@ -5,8 +5,9 @@ import React, { useEffect, useState } from 'react';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
 import { PiHeartLight } from 'react-icons/pi';
 import { useSelector, useDispatch } from 'react-redux';
-import Searchbar from '../searchbar/searchbar';
+
 import {logout} from '@/redux/features/userauthslice'
+import Searchbar from './../searchbar/searchbar';
 
 
 const Navbar = () => {
@@ -71,7 +72,7 @@ const Navbar = () => {
             <Link href='/shoppingcart'>
               <CiShoppingCart size={30} />
             </Link>
-            <div className='absolute bottom-4  shadow-md left-6 bg-wenge rounded-full w-6 h-6 text-white p-4 flex items-center justify-center'>
+            <div className='absolute bottom-4  shadow-md left-6 bg-wenge rounded-full w-7 h-7 text-white p-3  flex items-center justify-center'>
               {totalItems}
             </div>
           </div>

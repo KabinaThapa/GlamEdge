@@ -1,6 +1,6 @@
 'use client'
 import { RootState } from '@/redux/store'
-import React from 'react'
+import React, {useState} from 'react'
 import { useSelector } from 'react-redux'
 import Card  from '@/components/card/card';
 import { useDispatch } from 'react-redux';
@@ -8,8 +8,10 @@ import { addtocart } from '@/redux/features/cartslice';
 import { Items, addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
 import Link from 'next/link'
 import blob3 from '../../../public/blob3.svg'
+import {BsFillGridFill,BsFillGrid3X2GapFill,BsFillGrid3X3GapFill} from 'react-icons/bs'
 
 const page = () => {
+  const[columns, setColumns]=useState<number>(4)
   const items=useSelector((state:RootState)=>state.wishlist.item)
   const dispatch=useDispatch()
   console.log(items)
@@ -20,6 +22,10 @@ const page = () => {
   const handleSavetowishlist=(id:number)=>{
    
       dispatch(removefromwishlist(id))
+    
+  }
+  const handleColumns=(num:number)=>{
+    setColumns(num)
     
   }
   return (
@@ -41,9 +47,16 @@ const page = () => {
     ):
     (
       <>
-      <div className='w-full p-[5%] grid gap-8'>
-        <div className='w-[90%] mx-auto underline text-2xl'><h1>Your Saved Items</h1></div>
-        
+      <div className='w-full p-[5%] flex flex-col items-center justify-center gap-8'>
+        <div className='w-[90%] mx-auto underline text-2xl flex justify-between'><h1>Your Saved Items</h1>
+      
+      <div className='w-44 flex justify-around items-center'>
+      <button onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
+      <button onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
+      <button onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
+     
+        </div>
+        </div>
     <div className='w-[90%] h-auto grid grid-cols-4  gap-4 mx-auto'>
         {items.map((item)=>(
           <div key={item.id}>
