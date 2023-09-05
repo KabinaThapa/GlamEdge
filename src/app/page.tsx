@@ -112,8 +112,8 @@ export default function Home() {
                     src={image.img}
                     alt={image.caption}
                   />
-                  <div className="absolute top-[50%] left-[16%] bg-Jet bg-opacity-50 p-2 flex flex-col items-center justify-center text-center text-white  font-poppins text-md font-medium">
-                    <p className="legend">{image.caption}</p>
+                  <div className="absolute w-[80%] top-[50%] right-0  bg-Jet bg-opacity-50 p-2 flex flex-col justify-center  text-white  font-poppins text-lg font-medium">
+                    <p className="">{image.caption}</p>
                   </div>
                 </div>
               ))}

@@ -32,10 +32,10 @@ export default function Page({ params }: { params: { category: string} }) {
     <h1 className='capitalize text-4xl text-center underline mb-4'>{params.category}</h1>
    <p className='text-lg'>{filterdesc[0].desc}</p>
     </div>
-    <div className='w-[80%] h-auto grid grid-cols-3 gap-4 '>
+    <div className='w-[80%] h-[32rem] grid grid-cols-3 gap-4 '>
       
     {filterCategory.map((products, index)=>(
-        <div key={products.id} className={`w-84 ${index === 2||index===0? 'row-span-2' : ''} relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg  mx-auto`}>
+        <div key={products.id} className={`w-full h-full  ${index === 2||index===0? 'row-span-2' : ''} relative group  capitalize text-2xl overflow-hidden shadow-lg  mx-auto`}>
         <Link href={`/product/${params.category}/${products.subcategory}`}>
         
          <img className=' object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 ' src={products.image} loading='lazy' alt='image'/>

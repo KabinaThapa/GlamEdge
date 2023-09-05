@@ -103,7 +103,7 @@ const Navbar = () => {
    
       {open ?
       (
-        <div className=' absolute z-[1000] right-0 top-20 rounded-md w-72 h-72  bg-babypowder flex flex-col items-center'>
+        <div className=' absolute z-[1000]  top-20 right-2 rounded-md w-72 h-72  bg-babypowder flex flex-col items-center'>
           <div className='w-full  h-32 bg-timber flex '>
           
               </div>
