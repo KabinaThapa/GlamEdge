@@ -2,7 +2,7 @@
 import "./globals.css";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Product, fetchProduct } from "@/redux/features/productslice";
+import { fetchProduct } from "@/redux/features/productslice";
 import { fetchCategory } from "@/redux/features/categoryslice";
 import { AppDispatch, RootState } from "@/redux/store";
 import Link from "next/link";
@@ -93,12 +93,12 @@ export default function Home() {
                 "https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192"
               }
             />
-            <div className="absolute overflow-hidden top-[50%] left-[10%] gap-8 font-roboto font-semibold  text-center  text-2xl text-raisinblack p-2 bg-white w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center">
+            <div className="absolute overflow-hidden top-[50%] left-[10%] gap-8 font-noto font-bold  text-center  text-2xl text-raisinblack p-2 bg-babypowder w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center">
               <p>
                 Embrace Your Inner Glamour: Unleash the Swag with Luxurious
                 Furry Fashion!
               </p>
-              <button className="bg-white p-2 w-72 rounded text-lg hover:text-xl">
+              <button className="bg-wenge p-2 w-72 rounded text-lg text-white hover:text-xl">
                 Shop Collection
               </button>
             </div>
@@ -151,10 +151,10 @@ export default function Home() {
         </section>
 
         <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
-          <article className="w-[50%] p-4 flex flex-col gap-8 border-r-2 border-khaki">
-            <h1 className="text-3xl "> Our Featured Products</h1>
+          <article className="w-[50%] p-6 flex flex-col gap-8 border-r-2 border-khaki">
+            <h1 className="text-3xl text-right "> Our Featured Products</h1>
 
-            <p className=" text-lg ">
+            <p className=" text-lg text-right ">
               <h2 className="text-xl   underline">
                 Discover Our Featured Products
               </h2>
@@ -166,7 +166,7 @@ export default function Home() {
               featured collection has something for everyone. Shop now and
               elevate your style with our curated favorites.
             </p>
-            <button className=" text-white p-2 w-72 rounded text-lg hover:text-xl ms-end bg-wenge ">
+            <button className=" text-white p-2 w-72 rounded text-lg hover:text-xl ms-end bg-wenge ms-auto ">
               Shop Now
             </button>
           </article>
@@ -231,10 +231,10 @@ export default function Home() {
         </section>
 
         <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
-          <article className="w-[50%] p-4 flex flex-col gap-8 border-khaki border-r-2">
-            <h1 className="text-3xl">Top Trending</h1>
+          <article className="w-[50%] p-6 flex flex-col gap-8 border-khaki border-r-2 text-right">
+            <h1 className="text-3xl text-right">Top Trending</h1>
 
-            <p className="text-lg ">
+            <p className="text-lg text-right ">
               <h2 className="text-xl  underline ">
                 Discover Our Top Trending Products
               </h2>
@@ -245,7 +245,7 @@ export default function Home() {
               and elevate your look. Shop now and join the trendsetters with
               these coveted pieces
             </p>
-            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl ">
+            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl ms-auto ">
               Check our collections
             </button>
           </article>
