@@ -7,7 +7,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { Metadata } from "next";
 export const metadata:Metadata={
-  title:'Fashion Forward: Your Destination for Trendy Clothing and Accessories | GlamEdge',
+  title:{
+    default:'Fashion Forward: Your Destination for Trendy Clothing and Accessories | GlamEdge',
+    template:'%s'
+  },
   description:'Explore the latest fashion trends and shop a wide range of stylish clothing and accessories at GlamEdge. Find your perfect style today. Shop now!'
 } 
 export default function RootLayout({
