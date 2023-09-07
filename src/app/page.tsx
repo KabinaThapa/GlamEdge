@@ -21,7 +21,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { Items } from "@/redux/types/items";
 import Image from "next/image";
-import Head from "next/head";
 
 export default function Home() {
   
@@ -88,14 +87,6 @@ export default function Home() {
  
   return (
     <>
-    <Head>
-        <title>GlamEdge E-commerce website</title>
-        <meta
-          name="description"
-          content="Welcome to GlamEdge! Your ultimate destination for glamorous fashion."
-        />
-        {/* Add other meta tags as needed */}
-      </Head>
       <div className=" flex flex-col  w-full items-center justify-center">
         <section className="w-full h-auto  flex  justify-center items-center gap-6 p-4">
           <div className=" relative w-[80%] h-auto  flex">
