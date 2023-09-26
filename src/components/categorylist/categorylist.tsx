@@ -9,7 +9,7 @@ import { fetchSubCategory } from '@/redux/features/subcategoryslice';
 
 
 
-const categorylist:React.FC<{category:string}> = ({category})=> {
+const Categorylist:React.FC<{category:string}> = ({category})=> {
     const dispatch=useDispatch<AppDispatch>()
     useEffect(()=>{
       dispatch(fetchSubCategory())
@@ -63,4 +63,4 @@ const categorylist:React.FC<{category:string}> = ({category})=> {
     </>
     )
   }
-  export default categorylist
+  export default Categorylist

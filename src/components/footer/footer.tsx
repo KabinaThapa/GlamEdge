@@ -1,7 +1,7 @@
 import React from 'react'
 import {BiLogoFacebook,BiLogoInstagram,BiLogoTwitter,BiLogoYoutube} from 'react-icons/bi'
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className=' space-y-8 p-4 font-opensans '>
         <div className='border-b-2 border-khaki w-[95%] mx-auto'></div>
@@ -55,4 +55,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer

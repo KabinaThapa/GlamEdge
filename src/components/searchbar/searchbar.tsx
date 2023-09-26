@@ -1,4 +1,4 @@
-import { Product } from '@/redux/features/productslice'
+import { Items } from '@/redux/types/items'
 
 import { RootState } from '@/redux/store'
 import Link from 'next/link'
@@ -7,11 +7,11 @@ import React, {ChangeEvent, useState, useEffect, useRef} from 'react'
 import { useSelector } from 'react-redux'
 import {CiSearch} from 'react-icons/ci'
 
-const searchbar = () => {
+const Searchbar = () => {
   const router=useRouter()
   const[input, setInput]=useState('')
-  const[filterdata, setFilterdata]=useState<Product[]>([])
-  const[selectitem, setSelectitem]=useState<Product|null>(null)
+  const[filterdata, setFilterdata]=useState<Items[]>([])
+  const[selectitem, setSelectitem]=useState<Items|null>(null)
   const items=useSelector((state:RootState)=>state.product.item)
   const filterRef = useRef<HTMLDivElement | null>(null)
   console.log(items)
@@ -24,7 +24,7 @@ const searchbar = () => {
   console.log(filteritems)
   setFilterdata(filteritems)
 }
-const handleItemClick=(product:Product)=>{
+const handleItemClick=(product:Items)=>{
   setSelectitem(product)
   console.log(selectitem)
   setInput(product.name)
@@ -69,4 +69,4 @@ const handleItemClick=(product:Product)=>{
   )
 }
 
-export default searchbar
+export default Searchbar
