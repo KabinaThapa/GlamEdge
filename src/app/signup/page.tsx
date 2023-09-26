@@ -1,7 +1,8 @@
 import React from "react";
 
 import Signup from "@/components/auth/signup/signup";
-export const metadata = {
+import { Metadata } from "next";
+export const metadata:Metadata= {
   
   title: "SignUp Page",
   description: "Create a new account on our website.",
