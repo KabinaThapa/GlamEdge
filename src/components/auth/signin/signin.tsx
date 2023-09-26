@@ -99,10 +99,9 @@ const Signin: React.FC = () => {
                         icon={<BsLock />}
                       />
                       <p className="text-right ">Forgot Password?</p>
-
                       <button
                         type="submit"
-                        className="w-full  p-2 bg-wenge rounded text-lg text-white hover:text-xl"
+                        className="w-full p-2 bg-wenge rounded text-lg text-white hover:text-xl"
                       >
                         {" "}
                         LogIn
@@ -110,9 +109,9 @@ const Signin: React.FC = () => {
                       <Link href="/signup">
                         <p className="text-center underline">
                           Don't have an Account? Sign Up
-                        </p>
+                        </p>{" "}
                       </Link>
-                      <p className="text-center ">OR</p>
+                      <p className="text-center">OR</p>
                       <p className="text-center">Sign Up Using</p>
                       <div className="flex items-center justify-between w-28 mx-auto">
                         <CiFacebook size={30} />

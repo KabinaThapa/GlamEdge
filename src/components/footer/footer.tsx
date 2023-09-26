@@ -33,14 +33,13 @@ const Footer = () => {
         </ul>
         <ul className="space-y-4">
           <li className="font-semibold">Newsletter</li>
-          <li>Make sure that you're always the first who </li>
-          <li> receive our latest news and promotions</li>
+          <li>Make sure that you're always the first who</li>
+          <li>receive our latest news and promotions</li>
           <li>
             <input
-              className=" p-2 mr-2 border-b-2 border-Jet"
+              className="p-2 mr-2 border-b-2 border-Jet"
               type="email"
-              placeholder="Enter your email....."
-            ></input>
+              placeholder="Enter your email....."/>
             <button className="p-2 bg-wenge text-white w-32 rounded outline-none hover:scale-105">
               Register
             </button>

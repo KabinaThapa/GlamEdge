@@ -87,7 +87,7 @@ const Cart = () => {
           <div className="  flex  justify-around  w-full    p-[2%] ">
             <div className="  relative w-full  flex  justify-around bg-babypowder p-[3%]">
               <div className=" absolute w-[20%] bottom-0 left-1 z-1 ">
-                <img src={blob3.src} className="object-cover w-full h-full" />
+                <Image alt='pic' width={300} height={300} src={blob3.src} className="object-cover w-full h-full" />
               </div>
               <div className=" w-[60%] z-0 ">
                 <table className=" w-full text-left text-lg bg-timber z-[-1]">
