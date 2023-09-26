@@ -108,13 +108,13 @@ const Signin: React.FC = () => {
                         LogIn
                       </button>
                       <Link href="/signup">
-                        <p className="text-center underline ">
+                        <p className="text-center underline">
                           Don't have an Account? Sign Up
                         </p>
                       </Link>
                       <p className="text-center ">OR</p>
                       <p className="text-center">Sign Up Using</p>
-                      <div className="flex items-center justify-between w-28 mx-auto ">
+                      <div className="flex items-center justify-between w-28 mx-auto">
                         <CiFacebook size={30} />
                         <PiGoogleLogo size={30} />
                         <CiTwitter size={32} />

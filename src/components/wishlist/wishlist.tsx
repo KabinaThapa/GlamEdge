@@ -10,6 +10,7 @@ import Link from 'next/link'
 import blob3 from '../../../public/blob3.svg'
 import {BsFillGridFill,BsFillGrid3X2GapFill,BsFillGrid3X3GapFill} from 'react-icons/bs'
 import { Items } from '@/redux/types/items';
+import Image from 'next/image';
 
 const Wishlist = () => {
   const[columns, setColumns]=useState<number>(4)
@@ -41,7 +42,7 @@ const Wishlist = () => {
         </div>
 
         <div className=' absolute w-[45%] h-[100%] top-2 right-80 z-[-1] p-8' >
-        <img src={blob3.src} className='w-full h-full object-cover'/>
+        <Image alt='pic' width={200} height={300} src={blob3.src} className='w-full h-full object-cover'/>
    </div>
    </div>
       </>

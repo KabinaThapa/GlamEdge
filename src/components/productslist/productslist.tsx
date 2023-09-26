@@ -7,7 +7,7 @@ import Stars from '@/components/stars/stars'
 import Card from '@/components/card/card'
 import {  addtocart } from '@/redux/features/cartslice';
 import {  addtowishlist, removefromwishlist } from '@/redux/features/wishlistslice';
-
+import Image from 'next/image';
 
 const Productslist:React.FC<{id:string, category:string, subcategory:string}> = ({id, category,subcategory}) => {
     const[selectedsize, setSelectedsize]=useState<null|string>(null)
@@ -51,7 +51,7 @@ console.log(product)
             <div className='flex justify-center gap-8 items-center'>
             <div className='w-[30%] overflow-hidden'>
             
-            <img className='object-cover w-full h-full  transition transform-transition hover:scale-150 duration-50' src={product.image} alt={product.name} />
+            <Image alt='pic' width={1400} height={1400} className='object-cover w-full h-full  transition transform-transition hover:scale-150 duration-50' src={product.image} alt={product.name} />
             </div>
             <div className='w-[60%]  h-auto p-4 grid gap-4 border-l-2 border-khaki '>
             <h2 className='text-2xl font-semibold'>{product.name}</h2>
@@ -90,7 +90,7 @@ console.log(product)
                 <h1 className='text-2xl font-opensans mb-2'>Related Products</h1>
                 <div className='flex gap-4 '>
             {relatedProducts.map((product)=>(
-            <div className=' w-full'>
+            <div className=' w-full' key={product.id}>
                 <Card
                 img={product.image}
                 title={product.name}

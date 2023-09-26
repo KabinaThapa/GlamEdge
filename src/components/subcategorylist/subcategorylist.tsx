@@ -24,7 +24,7 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
     const[columns, setColumns]=useState<number>(4)
     useEffect(()=>{
       dispatch(fetchProduct())
-    },[])
+    },[dispatch])
     const{item}=useSelector((state:RootState)=>state.product)
     console.log(item)
     
@@ -100,7 +100,7 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
     <div className={`grid grid-cols-${columns} gap-2 gap-y-4 w-[90%] p-2 `}  > 
 
     {sortedProducts.map((product)=>(
-        <div className={`mx-auto ${columns===2 ?`w-[20rem]`:`w-[15rem]`}`}>
+        <div key={product.id} className={`mx-auto ${columns===2 ?`w-[20rem]`:`w-[15rem]`}`}>
           {sortedProducts.length===0 ? (<Skeleton width={300} height={400}/>):(
        
         <Card
