@@ -4,8 +4,9 @@ import { PiHeartFill, PiHeartLight } from 'react-icons/pi';
 import {TfiGallery} from 'react-icons/tfi'
 import Link from 'next/link'
 import {CardProps} from './types/cardprops'
+import Image from 'next/image';
 
-const ProductCard: React.FC<cardprops>=({ img, width, title, children, price, loading, addtocart, savetowishlist, size, heartfill, href }) => {
+const ProductCard: React.FC<CardProps>=({ img, title, children, price, loading, addtocart, savetowishlist, size, heartfill, href }) => {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
  
 
@@ -27,18 +28,19 @@ const ProductCard: React.FC<cardprops>=({ img, width, title, children, price, lo
     >
       <div className='overflow-hidden relative h-80 aspect-w-80'>
        
-      <img src={img} width={width} className=" object-cover w-full h-full transition-transform duration-800 transform group-hover:scale-125" loading='lazy' />
+      <Image src={img} alt='picture' width={2000} height={1800} className=" object-cover w-full h-full transition-transform duration-800 transform group-hover:scale-125" loading='lazy' />
       
       {isOptionsVisible && (
         <div className=" absolute inset-0 flex justify-around items-center bg-black bg-opacity-50 text-white">
           <div className='w-[80%] flex justify-around'>
           <button onClick={addtocart} className="rounded-full bg-Jet p-2 mx-2 hover:scale-110"><CiShoppingCart size={27}/></button>
           <button onClick={savetowishlist} className="bg-Jet p-2 rounded-full mx-2 hover:scale-110">
-            {heartfill ? (
+            { heartfill ? (
                       <PiHeartFill size={26} />
                     ) : (
                       <PiHeartLight size={26} />
-                    )}</button>
+                    )}
+                    </button>
                    <Link href={href}>
                     
                  

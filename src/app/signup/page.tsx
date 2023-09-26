@@ -1,5 +1,6 @@
 import React from "react";
-import SignIn from "@/components/auth/signin/signin";
+
+import Signup from "@/components/auth/signup/signup";
 export const metadata = {
   
   title: "SignUp Page",
@@ -9,7 +10,7 @@ export const metadata = {
 const SignInPage = () => {
   return (
     <div>
-      <SignIn />
+      <Signup />
     </div>
   );
 };

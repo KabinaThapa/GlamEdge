@@ -13,8 +13,9 @@ import { BsLock } from "react-icons/bs";
 import { PiGoogleLogo } from "react-icons/pi";
 import { CiFacebook, CiTwitter } from "react-icons/ci";
 import { useRouter } from "next/navigation";
-import {login} from '@/redux/features/userauthslice'
-import {useSelector, useDispatch} from 'react-redux'
+import { login } from "@/redux/features/userauthslice";
+import { useSelector, useDispatch } from "react-redux";
+import Image from "next/image";
 
 interface FormValues {
   email: string;
@@ -33,7 +34,7 @@ const Signin: React.FC = () => {
   });
 
   const router = useRouter();
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = async (values: FormValues) => {
     try {
@@ -42,14 +43,13 @@ const Signin: React.FC = () => {
         password: values.password,
       });
 
-     
       console.log(response.data);
-     
+
       localStorage.setItem("session-token", response.data.accessToken);
       localStorage.setItem("email", response.data.user.email);
       console.log(response.data.user.email);
       toast.success("Successfully signed in");
-      dispatch(login(response.data.user.email))
+      dispatch(login(response.data.user.email));
       router.push("/shoppingcart");
       console.log(response.data.user.email);
     } catch (error) {
@@ -59,68 +59,76 @@ const Signin: React.FC = () => {
 
   return (
     <>
-    <div className=" min-h-screen  w-full  p-[2%] ">
-      <div className='mx-auto grid grid-cols-4 place-items-center '>
-        <div className='w-full h-full col-span-3'>
-        <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921'}/>
-        </div>
-        <div className="ml-[-150px] z-[100] w-[28rem] mt-8 mb-8 bg-timber ">
-      <Formik
-        initialValues={initialValues}
-        onSubmit={handleSubmit}
-        validationSchema={validationSchema}
-      >
-        {({ handleSubmit, values, handleChange }) => {
-          return (
-            <>
-              <Form
-                onSubmit={handleSubmit}
-                className="  flex flex-col justify-center gap-6 text-lg font-opensans p-6"
-              >
-                <h1 className="text-3xl text-center">SignIn</h1>
-                <Inputfield
-                  type="text"
-                  name="email"
-                  label="Email Address"
-                  icon={<FiUser />}
-                />
-                <Inputfield
-                  type="password"
-                  name="password"
-                  label="Password"
-                  icon={<BsLock />}
-                />
-                <p className="text-right ">Forgot Password?</p>
+      <div className=" min-h-screen  w-full  p-[2%]">
+        <div className="mx-auto grid grid-cols-4 place-items-center">
+          <div className="w-full h-full col-span-3">
+            <Image
+              alt="pic"
+              width={1600}
+              height={1600}
+              className="object-cover h-full w-full"
+              src={
+                "https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921"
+              }
+            />
+          </div>
+          <div className="ml-[-150px] z-[100] w-[28rem] mt-8 mb-8 bg-timber ">
+            <Formik
+              initialValues={initialValues}
+              onSubmit={handleSubmit}
+              validationSchema={validationSchema}
+            >
+              {({ handleSubmit, values, handleChange }) => {
+                return (
+                  <>
+                    <Form
+                      onSubmit={handleSubmit}
+                      className="  flex flex-col justify-center gap-6 text-lg font-opensans p-6"
+                    >
+                      <h1 className="text-3xl text-center">SignIn</h1>
+                      <Inputfield
+                        type="text"
+                        name="email"
+                        label="Email Address"
+                        icon={<FiUser />}
+                      />
+                      <Inputfield
+                        type="password"
+                        name="password"
+                        label="Password"
+                        icon={<BsLock />}
+                      />
+                      <p className="text-right ">Forgot Password?</p>
 
-                <button
-                  type="submit"
-                  className="w-full  p-2 bg-wenge rounded text-lg text-white hover:text-xl"
-                >
-                  {" "}
-                  LogIn
-                </button>
-                <Link href="/signup">
-                  <p className="text-center underline ">
-                    Don't have an Account? Sign Up
-                  </p>
-                </Link>
-                <p className="text-center ">OR</p>
-                <p className="text-center">Sign Up Using</p>
-                <div className="flex items-center justify-between w-28 mx-auto ">
-                  <CiFacebook size={30} />
-                  <PiGoogleLogo size={30} />
-                  <CiTwitter size={32} />
-                </div>
-              </Form>
-              
-              <ToastContainer className="ml-auto" />
-              </>
-          );
-        }}
-      </Formik>
+                      <button
+                        type="submit"
+                        className="w-full  p-2 bg-wenge rounded text-lg text-white hover:text-xl"
+                      >
+                        {" "}
+                        LogIn
+                      </button>
+                      <Link href="/signup">
+                        <p className="text-center underline ">
+                          Don't have an Account? Sign Up
+                        </p>
+                      </Link>
+                      <p className="text-center ">OR</p>
+                      <p className="text-center">Sign Up Using</p>
+                      <div className="flex items-center justify-between w-28 mx-auto ">
+                        <CiFacebook size={30} />
+                        <PiGoogleLogo size={30} />
+                        <CiTwitter size={32} />
+                      </div>
+                    </Form>
+
+                    <ToastContainer className="ml-auto" />
+                  </>
+                );
+              }}
+            </Formik>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </>
   );
 };

@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FiUser } from "react-icons/fi";
 import { BsLock } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
+import Image from "next/image";
 
 const Signup = () => {
   const initialvalues = {
@@ -46,9 +47,17 @@ const Signup = () => {
 
   return (
     <div className="p-[2%] h-auto grid grid-cols-4 place-items-center">
-      <div className='w-full col-span-3 '>
-        <img className='object-cover h-full w-full' src={'https://minion-vinovatheme.myshopify.com/cdn/shop/files/banner_1_1512x.jpg?v=1616993329'}/>
-        </div>
+      <div className="w-full col-span-3 ">
+        <Image
+          alt="pic"
+          width={1600}
+          height={1500}
+          className="object-cover h-full w-full"
+          src={
+            "https://minion-vinovatheme.myshopify.com/cdn/shop/files/banner_1_1512x.jpg?v=1616993329"
+          }
+        />
+      </div>
       <Formik
         initialValues={initialvalues}
         validationSchema={validationSchema}
