@@ -1,13 +1,13 @@
 export interface CardProps {
     img: string;
-    width: string;
+    width?: string;
     title: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     price: number;
-    loading: boolean;
+    loading?: boolean;
     addtocart: () => void;
     savetowishlist: () => void;
-    size: string;
-    heartfill: boolean;
+    size?: string;
+    heartfill?: boolean;
     href: string;
 }

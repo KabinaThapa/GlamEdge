@@ -6,7 +6,7 @@ import Link from 'next/link'
 import {CardProps} from './types/cardprops'
 import Image from 'next/image';
 
-const ProductCard: React.FC<CardProps>=({ img, title, children, price, loading, addtocart, savetowishlist, size, heartfill, href }) => {
+const ProductCard: React.FC<CardProps>=({ img, title, children, price, loading, addtocart, savetowishlist, size, heartfill=false, href }) => {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
  
 

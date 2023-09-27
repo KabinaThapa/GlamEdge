@@ -27,9 +27,10 @@ export default function Home() {
     (state: RootState) => state.category
   );
   const items = useSelector((state: RootState) => state.wishlist.item);
+  const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     dispatch(fetchProduct());
-  }, []);
+  }, [dispatch]);
   const products = useSelector((state: RootState) => state.product.item);
   const featuredproducts = products.filter((product) => product.isfeatured);
   const onsale = products.filter((product) => product.onsale);
@@ -38,7 +39,7 @@ export default function Home() {
   console.log(products);
   console.log(featuredproducts);
   console.log(item);
-  const dispatch = useDispatch<AppDispatch>();
+ 
   const router = useRouter();
   useEffect(() => {
     dispatch(fetchCategory());
@@ -192,7 +193,7 @@ export default function Home() {
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
                     href={`/product/${product.category}/${product.subcategory}/${product.id}`}
-                    heartfill={items.find((item) => item.id === product.id)}
+                  
                   />
                 </div>
               ))}

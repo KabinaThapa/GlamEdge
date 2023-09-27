@@ -58,7 +58,7 @@ const Productslist: React.FC<{
 
   return (
     <>
-      <div className="w-full h-auto  p-[5%] font-opensans flex flex-col gap-8 items-center">
+      <div className="w-full h-auto p-[5%] font-opensans flex flex-col gap-8 items-center">
         <div className="flex justify-center gap-8 items-center">
           <div className="w-[30%] overflow-hidden">
             <Image
@@ -133,3 +133,4 @@ const Productslist: React.FC<{
 };
 
 export default Productslist;
+
