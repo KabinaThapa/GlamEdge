@@ -44,7 +44,7 @@ const Cart = () => {
     if (token) {
       const stripe = await stripePromise();
       console.log(items);
-      const { error } = await stripe?.redirectToCheckout({
+      const result = await stripe?.redirectToCheckout({
         lineItems: items.map((product) => ({
           price: product.priceId.toString(),
           quantity: product.quantity,
@@ -54,7 +54,7 @@ const Cart = () => {
         cancelUrl: `http://localhost:3000/cancel`,
         customerEmail: "customer@email.com",
       });
-      console.warn(error.message);
+      console.warn(result?.error.message);
     } else {
       toast.error("Please signin to checkout");
     }
@@ -119,8 +119,8 @@ const Cart = () => {
                         <td className=" px-4 py-6">
                           <Image
                             src={item.image}
-                            width={1600}
-                            height={1400}
+                            width={200}
+                            height={200}
                             alt={item.name}
                           />
                           <p className="text-md z-[-1]">{item.name}</p>
