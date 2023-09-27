@@ -7,6 +7,9 @@ const nextConfig = {
         'yanka-demos.myshopify.com', 
         'skudmart.myshopify.com',
         'websitedemos.net',
+        'images.pexels.com',
+        'images.unsplash.com',
+        'nenaandpasadena.com'
     ],
         
     

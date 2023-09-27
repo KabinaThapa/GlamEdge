@@ -118,9 +118,7 @@ const Productslist: React.FC<{
                   price={product.price}
                   addtocart={() => handleAddtocart(product)}
                   savetowishlist={() => handleSave(product)}
-                  heartfill={wishlistProducts.find(
-                    (item) => item.id === product.id
-                  )}
+                 
                   href={`/product/${category}/${subcategory}/${product.id}`}
                 />
               </div>

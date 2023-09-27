@@ -69,7 +69,8 @@ const Wishlist = () => {
       price={item.price}
       addtocart={()=>handleAddtocart(item)}
       savetowishlist={()=>handleSavetowishlist(item.id)}
-      heartfill={items.find((item)=>item.id===item.id)}
+      heartfill={!!items.find((item)=>item.id===item.id)}
+      
      
       />
            </div>

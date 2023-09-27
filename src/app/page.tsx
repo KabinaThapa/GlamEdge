@@ -23,6 +23,7 @@ import { Items } from "@/redux/types/items";
 import Image from "next/image";
 
 export default function Home() {
+  const [filled, setFilled] = useState(false)
   const { item, status, error, isloading } = useSelector(
     (state: RootState) => state.category
   );
@@ -57,6 +58,7 @@ export default function Home() {
   };
 
   const handleSavetowishlist = (product: Items) => {
+    
     if (items.find((item) => item.id === product.id)) {
       dispatch(removefromwishlist(product.id));
       toast.success(`${product.name} removed from wishlist!`);
@@ -192,7 +194,10 @@ export default function Home() {
                     price={product.price}
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
+                   heartfill={!!items.find((item)=>item.id===product.id)}
                     href={`/product/${product.category}/${product.subcategory}/${product.id}`}
+                    
+                  
                   
                   />
                 </div>

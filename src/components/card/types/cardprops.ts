@@ -8,6 +8,6 @@ export interface CardProps {
     addtocart: () => void;
     savetowishlist: () => void;
     size?: string;
-    heartfill?: boolean;
+    heartfill?: boolean
     href: string;
 }

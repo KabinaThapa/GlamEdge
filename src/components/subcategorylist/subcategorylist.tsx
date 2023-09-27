@@ -17,6 +17,7 @@ import {BsFillGridFill,BsFillGrid3X2GapFill,BsFillGrid3X3GapFill} from 'react-ic
 
 
 export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({category, subcategory})=> {
+  const[filled, setFilled]=useState(false)
     const dispatch=useDispatch<AppDispatch>()
     const [sortedProducts, setSortedProducts] = useState<Items[]>([]);
     const [sortByPrice, setSortByPrice] = useState<boolean>(false)
@@ -76,6 +77,9 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
       setColumns(num)
       
     }
+    const toogle=()=>{
+      setFilled(!filled)
+    }
     return(
      <>
      <div className='flex flex-col items-center justify-center w-full p-[5%] gap-10'>
@@ -109,7 +113,7 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSave(product)}
-      heartfill={items.find((item)=>item.id===product.id)}
+      heartfill={toogle}
       href={`/product/${category}/${subcategory}/${product.id}`}
       />
       )}
