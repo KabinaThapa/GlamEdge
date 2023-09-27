@@ -213,7 +213,7 @@ export default function Home() {
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
                     href={`/product/${product.category}/${product.subcategory}/${product.id}`}
-                    heartfill={items.find((item) => item.id === product.id)}
+                    
                   />
                 </div>
               ))}
@@ -269,7 +269,7 @@ export default function Home() {
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
                     href={`/product/${product.category}/${product.subcategory}/${product.id}`}
-                    heartfill={items.find((item) => item.id === product.id)}
+                    
                   />
                 </div>
               ))}
