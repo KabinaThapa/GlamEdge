@@ -41,7 +41,7 @@ const initialState:Productstate={
         })
         .addCase(fetchProduct.rejected, (state, action)=>{
             state.status='failed',
-            state.error=action.error.message
+            state.error=action.error.message||'error'
 
         })
     },

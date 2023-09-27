@@ -113,7 +113,7 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSave(product)}
-      heartfill={toogle}
+      heartfill={!!items.find((item)=>item.id===item.id)}
       href={`/product/${category}/${subcategory}/${product.id}`}
       />
       )}

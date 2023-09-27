@@ -3,7 +3,7 @@ import {PayloadAction} from '@reduxjs/toolkit'
 
 
 export interface Category{
-    id:number,
+    id:string,
     image:string,
     desc:string,
 }
@@ -48,7 +48,7 @@ const initialState:Categorystate={
         })
         .addCase(fetchCategory.rejected, (state, action)=>{
             state.status='failed',
-            state.error=action.error.message
+            state.error=action.error.message||'error'
             state.isloading = false;
 
         })

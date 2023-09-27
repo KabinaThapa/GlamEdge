@@ -118,7 +118,7 @@ const Productslist: React.FC<{
                   price={product.price}
                   addtocart={() => handleAddtocart(product)}
                   savetowishlist={() => handleSave(product)}
-                 
+                
                   href={`/product/${category}/${subcategory}/${product.id}`}
                 />
               </div>
