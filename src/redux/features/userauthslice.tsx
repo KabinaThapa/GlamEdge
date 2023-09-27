@@ -4,12 +4,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AuthState {
   isAuthenticated: boolean;
-  userEmail: string | null;
+  userEmail: string;
 }
 
 const initialState: AuthState = {
   isAuthenticated: false,
-  userEmail: null,
+  userEmail: ''
 };
 
 const authSlice = createSlice({
@@ -22,7 +22,7 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.isAuthenticated = false;
-      state.userEmail = null;
+      state.userEmail = '';
     },
   },
 });
