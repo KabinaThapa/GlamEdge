@@ -47,7 +47,7 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
     
     
     const items=useSelector((state:RootState)=>state.wishlist.item)
-    
+    console.log(items)
 
     //addtocart functionality
     
@@ -113,7 +113,7 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
       price={product.price}
       addtocart={()=>handleAddtocart(product)}
       savetowishlist={()=>handleSave(product)}
-      heartfill={!!items.find((item)=>item.id===item.id)}
+      heartfill={!!items.find((item)=>item.id=== product.id)}
       href={`/product/${category}/${subcategory}/${product.id}`}
       />
       )}

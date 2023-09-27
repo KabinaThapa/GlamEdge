@@ -73,7 +73,11 @@ const Productslist: React.FC<{
             <h2 className="text-2xl font-semibold">{product.name}</h2>
 
             <div className="flex items-center">
-              <Stars rating={product.rating} />
+            {product.rating !== undefined ? (
+    <Stars rating={product.rating} />
+  ) : (
+    <span>No rating available</span>
+  )}
             </div>
             <p>{product.description}</p>
             <p className="font-serif text-xl"> ${product.price}</p>
@@ -118,7 +122,7 @@ const Productslist: React.FC<{
                   price={product.price}
                   addtocart={() => handleAddtocart(product)}
                   savetowishlist={() => handleSave(product)}
-                
+                  heartfill={!!products.find((item)=>item.id===item.id)}
                   href={`/product/${category}/${subcategory}/${product.id}`}
                 />
               </div>
