@@ -141,7 +141,7 @@ export default function Home() {
                 {isloading ? (
                   <Skeleton width={300} height={400} />
                 ) : (
-                  <Link href={`/product/${item.id}`}>
+                  <Link href={`product/${item.id}`}>
                     <Image
                       className=" object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 "
                       src={item.image}
@@ -195,7 +195,7 @@ export default function Home() {
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
                    heartfill={!!items.find((item)=>item.id===product.id)}
-                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
+                    href={`product/${product.category}/${product.subcategory}/${product.id}`}
                     
                   
                   
@@ -217,7 +217,7 @@ export default function Home() {
                     price={product.price}
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
-                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
+                    href={`product/${product.category}/${product.subcategory}/${product.id}`}
                     
                   />
                 </div>
@@ -273,7 +273,7 @@ export default function Home() {
                     price={product.price}
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
-                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
+                    href={`product/${product.category}/${product.subcategory}/${product.id}`}
                     
                   />
                 </div>
