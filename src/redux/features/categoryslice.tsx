@@ -10,7 +10,8 @@ export interface Category{
 
 export const fetchCategory=createAsyncThunk("category/fetchcategory",
 async()=>{
-    const response=await fetch('http://localhost:4002/category')
+    const serverUrl = process.env.NODE_ENV === 'production' ? 'https://galedge-vercel.com/category' : 'http://localhost:4002/category';
+    const response=await fetch(serverUrl)
     const data=await response.json()
     return data as Category[]
 }
