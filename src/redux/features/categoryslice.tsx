@@ -1,6 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import {PayloadAction} from '@reduxjs/toolkit'
 
+
 export interface Category{
     id:string,
     image:string,
@@ -9,7 +10,7 @@ export interface Category{
 
 export const fetchCategory=createAsyncThunk('category/fetchcategory',
 async()=>{
-    const response=await fetch('/category')
+    const response=await fetch('http://localhost:4005/category')
     const data=await response.json()
     console.log('Fetched data:', data);
     return data as Category[]
