@@ -30,9 +30,9 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
     console.log(item)
     
     useEffect(() => {
-      const filterCategory = item.filter(
+      const filterCategory = Array.isArray(item)?(item.filter(
         (product) => product.category ===category && product.subcategory === subcategory
-      )
+      )):[]
       console.log(filterCategory)
   
       let productsToShow = filterCategory;

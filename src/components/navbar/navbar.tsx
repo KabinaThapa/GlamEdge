@@ -8,16 +8,18 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import {logout} from '@/redux/features/userauthslice'
 import Searchbar from './../searchbar/searchbar';
-import { fetchCategory } from '@/redux/features/categoryslice';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 
 const Navbar = () => {
- 
+ const[click, setClick]=useState(false)
   const [open, setOpen]=useState(false)
   const dispatch=useDispatch<AppDispatch>()
   const {isAuthenticated, userEmail}=useSelector((state:RootState)=>state.auth)
  
- 
+ const handleClick=()=>{
+  setClick(!click)
+ }
 
   const handleLogout = () => {
     localStorage.removeItem('session-token');
@@ -37,7 +39,23 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='w-full flex pb-2 justify-around items-center mt-6 font-kreon'>
+    <div>
+      <AiOutlineMenu onClick={handleClick} className='md:hidden absolute right-0 top-2'/>
+    </div>
+    {
+      click?
+      (<div className='absolute top-8 right-0 bg-slate-700 z-20 '>
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Sale</li>
+          <li>Cart</li>
+          <li>Saved items</li>
+
+        </ul>
+      </div>):('')
+    }
+    <nav className='w-full md:flex pb-2 justify-around items-center mt-6 font-kreon  hidden'>
      
       <ul>
         <div className='text-3xl flex items-baseline font-aclonica'>

@@ -23,7 +23,7 @@ import { Items } from "@/redux/types/items";
 import Image from "next/image";
 
 export default function Home() {
-  const [filled, setFilled] = useState(false)
+ 
   const { item, status, error, isloading } = useSelector(
     (state: RootState) => state.category
   );
@@ -33,9 +33,14 @@ export default function Home() {
     dispatch(fetchProduct());
   }, [dispatch]);
   const products = useSelector((state: RootState) => state.product.item);
-  const featuredproducts = products.filter((product) => product.isfeatured);
-  const onsale = products.filter((product) => product.onsale);
-  const toptrending = products.filter((product) => product.toptrending);
+ 
+const featuredproducts = Array.isArray(products) ? products.filter((product) => product.isfeatured) : [];
+const onsale = Array.isArray(products) ? products.filter((product) => product.onsale) : [];
+const toptrending = Array.isArray(products) ? products.filter((product) => product.toptrending) : [];
+
+console.log(products);
+console.log(featuredproducts);
+
 
   console.log(products);
   console.log(featuredproducts);
