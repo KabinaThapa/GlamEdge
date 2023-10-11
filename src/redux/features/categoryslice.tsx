@@ -10,7 +10,7 @@ export interface Category{
 
 export const fetchCategory=createAsyncThunk('category/fetchcategory',
 async()=>{
-    const response=await fetch('http://localhost:4005/category')
+    const response=await fetch(process.env.NEXT_PUBLIC_SERVER_CATEGORY_URL + '/category')
     const data=await response.json()
     console.log('Fetched data:', data);
     return data as Category[]

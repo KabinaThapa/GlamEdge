@@ -10,7 +10,7 @@ export interface subcategory{
 
 export const fetchSubCategory=createAsyncThunk("subcategory/fetchSubCategory",
 async()=>{
-    const response=await fetch('http://localhost:4003/subcategory')
+    const response=await fetch(process.env.NEXT_PUBLIC_SERVER_SUBCATEGORY_URL + '/subcategory')
     const data=await response.json()
     return data as subcategory[]
 }
