@@ -8,10 +8,11 @@ export interface Category{
     desc:string,
 }
 
-export const fetchCategory=createAsyncThunk("category/fetchcategory",
+export const fetchCategory=createAsyncThunk('category/fetchcategory',
 async()=>{
-    const response=await fetch('category')
+    const response=await fetch('http://localhost:4005/category')
     const data=await response.json()
+    console.log('Fetched data:', data);
     return data as Category[]
 }
 ) 

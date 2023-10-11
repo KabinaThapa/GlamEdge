@@ -1,5 +1,5 @@
 'use client'
-import { RootState } from '@/redux/store';
+import { AppDispatch, RootState } from '@/redux/store';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
@@ -8,12 +8,13 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import {logout} from '@/redux/features/userauthslice'
 import Searchbar from './../searchbar/searchbar';
+import { fetchCategory } from '@/redux/features/categoryslice';
 
 
 const Navbar = () => {
  
   const [open, setOpen]=useState(false)
-  const dispatch=useDispatch()
+  const dispatch=useDispatch<AppDispatch>()
   const {isAuthenticated, userEmail}=useSelector((state:RootState)=>state.auth)
  
  
@@ -28,7 +29,10 @@ const Navbar = () => {
     setOpen(!open)
   }
 
-  const { item } = useSelector((state: RootState) => state.category);
+  const {item}  = useSelector((state: RootState)=>state.category);
+ 
+  console.log(item)
+
   const totalItems = useSelector((state: RootState) => state.cart.cartQuantity);
 
   return (
@@ -54,13 +58,14 @@ const Navbar = () => {
             
               <div className='hidden  group-hover:block absolute z-[1000] left-0 mt-2 bg-babypowder p-2  rounded shadow-lg '>
               <div className='group-hover:block absolute bg-babypowder w-4 h-4 rotate-45 top-[-8px] left-5 border-r-0 border-b-0 '></div>
-                {item.map((item) => (
+                {Array.isArray(item)?(
+                item.map((item) => (
                   <div key={item.id} className='capitalize py-2 px-2 font-medium'>
                     <Link href={`/product/${item.id}`}>
                       {item.id}
                     </Link>
                   </div>
-                ))}
+                ))):(<p>''</p>)}
               </div>
             </span>
           </div>

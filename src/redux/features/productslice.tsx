@@ -5,11 +5,12 @@ import { Items } from '../types/items'
 
 
 
-export const fetchProduct=createAsyncThunk("products/fetchproduct",
+export const fetchProduct=createAsyncThunk("products/fetchProduct",
 async()=>{
-    const response=await fetch('products')
+    const response=await fetch('http://localhost:4001/products')
     const data=await response.json()
     return data as Items[]
+    
 }
 ) 
 export interface Productstate{

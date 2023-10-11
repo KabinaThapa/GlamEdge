@@ -133,7 +133,8 @@ export default function Home() {
             Our Category
           </h1>
           <div className="w-[80%] h-auto grid grid-cols-3  gap-12">
-            {item.map((item) => (
+            {Array.isArray(item)?(
+            item.map((item) => (
               <div
                 key={item.id}
                 className="relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg"
@@ -141,7 +142,7 @@ export default function Home() {
                 {isloading ? (
                   <Skeleton width={300} height={400} />
                 ) : (
-                  <Link href={`product/${item.id}`}>
+                  <Link href={`/product/${item.id}`}>
                     <Image
                       className=" object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 "
                       src={item.image}
@@ -157,7 +158,7 @@ export default function Home() {
                   </Link>
                 )}
               </div>
-            ))}
+            ))):('')}
           </div>
         </section>
 
@@ -195,7 +196,7 @@ export default function Home() {
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
                    heartfill={!!items.find((item)=>item.id===product.id)}
-                    href={`product/${product.category}/${product.subcategory}/${product.id}`}
+                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
                     
                   
                   
@@ -217,7 +218,7 @@ export default function Home() {
                     price={product.price}
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
-                    href={`product/${product.category}/${product.subcategory}/${product.id}`}
+                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
                     
                   />
                 </div>
@@ -273,7 +274,7 @@ export default function Home() {
                     price={product.price}
                     addtocart={() => handleAddtocart(product)}
                     savetowishlist={() => handleSavetowishlist(product)}
-                    href={`product/${product.category}/${product.subcategory}/${product.id}`}
+                    href={`/product/${product.category}/${product.subcategory}/${product.id}`}
                     
                   />
                 </div>
