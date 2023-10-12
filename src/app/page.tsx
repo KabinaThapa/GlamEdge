@@ -145,7 +145,7 @@ console.log(featuredproducts);
             item.map((item, index) => (
               <div
                 key={item.id}
-                className={`${index===2?'col-span-2 md:col-auto md:h-auto h-[12rem] ':'md:h-auto h-[20rem]'} relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg`}
+                className={`${index===2?'col-span-2 md:col-auto md:h-auto h-[12rem] ':'md:h-auto h-[20rem]'} relative group gap-4 capitalize md:text-2xl text-lg overflow-hidden shadow-lg`}
               >
                 {isloading ? (
                   <Skeleton width={300} height={400} />
@@ -160,7 +160,7 @@ console.log(featuredproducts);
                       height={400}
                     />
 
-                    <div className="absolute top-[50%] md:right-[30%] left-0 bg-babypowder w-32 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
+                    <div className="absolute top-[50%] md:right-[30%] left-0 bg-babypowder md:w-32 w-24 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
                       <h1>{item.id}</h1>
                     </div>
                   </Link>
@@ -170,11 +170,11 @@ console.log(featuredproducts);
           </div>
         </section>
 
-        <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
-          <article className="w-[50%] p-6 flex flex-col gap-8 border-r-2 border-khaki">
-            <h1 className="text-3xl text-right "> Our Featured Products</h1>
+        <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-8 p-[5%] font-opensans">
+          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 md:border-r-2 border-l-2 border-khaki">
+            <h1 className="md:text-3xl text-xl md:text-right "> Our Featured Products</h1>
 
-            <p className=" md:text-lg text-sm text-right ">
+            <p className=" md:text-lg text-sm md:text-right ">
               <h2 className="md:text-xl  underline">
                 Discover Our Featured Products
               </h2>
@@ -186,16 +186,16 @@ console.log(featuredproducts);
               featured collection has something for everyone. Shop now and
               elevate your style with our curated favorites.
             </p>
-            <button className=" text-white p-2 w-72 rounded text-lg hover:text-xl ms-end bg-wenge ms-auto ">
+            <button className=" text-white p-2 md:w-72 w-32 rounded text-lg hover:text-xl  bg-wenge md:ms-auto me-auto ">
               Shop Now
             </button>
           </article>
-          <div className=" w-[60%] bg-babypowder p-[3%] ">
+          <div className=" md:w-[60%] w-full bg-babypowder p-[3%] ">
             <Carousel settings={Cardsetting}>
               {featuredproducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className=" aspect-w-full aspect-h-auto pl-2 pr-2 gap-2 "
+                  className="  pl-2 pr-2 gap-2 "
                 >
                   <Card
                     img={product.image}
