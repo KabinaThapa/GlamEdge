@@ -84,6 +84,7 @@ console.log(featuredproducts);
     slidesToScroll: 2,
     arrows: false,
   };
+  
   const Cardsetting = {
     arrows: true,
     infinite: true,
@@ -135,16 +136,16 @@ console.log(featuredproducts);
           </div>
         </section>
 
-        <section className="bg-khaki flex flex-col justify-center items-center p-12">
+        <section className="bg-khaki flex flex-col justify-center items-center p-4 md:p-12">
           <h1 className={styles.kabi + " md:text-4xl text-2xl text-center mb-8"}>
             Our Category
           </h1>
-          <div className="md:w-[80%] w-[100%] h-auto grid md:grid-cols-3 grid-cols-1  gap-8">
+          <div className="md:w-[80%] w-[100%] md:h-auto  grid md:grid-cols-3 grid-cols-2  gap-4">
             {Array.isArray(item)?(
-            item.map((item) => (
+            item.map((item, index) => (
               <div
                 key={item.id}
-                className="relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg"
+                className={`${index===2?'col-span-2 md:col-auto md:h-auto h-[12rem] ':'md:h-auto h-[20rem]'} relative group gap-4 capitalize text-2xl overflow-hidden shadow-lg`}
               >
                 {isloading ? (
                   <Skeleton width={300} height={400} />
