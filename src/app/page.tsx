@@ -171,7 +171,7 @@ console.log(featuredproducts);
         </section>
 
         <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-8 p-[5%] font-opensans">
-          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 md:border-r-2 border-l-2 border-khaki">
+          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 md:border-r-2 border-l-2 md:border-l-0 border-khaki">
             <h1 className="md:text-3xl text-xl md:text-right "> Our Featured Products</h1>
 
             <p className=" md:text-lg text-sm md:text-right ">
@@ -255,7 +255,7 @@ console.log(featuredproducts);
         </section>
 
         <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-8 p-[5%] font-opensans">
-          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 border-khaki md:border-r-2 border-l-2 md:text-right">
+          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 border-khaki md:border-r-2 md:border-l-transparent  border-l-2 md:text-right">
             <h1 className="md:text-3xl text-2xl ">Top Trending</h1>
             <p className="md:text-lg text-sm ">
               <h2 className="md:text-xl text-lg  underline">
