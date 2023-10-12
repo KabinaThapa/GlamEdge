@@ -215,8 +215,8 @@ console.log(featuredproducts);
           </div>
         </section>
 
-        <section className="w-full h-auto flex p-[5%] gap-8 font-opensans bg-khaki justify-between">
-          <div className=" w-[60%] bg-babypowder  p-[3%] ">
+        <section className="w-full h-auto flex md:flex-row  flex-col-reverse p-[5%] gap-8 font-opensans bg-khaki justify-between">
+          <div className=" md:w-[60%] w-full bg-babypowder  p-[3%] ">
             <Carousel settings={Cardsetting}>
               {onsale.map((product, index) => (
                 <div key={product.id} className=" h-auto pl-2 pr-2 capitalize">
@@ -233,11 +233,11 @@ console.log(featuredproducts);
               ))}
             </Carousel>
           </div>
-          <article className="w-[50%] p-2 flex flex-col gap-8">
-            <h1 className="text-3xl">OnSale</h1>
+          <article className="md:w-[50%] w-full p-2 flex flex-col gap-8">
+            <h1 className="md:text-3xl text-2xl">OnSale</h1>
 
             <p className="md:text-lg text-sm ">
-              <h2 className="text-xl underline">
+              <h2 className="md:text-xl text-lg underline">
                 Unbeatable Deals on OnSale Products
               </h2>
               Get ready to snag some incredible deals on our on sale products!
@@ -248,17 +248,17 @@ console.log(featuredproducts);
               items. Don't miss out on these limited-time offers – shop now and
               take advantage of the amazing discounts on offer!
             </p>
-            <button className="bg-wenge text-white md:p-2 p-1 md:w-72 w-24 rounded  text-sm md:text-lg hover:text-xl ">
+            <button className="bg-wenge text-white p-2  md:w-72 w-32 rounded  text-sm md:text-lg hover:text-xl ">
               Find more deals
             </button>
           </article>
         </section>
 
-        <section className="w-full h-auto flex justify-between gap-8 p-[5%] font-opensans">
-          <article className="w-[50%] p-6 flex flex-col gap-8 border-khaki border-r-2 text-right">
-            <h1 className="text-3xl text-right">Top Trending</h1>
-            <p className="text-lg text-right">
-              <h2 className="text-xl  underline">
+        <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-8 p-[5%] font-opensans">
+          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 border-khaki md:border-r-2 border-l-2 md:text-right">
+            <h1 className="md:text-3xl text-2xl ">Top Trending</h1>
+            <p className="md:text-lg text-sm ">
+              <h2 className="md:text-xl text-lg  underline">
                 Discover Our Top Trending Products
               </h2>
               Explore the latest and most sought-after items in our collection
@@ -268,11 +268,11 @@ console.log(featuredproducts);
               inspire and elevate your look. Shop now and join the trendsetters
               with these coveted pieces
             </p>
-            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl ms-auto">
+            <button className="bg-wenge text-white p-2 md:w-72 w-60 rounded md:text-lg hover:text-xl md:ms-auto">
               Check our collections
             </button>
           </article>
-          <div className=" w-[60%] capitalize bg-babypowder p-[3%]">
+          <div className=" md:w-[60%] w-full capitalize bg-babypowder p-[3%]">
             <Carousel settings={Cardsetting}>
               {toptrending.map((product, index) => (
                 <div key={product.id} className="pl-2 pr-2 h-auto">
