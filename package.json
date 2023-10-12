@@ -8,9 +8,9 @@
     "start": "next start --p 4000",
     "lint": "next lint",
     "seed": "cd seeders && node seed_priceid.js",
-    "server-products": "json-server -p 4001 backend/products/db.json -m ./node_modules/json-server-auth",
+    "server-products": "json-server -p 4006 backend/products/db.json -m ./node_modules/json-server-auth",
     "server-category": "json-server -p 4005 backend/category/db.json -m ./node_modules/json-server-auth",
-    "server-subcategory": "json-server -p 4003 backend/subcategory/db.json -m ./node_modules/json-server-auth",
+    "server-subcategory": "json-server -p 4007 backend/subcategory/db.json -m ./node_modules/json-server-auth",
     "server-users": "json-server -p 4004 backend/users/db.json -m ./node_modules/json-server-auth",
     "start-all-servers": "concurrently \"npm run server-products\" \"npm run server-category\" \"npm run server-subcategory\" \"npm run server-users\""
   },

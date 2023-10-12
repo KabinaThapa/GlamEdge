@@ -7,7 +7,7 @@ import { Items } from '../types/items'
 
 export const fetchProduct=createAsyncThunk("products/fetchProduct",
 async()=>{
-    const response=await fetch(process.env.NEXT_PUBLIC_SERVER_PRODUCTS_URL + '/products')
+    const response=await fetch('https://glam-edge-backend.onrender.com/products')
     const data=await response.json()
     return data as Items[]
     

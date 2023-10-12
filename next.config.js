@@ -23,7 +23,7 @@ const nextConfig = {
           },
           // Rewrite requests with /api/category to the backend server running on port 4005
           {
-            source: '/category',
+            source: '/api/category',
             destination: 'http://localhost:4005/category',
           },
           {

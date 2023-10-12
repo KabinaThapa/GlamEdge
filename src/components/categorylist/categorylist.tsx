@@ -18,9 +18,9 @@ const Categorylist: React.FC<{ category: string }> = ({ category }) => {
   console.log(item);
   console.log(items);
 
-  const filterCategory = item.filter(
-    (subcategory) => subcategory.id === category
-  );
+  const filterCategory = Array.isArray(item)?(item.filter(
+    (subcategory) => subcategory.id === category)):([])
+  
   const filterdesc = items.filter((categories) => categories.id === category);
   console.log(filterdesc);
   console.log(filterCategory);

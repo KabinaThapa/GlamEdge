@@ -10,7 +10,7 @@ export interface Category{
 
 export const fetchCategory=createAsyncThunk('category/fetchcategory',
 async()=>{
-    const response=await fetch(process.env.NEXT_PUBLIC_SERVER_CATEGORY_URL + '/category')
+    const response=await fetch('https://glam-edge-backend.onrender.com/category')
     const data=await response.json()
     console.log('Fetched data:', data);
     return data as Category[]
