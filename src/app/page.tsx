@@ -93,9 +93,9 @@ console.log(featuredproducts);
 
   return (
     <>
-      <div className=" flex flex-col  w-full items-center justify-center">
-        <section className="w-full h-auto  flex  justify-center items-center gap-6 p-4">
-          <div className=" relative w-[70%] h-auto  flex">
+      <div className=" flex flex-col  w-full items-center justify-center border border-black">
+        <section className="w-full h-auto  flex  justify-center items-center md:gap-6 gap-4 md:p-4 p-2 pt-4 pb-4">
+          <div className=" relative md:w-[70%] w-[60%] md:h-auto h-[20rem]  flex">
             <Image
               src={
                 "https://cdn.shopify.com/s/files/1/0062/5642/7093/files/blog_02.jpg?3192"
@@ -103,28 +103,30 @@ console.log(featuredproducts);
               alt="picture"
               width={1200}
               height={1200}
+              className="object-cover w-full h-full"
             />
-            <div className="absolute overflow-hidden top-[50%] left-[10%] gap-8 font-noto font-bold  text-center  text-2xl text-raisinblack p-2 bg-babypowder w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center">
+            <div className="absolute overflow-hidden top-[50%] left-[10%] gap-8 font-noto font-bold  text-center  md:text-2xl text-xs text-raisinblack p-2 bg-babypowder w-[80%] bg-opacity-60 inset-0 flex flex-col justify-center items-center">
               <p>
                 Embrace Your Inner Glamour: Unleash the Swag with Luxurious
                 Furry Fashion!
               </p>
-              <button className="bg-wenge p-2 w-72 rounded text-lg text-white hover:text-xl">
+              <button className="bg-wenge p-2 md:w-72 w-32 rounded md:text-lg text-xs text-white hover:text-xl">
                 Shop Collection
               </button>
             </div>
           </div>
-          <div className="w-[32%] ">
+          <div className="md:w-[32%] w-[40%] ">
             <Carousel settings={Imagesetting}>
               {images.map((image, index) => (
-                <div key={index} className="relative h-80">
+                <div key={index} className="relative md:h-80 h-44 ">
                   <Image
+                  className="object-cover w-full h-full"
                     src={image.img}
                     alt={image.caption}
                     width={500}
                     height={500}
                   />
-                  <div className="absolute w-[80%] top-[50%] right-0  bg-Jet bg-opacity-50 p-2 flex flex-col justify-center  text-white  font-poppins text-lg font-medium">
+                  <div className="absolute md:w-[100%] w-[100%] top-[50%] right-0  bg-Jet bg-opacity-50 p-2 flex flex-col justify-center  text-white  font-poppins md:text-lg text-xs font-medium">
                     <p className="">{image.caption}</p>
                   </div>
                 </div>
@@ -134,10 +136,10 @@ console.log(featuredproducts);
         </section>
 
         <section className="bg-khaki flex flex-col justify-center items-center p-12">
-          <h1 className={styles.kabi + " text-4xl text-center mb-8"}>
+          <h1 className={styles.kabi + " md:text-4xl text-2xl text-center mb-8"}>
             Our Category
           </h1>
-          <div className="w-[80%] h-auto grid grid-cols-3  gap-12">
+          <div className="md:w-[80%] w-[100%] h-auto grid md:grid-cols-3 grid-cols-1  gap-8">
             {Array.isArray(item)?(
             item.map((item) => (
               <div
@@ -157,7 +159,7 @@ console.log(featuredproducts);
                       height={400}
                     />
 
-                    <div className="absolute top-[50%] right-[30%] bg-babypowder w-32 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
+                    <div className="absolute top-[50%] md:right-[30%] left-0 bg-babypowder w-32 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
                       <h1>{item.id}</h1>
                     </div>
                   </Link>
@@ -171,8 +173,8 @@ console.log(featuredproducts);
           <article className="w-[50%] p-6 flex flex-col gap-8 border-r-2 border-khaki">
             <h1 className="text-3xl text-right "> Our Featured Products</h1>
 
-            <p className=" text-lg text-right ">
-              <h2 className="text-xl underline">
+            <p className=" md:text-lg text-sm text-right ">
+              <h2 className="md:text-xl  underline">
                 Discover Our Featured Products
               </h2>
               Explore our handpicked selection of featured products, carefully
@@ -233,7 +235,7 @@ console.log(featuredproducts);
           <article className="w-[50%] p-2 flex flex-col gap-8">
             <h1 className="text-3xl">OnSale</h1>
 
-            <p className="text-lg ">
+            <p className="md:text-lg text-sm ">
               <h2 className="text-xl underline">
                 Unbeatable Deals on OnSale Products
               </h2>
@@ -245,7 +247,7 @@ console.log(featuredproducts);
               items. Don't miss out on these limited-time offers – shop now and
               take advantage of the amazing discounts on offer!
             </p>
-            <button className="bg-wenge text-white p-2 w-72 rounded text-lg hover:text-xl ">
+            <button className="bg-wenge text-white md:p-2 p-1 md:w-72 w-24 rounded  text-sm md:text-lg hover:text-xl ">
               Find more deals
             </button>
           </article>

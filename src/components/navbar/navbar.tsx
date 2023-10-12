@@ -39,8 +39,12 @@ const Navbar = () => {
 
   return (
     <>
-    <div>
-      <AiOutlineMenu onClick={handleClick} className='md:hidden absolute right-0 top-2'/>
+    <div className='md:hidden flex justify-between items-center  w-[95%] mx-auto relative  p-2'>
+      <div className='flex items-baseline'>
+    <h1 className='text-2xl'>Glam </h1><h1 className='text-4xl font-aclonica font-bold text-wenge'>Edge</h1>
+      
+      </div>
+      <AiOutlineMenu onClick={handleClick} className='text-2xl'/>
     </div>
     {
       click?

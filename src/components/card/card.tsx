@@ -55,7 +55,7 @@ const ProductCard: React.FC<CardProps>=({ img, title, children, price, loading, 
       )}
       
       </div>
-      <div className='p-2 text-lg font-roboto'>
+      <div className='p-2 md:text-lg text-sm font-roboto'>
     <h2>{title}</h2>
      <h2 className='font-serif'>${price}</h2>
      </div>

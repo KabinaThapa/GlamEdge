@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className=" space-y-8 p-4 font-opensans ">
       <div className="border-b-2 border-khaki w-[95%] mx-auto"></div>
-      <div className="flex justify-between w-full h-auto ">
+      <div className="flex justify-between md:w-full w-[50%] h-auto text-xs">
         <ul className="space-y-4">
           <li className="font-semibold">Contact us</li>
           <li>221b Notingham Forest - London - UK</li>
