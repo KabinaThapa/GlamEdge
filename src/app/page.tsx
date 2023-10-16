@@ -94,7 +94,7 @@ console.log(featuredproducts);
 
   return (
     <>
-      <div className=" flex flex-col  w-full items-center justify-center border border-black">
+      <div className=" flex flex-col  w-full items-center justify-center">
         <section className="w-full h-auto  flex  justify-center items-center md:gap-6 gap-4 md:p-4 p-2 pt-4 pb-4">
           <div className=" relative md:w-[70%] w-[60%] md:h-auto h-[20rem]  flex">
             <Image
@@ -111,7 +111,7 @@ console.log(featuredproducts);
                 Embrace Your Inner Glamour: Unleash the Swag with Luxurious
                 Furry Fashion!
               </p>
-              <button className="bg-wenge p-2 md:w-72 w-32 rounded md:text-lg text-xs text-white hover:text-xl">
+              <button className="bg-wenge p-2 md:w-72 w-32 rounded md:text-lg text-sm text-white hover:text-xl">
                 Shop Collection
               </button>
             </div>
@@ -137,7 +137,7 @@ console.log(featuredproducts);
         </section>
 
         <section className="bg-khaki flex flex-col justify-center items-center p-4 md:p-12">
-          <h1 className={styles.kabi + " md:text-4xl text-2xl text-center mb-8"}>
+          <h1 className={styles.kabi + " md:text-4xl text-2xl text-center mb-8 font-semibold"}>
             Our Category
           </h1>
           <div className="md:w-[80%] w-[100%] md:h-auto  grid md:grid-cols-3 grid-cols-2  gap-4">
@@ -145,12 +145,8 @@ console.log(featuredproducts);
             item.map((item, index) => (
               <div
                 key={item.id}
-                className={`${index===2?'col-span-2 md:col-auto md:h-auto h-[12rem] ':'md:h-auto h-[20rem]'} relative group gap-4 capitalize md:text-2xl text-lg overflow-hidden shadow-lg`}
+                className={`${index===2?'col-span-2  md:col-auto md:h-auto h-[12rem] ':'md:h-auto h-[20rem]'} relative group gap-4 capitalize md:text-2xl text-lg overflow-hidden shadow-lg`}
               >
-                {isloading ? (
-                  <Skeleton width={300} height={400} />
-                ) : (
-                  <Link href={`/product/${item.id}`}>
                     <Image
                       className=" object-cover w-full h-full transition-transform duration-1000 transform hover:scale-110 "
                       src={item.image}
@@ -159,22 +155,22 @@ console.log(featuredproducts);
                       width={1800}
                       height={400}
                     />
-
-                    <div className="absolute top-[50%] md:right-[30%] left-0 bg-babypowder md:w-32 w-24 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
+ <Link href={`/product/${item.id}`}>
+                    <div className="absolute top-[50%] md:right-[30%] left-0 bg-babypowder md:w-32 w-[60%] p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
                       <h1>{item.id}</h1>
                     </div>
                   </Link>
-                )}
+                
               </div>
             ))):('')}
           </div>
         </section>
 
-        <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-8 p-[5%] font-opensans">
-          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 md:border-r-2 border-l-2 md:border-l-0 border-khaki">
-            <h1 className="md:text-3xl text-xl md:text-right "> Our Featured Products</h1>
+        <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-10 p-[5%] font-opensans">
+          <article className="md:w-[50%] w-full pl-6 pr-6 flex flex-col gap-8 md:border-r-2 border-l-2 md:border-l-0 border-khaki">
+            <h1 className="md:text-3xl text-xl font-semibold md:text-right "> Our Featured Products</h1>
 
-            <p className=" md:text-lg text-sm md:text-right ">
+            <p className=" md:text-lg text-base md:text-right ">
               <h2 className="md:text-xl  underline">
                 Discover Our Featured Products
               </h2>
@@ -186,7 +182,7 @@ console.log(featuredproducts);
               featured collection has something for everyone. Shop now and
               elevate your style with our curated favorites.
             </p>
-            <button className=" text-white p-2 md:w-72 w-32 rounded text-lg hover:text-xl  bg-wenge md:ms-auto me-auto ">
+            <button className=" text-white p-2 md:w-72 w-32 rounded text-lg hover:text-xl  bg-wenge  md:ms-auto  ">
               Shop Now
             </button>
           </article>
@@ -234,9 +230,9 @@ console.log(featuredproducts);
             </Carousel>
           </div>
           <article className="md:w-[50%] w-full p-2 flex flex-col gap-8">
-            <h1 className="md:text-3xl text-2xl">OnSale</h1>
+            <h1 className="md:text-3xl text-2xl font font-semibold">OnSale</h1>
 
-            <p className="md:text-lg text-sm ">
+            <p className="md:text-lg text-base ">
               <h2 className="md:text-xl text-lg underline">
                 Unbeatable Deals on OnSale Products
               </h2>
@@ -248,16 +244,16 @@ console.log(featuredproducts);
               items. Don't miss out on these limited-time offers – shop now and
               take advantage of the amazing discounts on offer!
             </p>
-            <button className="bg-wenge text-white p-2  md:w-72 w-32 rounded  text-sm md:text-lg hover:text-xl ">
+            <button className="bg-wenge text-white p-2  md:w-72 w-44 rounded text-lg hover:text-xl ">
               Find more deals
             </button>
           </article>
         </section>
 
-        <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-8 p-[5%] font-opensans">
-          <article className="md:w-[50%] w-full p-6 flex flex-col gap-8 border-khaki md:border-r-2 md:border-l-transparent  border-l-2 md:text-right">
-            <h1 className="md:text-3xl text-2xl ">Top Trending</h1>
-            <p className="md:text-lg text-sm ">
+        <section className="w-full h-auto flex md:flex-row flex-col justify-between gap-10 p-[5%] font-opensans">
+          <article className="md:w-[50%] w-full pl-6 pr-6 flex flex-col gap-8 border-khaki md:border-r-2 md:border-l-transparent  border-l-2 md:text-right">
+            <h1 className="md:text-3xl text-2xl font-semibold ">Top Trending</h1>
+            <p className="md:text-lg text-base">
               <h2 className="md:text-xl text-lg  underline">
                 Discover Our Top Trending Products
               </h2>
@@ -268,7 +264,7 @@ console.log(featuredproducts);
               inspire and elevate your look. Shop now and join the trendsetters
               with these coveted pieces
             </p>
-            <button className="bg-wenge text-white p-2 md:w-72 w-60 rounded md:text-lg hover:text-xl md:ms-auto">
+            <button className="bg-wenge text-white p-2 md:w-72 w-60 rounded text-lg hover:text-xl md:ms-auto">
               Check our collections
             </button>
           </article>

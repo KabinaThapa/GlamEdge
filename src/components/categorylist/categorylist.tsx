@@ -27,13 +27,13 @@ const Categorylist: React.FC<{ category: string }> = ({ category }) => {
   return (
     <>
       <div className="relative w-full h-full flex flex-col items-center gap-10 p-[5%] font-opensans">
-        <div className=" w-[90%] ">
+        <div className=" md:w-[80%] w-[95%] ">
           <h1 className="capitalize md:text-4xl text-2xl text-center underline mb-4  ">
             {category}
           </h1>
           <p className="md:text-lg text-sm   ">{filterdesc[0].desc}</p>
         </div>
-        <div className="md:w-[80%] w-[95%] md:h-[32rem] h-[20rem] grid grid-cols-3 gap-4 ">
+        <div className="md:w-[80%] w-[95%] md:h-[32rem] h-[20rem] grid grid-cols-3 md:gap-4 gap-2 ">
           {filterCategory.map((products, index) => (
             <div
               key={products.id}
@@ -51,7 +51,7 @@ const Categorylist: React.FC<{ category: string }> = ({ category }) => {
                   height={1400}
                 />
 
-                <div className="absolute top-[50%] md:right-[20%] right-[10%] bg-babypowder md:w-44 w-20 p-2 md:text-center md:text-base text-xs rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
+                <div className="absolute top-[50%] md:right-[20%] right-[10%] bg-babypowder md:w-44 w-20 p-2 text-center md:text-lg text-xs font-medium rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
                   <h1>{products.subcategory}</h1>
                 </div>
               </Link>

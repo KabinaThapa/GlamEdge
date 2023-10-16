@@ -40,21 +40,21 @@ const Footer = () => {
               className="p-2 mr-2 border-b-2 border-Jet "
               type="email"
               placeholder="Enter your email....."/>
-            <button className="p-2 bg-wenge text-white md:w-32 w-[70%] mt-2 rounded outline-none hover:scale-105">
+            <button className="p-2 bg-wenge text-white md:w-32 w-[70%] mt-2 md:text-base text-sm rounded outline-none hover:scale-105">
               Register
             </button>
           </li>
         </ul>
       </div>
-      <div className="flex flex-col justify-between items-center ">
+      <div className="flex flex-col justify-between items-center md:text-base text-xs ">
         <ul>
           <li>Copyright © 2022 Velatheme. All Right Reserved.</li>
         </ul>
-        <div className="w-44 justify-between flex mt-2">
-          <BiLogoFacebook size={28} />
-          <BiLogoInstagram size={28} />
-          <BiLogoTwitter size={28} />
-          <BiLogoYoutube size={28} />
+        <div className="md:w-44 w-32 justify-between flex mt-2 md:text-4xl text-2xl">
+          <BiLogoFacebook  />
+          <BiLogoInstagram  />
+          <BiLogoTwitter  />
+          <BiLogoYoutube  />
         </div>
       </div>
     </div>
