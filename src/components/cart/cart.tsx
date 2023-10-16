@@ -85,46 +85,51 @@ const Cart = () => {
       ) : (
         <>
           <div className="  flex  justify-around  w-full    p-[2%] ">
-            <div className="  relative w-full  flex  justify-around bg-babypowder p-[3%]">
-              <div className=" absolute w-[20%] bottom-0 left-1 z-1 ">
+            
+            <div className="  relative w-full   md:flex  justify-around bg-babypowder p-[3%]">
+         
+              <div className=" absolute md:w-44 md:h-44 hidden md:block w-32 h-32 md:bottom-0  md:left-1 left-8 ">
+                
                 <Image alt='pic' width={300} height={300} src={blob3.src} className="object-cover w-full h-full" />
               </div>
-              <div className="md:w-[60%] w-[20%] z-0">
-              <div className="grid md:grid-cols-5 grid-cols-1 gap-2 text-xl bg-timber border-b-8 border-babypowder p-4">
+              <h1 className="underline text-center md:hidden z-[10000] md:mb-0 mb-6">Your Shopping Cart</h1>
+              <div className="md:w-[60%] w-[100%] z-[1] border border-black bg-timber ">
+                
+              <div className="grid md:grid-cols-5 grid-cols-4 z-10 gap-2 md:text-xl text-sm  border-b-8 border-babypowder p-4">
     <div className="text-center font-serif">Item</div>
     <div className="text-center font-serif">Quantity</div>
     <div className="text-center font-serif">Price</div>
     <div className="text-center font-serif">Total</div>
-    <div className="text-center font-serif">Actions</div>
+    <div className="text-center font-serif md:block hidden">Actions</div>
     </div>
   
 
     {items.map((item) => (
       <div
         key={item.id}
-        className="grid grid-cols-5 items-center text-center  border-b-8 border-babypowder text-base bg-timber p-2"
+        className="grid md:grid-cols-5 grid-cols-4  text-center items-center border-b-8 border-babypowder text-base gap-2   p-2"
       >
        
-        <div className="px-4 py-6 w-38 h-38">
+        <div className=" w-38 h-38 ">
           <Image src={item.image} width={800} height={200} alt={item.name} />
-          <p className="text-md z-[-1] mt-2">{item.name}</p>
+          <p className="md:text-base text-xs z-[-1] mt-2">{item.name}</p>
         </div>
 
-        <div className="px-4 py-6 mx-auto">
-          <div className="bg-wenge text-white text-lg rounded-md flex w-32 justify-around p-1 font-serif">
+        <div className="mx-auto">
+          <div className="bg-wenge   text-white text-lg md:rounded-md rounded-2xl flex md:flex-row flex-col  md:w-32 w-7 justify-around p-1  font-serif">
             <button onClick={() => handleDecrement(item.id)}>-</button>
             <p>{item.quantity}</p>
             <button onClick={() => handleIncrement(item.id)}>+</button>
-          </div>
+         </div>
         </div>
 
-        <div className="px-4 py-6 text-lg font-serif"> $ {item.price}</div>
-        <div className="px-4 py-6 font-serif text-lg">
+        <div className=" md:text-lg text-sm font-serif my-auto"> $ {item.price}</div>
+        <div className=" font-serif md:text-lg text-sm my-auto">
           $ {item.price * item.quantity}
         </div>
-        <div className="px-4 py-6">
-          <button onClick={() => handleDelete(item.id)}>
-            <AiOutlineDelete size={25} />
+        <div className=" md:text-2xl text-xl col-span-5 md:mx-0 mx-auto md:col-auto p-4 mt-2 ">
+          <button className="border rounded-full md:mx-auto flex items-center justify-center bg-babypowder text-red-800 w-9 h-9" onClick={() => handleDelete(item.id)}>
+            <AiOutlineDelete  />
           </button>
         </div>
       </div>
@@ -132,8 +137,8 @@ const Cart = () => {
   </div>
 
 
-              <div className="relative text-2xl font-roboto w-[30%] h-96 p-4  flex flex-col gap-4 ">
-                <div className=" absolute w-[100%]  bottom-8 left-12 p-2  z-0 ">
+              <div className="relative md:text-2xl text-xl font-roboto md:w-[30%] h-96 p-4  flex flex-col gap-4 border ">
+                <div className=" absolute w-[100%]  md:bottom-8  md:left-12 left-2 p-2  z-0 ">
                   <Image
                     alt="pic"
                     width={200}
@@ -142,9 +147,9 @@ const Cart = () => {
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <p className="underline  z-[1]">Your Shopping Cart</p>
-                <p className="z-[1]">Total Items: {cartQuantity}</p>
-                <h1 className="text-2xl z-[1]">Sub Total: ${cartAmount}</h1>
+                <p className="underline md:block hidden z-[1]">Your Shopping Cart</p>
+                <p className="z-[1] ">Total Items: {cartQuantity}</p>
+                <h1 className=" z-[1]">Sub Total: ${cartAmount}</h1>
 
                 <button
                   onClick={handleCheckout}
