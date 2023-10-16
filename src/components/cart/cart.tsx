@@ -89,71 +89,48 @@ const Cart = () => {
               <div className=" absolute w-[20%] bottom-0 left-1 z-1 ">
                 <Image alt='pic' width={300} height={300} src={blob3.src} className="object-cover w-full h-full" />
               </div>
-              <div className=" w-[60%] z-0 ">
-                <table className=" w-full text-left text-lg bg-timber z-[-1]">
-                  <thead>
-                    <tr className=" border-b-8  border-babypowder p-2 uppercase ">
-                      <th className="px-4 py-4 text-center font-medium">
-                        Item
-                      </th>
-                      <th className="px-4 py-4 text-center font-medium">
-                        Quantity
-                      </th>
-                      <th className="px-4 py-4 text-center font-medium">
-                        Price
-                      </th>
-                      <th className="px-4 py-4 text-center font-medium">
-                        Total
-                      </th>
-                      <th className="px-4 py-4 text-center font-medium">
-                        Actions
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {items.map((item) => (
-                      <tr
-                        key={item.id}
-                        className="border-b-8  border-babypowder text-base "
-                      >
-                        <td className=" px-4 py-6">
-                          <Image
-                            src={item.image}
-                            width={200}
-                            height={200}
-                            alt={item.name}
-                          />
-                          <p className="text-md z-[-1]">{item.name}</p>
-                        </td>
+              <div className="md:w-[60%] w-[20%] z-0">
+              <div className="grid md:grid-cols-5 grid-cols-1 gap-2 text-xl bg-timber border-b-8 border-babypowder p-4">
+    <div className="text-center font-serif">Item</div>
+    <div className="text-center font-serif">Quantity</div>
+    <div className="text-center font-serif">Price</div>
+    <div className="text-center font-serif">Total</div>
+    <div className="text-center font-serif">Actions</div>
+    </div>
+  
 
-                        <td className=" px-4 py-6 mx-auto">
-                          <div className=" bg-wenge text-white rounded-md flex  w-32 justify-around p-1  font-serif">
-                            <button onClick={() => handleDecrement(item.id)}>
-                              -
-                            </button>
-                            <p>{item.quantity}</p>
-                            <button onClick={() => handleIncrement(item.id)}>
-                              +
-                            </button>
-                          </div>
-                        </td>
-                        <td className=" px-4 py-6 font-serif">
-                          {" "}
-                          $ {item.price}
-                        </td>
-                        <td className=" px-4 py-6 font-serif">
-                          $ {item.price * item.quantity}
-                        </td>
-                        <td className=" px-4 py-6">
-                          <button onClick={() => handleDelete(item.id)}>
-                            <AiOutlineDelete size={25} />
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+    {items.map((item) => (
+      <div
+        key={item.id}
+        className="grid grid-cols-5 items-center text-center  border-b-8 border-babypowder text-base bg-timber p-2"
+      >
+       
+        <div className="px-4 py-6 w-38 h-38">
+          <Image src={item.image} width={800} height={200} alt={item.name} />
+          <p className="text-md z-[-1] mt-2">{item.name}</p>
+        </div>
+
+        <div className="px-4 py-6 mx-auto">
+          <div className="bg-wenge text-white text-lg rounded-md flex w-32 justify-around p-1 font-serif">
+            <button onClick={() => handleDecrement(item.id)}>-</button>
+            <p>{item.quantity}</p>
+            <button onClick={() => handleIncrement(item.id)}>+</button>
+          </div>
+        </div>
+
+        <div className="px-4 py-6 text-lg font-serif"> $ {item.price}</div>
+        <div className="px-4 py-6 font-serif text-lg">
+          $ {item.price * item.quantity}
+        </div>
+        <div className="px-4 py-6">
+          <button onClick={() => handleDelete(item.id)}>
+            <AiOutlineDelete size={25} />
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+
 
               <div className="relative text-2xl font-roboto w-[30%] h-96 p-4  flex flex-col gap-4 ">
                 <div className=" absolute w-[100%]  bottom-8 left-12 p-2  z-0 ">
@@ -171,7 +148,7 @@ const Cart = () => {
 
                 <button
                   onClick={handleCheckout}
-                  className=" p-4 text-lg rounded-md bg-wenge text-white hover:text-xl z-[1]"
+                  className=" p-4 text-xl rounded-md bg-wenge text-white hover:text-xl z-[1]"
                 >
                   CheckOut
                 </button>
