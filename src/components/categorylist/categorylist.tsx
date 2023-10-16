@@ -28,16 +28,16 @@ const Categorylist: React.FC<{ category: string }> = ({ category }) => {
     <>
       <div className="relative w-full h-full flex flex-col items-center gap-10 p-[5%] font-opensans">
         <div className=" w-[90%] ">
-          <h1 className="capitalize text-4xl text-center underline mb-4">
+          <h1 className="capitalize md:text-4xl text-2xl text-center underline mb-4  ">
             {category}
           </h1>
-          <p className="text-lg">{filterdesc[0].desc}</p>
+          <p className="md:text-lg text-sm   ">{filterdesc[0].desc}</p>
         </div>
-        <div className="w-[80%] h-[32rem] grid grid-cols-3 gap-4 ">
+        <div className="md:w-[80%] w-[95%] md:h-[32rem] h-[20rem] grid grid-cols-3 gap-4 ">
           {filterCategory.map((products, index) => (
             <div
               key={products.id}
-              className={`w-full h-full  ${
+              className={`w-full h-full   ${
                 index === 2 || index === 0 ? "row-span-2" : ""
               } relative group  capitalize text-2xl overflow-hidden shadow-lg  mx-auto`}
             >
@@ -51,7 +51,7 @@ const Categorylist: React.FC<{ category: string }> = ({ category }) => {
                   height={1400}
                 />
 
-                <div className="absolute top-[50%] right-[20%] bg-babypowder w-44 p-2 text-center rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
+                <div className="absolute top-[50%] md:right-[20%] right-[10%] bg-babypowder md:w-44 w-20 p-2 md:text-center md:text-base text-xs rounded-sm transition-transform duration-1000 transform group-hover:scale-110">
                   <h1>{products.subcategory}</h1>
                 </div>
               </Link>
