@@ -69,7 +69,7 @@ const Productslist: React.FC<{
               alt={product.name}
             />
           </div>
-          <div className="md:w-[60%] h-auto p-4 grid gap-4 border-l-2 border-khaki ">
+          <div className="md:w-[60%] h-auto p-4 grid gap-4 md:border-l-2  border-khaki ">
             <h2 className="md:text-2xl text-lg text-center md:text-left font-semibold">{product.name}</h2>
 
             <div className="flex items-center md:justify-start justify-center ">

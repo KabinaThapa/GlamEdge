@@ -60,19 +60,19 @@ const Signin: React.FC = () => {
   return (
     <>
       <div className=" min-h-screen  w-full  p-[2%]">
-        <div className="mx-auto grid grid-cols-4 place-items-center">
-          <div className="w-full h-full col-span-3">
+        <div className="mx-auto grid md:grid-cols-4 grid-cols-3 place-items-center">
+          <div className="w-full h-full md:col-span-3 col-span-2">
             <Image
               alt="pic"
               width={1600}
               height={1600}
-              className="object-cover h-full w-full"
+              className="object-cover object-center h-full w-full"
               src={
                 "https://minion-vinovatheme.myshopify.com/cdn/shop/files/s-9-1_2048x.jpg?v=1619166921"
               }
             />
           </div>
-          <div className="ml-[-150px] z-[100] w-[28rem] mt-8 mb-8 bg-timber ">
+          <div className="ml-[-150px] z-[1] md:w-[28rem] mt-8 mb-8 md:bg-timber backdrop-blur-md">
             <Formik
               initialValues={initialValues}
               onSubmit={handleSubmit}
@@ -83,9 +83,9 @@ const Signin: React.FC = () => {
                   <>
                     <Form
                       onSubmit={handleSubmit}
-                      className="  flex flex-col justify-center gap-6 text-lg font-opensans p-6"
+                      className="  flex flex-col justify-center gap-6 md:text-lg text-base font-opensans p-6"
                     >
-                      <h1 className="text-3xl text-center">SignIn</h1>
+                      <h1 className="md:text-3xl text-2xl text-center">SignIn</h1>
                       <Inputfield
                         type="text"
                         name="email"
@@ -101,10 +101,10 @@ const Signin: React.FC = () => {
                       <p className="text-right ">Forgot Password?</p>
                       <button
                         type="submit"
-                        className="w-full p-2 bg-wenge rounded text-lg text-white hover:text-xl"
+                        className="w-full p-2 bg-wenge rounded md:text-lg text-white hover:text-xl"
                       >
                         {" "}
-                        LogIn
+                        Log In
                       </button>
                       <Link href="/signup">
                         <p className="text-center underline">
@@ -113,10 +113,10 @@ const Signin: React.FC = () => {
                       </Link>
                       <p className="text-center">OR</p>
                       <p className="text-center">Sign Up Using</p>
-                      <div className="flex items-center justify-between w-28 mx-auto">
-                        <CiFacebook size={30} />
-                        <PiGoogleLogo size={30} />
-                        <CiTwitter size={32} />
+                      <div className="flex items-center md:text-4xl text-2xl justify-between md:w-28 w-24 mx-auto">
+                        <CiFacebook  />
+                        <PiGoogleLogo  />
+                        <CiTwitter  />
                       </div>
                     </Form>
 
