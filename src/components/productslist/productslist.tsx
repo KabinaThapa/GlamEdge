@@ -59,8 +59,8 @@ const Productslist: React.FC<{
   return (
     <>
       <div className="w-full h-auto p-[5%] font-opensans flex flex-col gap-8 items-center">
-        <div className="flex justify-center gap-8 items-center">
-          <div className="w-[30%] overflow-hidden">
+        <div className="flex md:flex-row flex-col justify-center gap-8 items-center">
+          <div className="md:w-[30%] w-[70%] overflow-hidden">
             <Image
               width={1400}
               height={1400}
@@ -69,22 +69,22 @@ const Productslist: React.FC<{
               alt={product.name}
             />
           </div>
-          <div className="w-[60%]  h-auto p-4 grid gap-4 border-l-2 border-khaki ">
-            <h2 className="text-2xl font-semibold">{product.name}</h2>
+          <div className="md:w-[60%] h-auto p-4 grid gap-4 border-l-2 border-khaki ">
+            <h2 className="md:text-2xl text-lg text-center md:text-left font-semibold">{product.name}</h2>
 
-            <div className="flex items-center">
+            <div className="flex items-center md:justify-start justify-center ">
             {product.rating !== undefined ? (
     <Stars rating={product.rating} />
   ) : (
     <span>No rating available</span>
   )}
             </div>
-            <p>{product.description}</p>
-            <p className="font-serif text-xl"> ${product.price}</p>
+            <p className="md:text-base text-sm">{product.description}</p>
+            <p className="font-serif md:text-xl text-lg"> ${product.price}</p>
 
-            <div className="">
+            <div className="text-xl">
               <h1>Size</h1>
-              <ul className="flex gap-4 font-semibold font-roboto">
+              <ul className="flex gap-4 text-sm md:text-base font-semibold font-roboto">
                 {["XXL", "XL", "L", "M", "S", "XS"].map((size) => (
                   <li
                     key={size}
@@ -100,7 +100,7 @@ const Productslist: React.FC<{
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col items-center text-lg overflow-hidden">
+            <div className="flex flex-col items-center md:text-lg text-base overflow-hidden">
               <button className="w-full bg-wenge rounded p-2 hover:text-xl  text-white">
                 Add to cart
               </button>
@@ -112,8 +112,8 @@ const Productslist: React.FC<{
           </div>
         </div>
         <div className="w-full p-4 ">
-          <h1 className="text-2xl font-opensans mb-2">Related Products</h1>
-          <div className="flex gap-4 ">
+          <h1 className="md:text-2xl text-xl font-opensans mb-2">Related Products</h1>
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-2 ">
             {relatedProducts.map((product) => (
               <div className=" w-full" key={product.id}>
                 <Card
