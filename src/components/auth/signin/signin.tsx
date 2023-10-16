@@ -83,7 +83,7 @@ const Signin: React.FC = () => {
                   <>
                     <Form
                       onSubmit={handleSubmit}
-                      className="  flex flex-col justify-center gap-6 md:text-lg text-base font-opensans p-6"
+                      className="  flex flex-col justify-center gap-6 md:text-lg text-sm font-opensans p-6"
                     >
                       <h1 className="md:text-3xl text-2xl text-center">SignIn</h1>
                       <Inputfield

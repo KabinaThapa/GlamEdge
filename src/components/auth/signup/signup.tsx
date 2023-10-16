@@ -46,8 +46,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="p-[2%] h-auto grid grid-cols-4 place-items-center">
-      <div className="w-full col-span-3 ">
+    <div className="p-[2%] h-auto grid md:grid-cols-4 grid-cols-3 place-items-center">
+      <div className="w-full h-full md:col-span-3 col-span-2 ">
         <Image
           alt="pic"
           width={1600}
@@ -63,9 +63,9 @@ const Signup = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <div className="w-[28rem] ml-[-150px] h-auto bg-timber">
-          <Form className="h-auto p-8 flex flex-col justify-center gap-6 text-base ">
-            <h1 className="text-3xl text-center">SignUp</h1>
+        <div className="md:w-[28rem] ml-[-150px]  mt-8 mb-8 h-auto md:bg-timber backdrop-blur-md">
+          <Form className="h-auto p-8 flex flex-col justify-center gap-6 md:text-lg text-sm ">
+            <h1 className="md:text-3xl text-2xl text-center">SignUp</h1>
             <Inputfield
               type="text"
               name="name"
