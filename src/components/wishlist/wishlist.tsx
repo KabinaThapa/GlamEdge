@@ -59,9 +59,9 @@ const Wishlist = () => {
      
         </div>
         </div>
-    <div className={`md:w-[95%] h-auto grid md:grid-cols-${columns} grid-cols-2  md:gap-4 gap-2 mx-auto`}>
+    <div className={`md:w-[95%] h-auto grid md:grid-cols-${columns}  grid-cols-2  md:gap-4 gap-2 mx-auto`}>
         {items.map((item)=>(
-          <div key={item.id} className=''>
+          <div key={item.id} className='object-cover w-full h-full'>
           <Card
       img={item.image}
       href={`/product/${item.category}/${item.subcategory}/${item.id}`}

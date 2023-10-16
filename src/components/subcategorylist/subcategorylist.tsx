@@ -83,12 +83,12 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
     return(
      <>
      <div className='flex flex-col items-center justify-center w-full p-[5%] gap-10'>
-      <div className='relative w-[90%] text-xl flex justify-between'>
-      <h1 className='text-3xl underline'>{subcategory}</h1>
-      <div className='w-44 flex justify-around items-center'>
-      <button onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
-      <button onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
-      <button onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
+      <div className='relative w-[90%] md:text-xl text-base flex  justify-between'>
+      <h1 className='md:text-3xl text-2xl underline'>{subcategory}</h1>
+      <div className='md:w-44 flex justify-around items-center'>
+      <button className='md:block hidden' onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
+      <button className='md:block hidden' onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
+      <button className='md:block hidden' onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
      
       <button onClick={handleDropmenu} className=' flex items-center justify-center cursor-pointer'>Filter <HiOutlineChevronDown size={20}/></button>
       {dropmenu ?(
@@ -101,10 +101,10 @@ export const Subcategorylist:React.FC<{category:string,subcategory:string}>=({ca
       </div>
    
       </div>
-    <div className={`grid grid-cols-${columns} gap-2 gap-y-4 w-[90%] p-2 `}  > 
+    <div className={`grid md:grid-cols-${columns} grid-cols-2 gap-2 gap-y-4 w-[90%] p-2 `}  > 
 
     {sortedProducts.map((product)=>(
-        <div key={product.id} className={`mx-auto ${columns===2 ?`w-[20rem]`:`w-[15rem]`}`}>
+        <div key={product.id} className={`mx-auto ${columns===2 ?`md:w-[20rem]`:`md:w-[15rem]`}`}>
           {sortedProducts.length===0 ? (<Skeleton width={300} height={400}/>):(
        
         <Card

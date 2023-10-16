@@ -9,7 +9,9 @@ const nextConfig = {
         'websitedemos.net',
         'images.pexels.com',
         'images.unsplash.com',
-        'nenaandpasadena.com'
+        'nenaandpasadena.com',
+        'encrypted-tbn0.gstatic.com',
+        'preview.colorlib.com'
     ],
         
     
