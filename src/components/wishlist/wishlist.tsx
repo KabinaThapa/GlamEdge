@@ -50,18 +50,18 @@ const Wishlist = () => {
     (
       <>
       <div className='w-full p-[5%] flex flex-col items-center justify-center gap-8'>
-        <div className='w-[90%] mx-auto underline text-2xl flex justify-between'><h1>Your Saved Items</h1>
+        <div className='md:w-[95%]  mx-auto  underline md:text-2xl text-lg flex justify-between'>Your Saved Items
       
-      <div className='w-44 flex justify-around items-center'>
-      <button onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
-      <button onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
-      <button onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
+      <div className='md:w-44 hidden  w-20 text-base md:text-2xl md:flex justify-around items-center'>
+      <button  onClick={()=>handleColumns(3)}><BsFillGrid3X2GapFill/></button>
+      <button  onClick={()=>handleColumns(2)}><BsFillGridFill/></button>
+      <button  onClick={()=>handleColumns(4)}><BsFillGrid3X3GapFill/></button>
      
         </div>
         </div>
-    <div className='w-[90%] h-auto grid grid-cols-4  gap-4 mx-auto'>
+    <div className={`md:w-[95%] h-auto grid md:grid-cols-${columns} grid-cols-2  md:gap-4 gap-2 mx-auto`}>
         {items.map((item)=>(
-          <div key={item.id}>
+          <div key={item.id} className=''>
           <Card
       img={item.image}
       href={`/product/${item.category}/${item.subcategory}/${item.id}`}
