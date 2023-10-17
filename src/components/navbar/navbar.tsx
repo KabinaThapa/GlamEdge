@@ -92,14 +92,14 @@ const Navbar = () => {
           <li>
           {isAuthenticated ? (
             <div className='w-full '>
-              <div  className='bg-wenge mx-auto text-white capitalize cursor-pointer rounded-full w-8 h-8 text-xl text-center flex items-center justify-center'>
+              <div  className='bg-wenge mx-auto text-white capitalize cursor-pointer rounded-full w-8 h-8 md:text-xl text-base text-center flex items-center justify-center'>
                 {userEmail[0]}
               </div>
               <button
-                className='bg-wenge p-2 rounded w-32 mt-4 text-white'
+                className='bg-wenge p-2 rounded w-32 mt-4 md:text-base text-sm text-white'
                 onClick={handleLogout}
               >
-                LogOut
+                Log Out
               </button>
              
             </div>

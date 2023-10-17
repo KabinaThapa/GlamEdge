@@ -21,6 +21,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Items } from "@/redux/types/items";
 import Image from "next/image";
+import LoadingSkeleton from "@/components/skeleton/skeleton";
 
 export default function Home() {
  
@@ -51,7 +52,7 @@ console.log(featuredproducts);
     dispatch(fetchCategory());
   }, [dispatch]);
   if (status === "loading") {
-    return <p>Loading...</p>;
+    return <p><LoadingSkeleton/></p>;
   }
   if (status === "failed") {
     return <p>Error:{error}</p>;
@@ -94,6 +95,7 @@ console.log(featuredproducts);
 
   return (
     <>
+    
       <div className=" flex flex-col  w-full items-center justify-center">
         <section className="w-full h-auto  flex  justify-center items-center md:gap-6 gap-4 md:p-4 p-2 pt-4 pb-4">
           <div className=" relative md:w-[70%] w-[60%] md:h-auto h-[20rem]  flex">
