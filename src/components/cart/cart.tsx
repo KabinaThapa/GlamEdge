@@ -65,12 +65,12 @@ const Cart = () => {
       {items.length === 0 ? (
         <>
           <div className="  min-h-screen w-full flex items-center p-12  ">
-            <div className=" relative flex flex-col  items-center justify-center p-[5%] h-[35rem] w-[60%]  text-2xl overflow-hidden gap-4 mx-auto">
+            <div className=" relative flex flex-col  items-center justify-center p-[5%] h-[35rem] md:w-[60%] w-[100%]  text-2xl overflow-hidden gap-4 mx-auto">
               <h1 className="underline">Your Cart is Empty!</h1>
-              <button className="w-44 p-2 bg-wenge rounded text-lg hover:text-xl text-white">
+              <button className="w-44 w-44 p-2 bg-wenge rounded md:text-lg text-base hover:text-xl text-white">
                 <Link href="/">Back To Shopping</Link>
               </button>
-              <div className=" absolute w-[60%] top-50 right-50 z-[-1] ">
+              <div className=" absolute md:w-[60%] w-[100%] top-50 right-50 z-[-1] ">
                 <Image
                   alt="pic"
                   width={1400}
@@ -137,7 +137,7 @@ const Cart = () => {
   </div>
 
 
-              <div className="relative md:text-2xl text-xl font-roboto md:w-[30%] h-96 p-4  flex flex-col gap-4 border ">
+              <div className="relative md:text-2xl text-xl font-roboto md:w-[30%] h-96 p-4  flex flex-col gap-4  ">
                 <div className=" absolute w-[100%]  md:bottom-8  md:left-12 left-2 p-2  z-0 ">
                   <Image
                     alt="pic"
