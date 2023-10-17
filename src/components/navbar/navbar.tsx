@@ -48,15 +48,69 @@ const Navbar = () => {
     </div>
     {
       click?
-      (<div className='absolute top-8 right-0 bg-slate-700 z-20 '>
-        <ul>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>Sale</li>
-          <li>Cart</li>
-          <li>Saved items</li>
+      (<div className='absolute top-14 w-[50%] h-96 right-0 bg-babypowder rounded-md  font-noto p-[5%] z-20 '>
+        
+        <ul className='flex flex-col w-full h-full justify-evenly text-lg items-center'>
+          <li className='hover:font-semibold'>
+            <Link href='/'>Home</Link>
+          </li>
+          <div className='relative group '>
+            <span className=' cursor-pointer hover:font-semibold'>
+              Shop
+            
+              <div className='hidden  group-hover:block absolute z-[1000] left-0 mt-2 bg-babypowder p-2  rounded shadow-lg '>
+              <div className='group-hover:block absolute bg-babypowder w-4 h-4 rotate-45 top-[-8px] left-5 border-r-0 border-b-0 '></div>
+                {Array.isArray(item)?(
+                item.map((item) => (
+                  <div key={item.id} className='capitalize py-2 px-2 font-medium'>
+                    <Link href={`/product/${item.id}`}>
+                      {item.id}
+                    </Link>
+                  </div>
+                ))):(<p>''</p>)}
+              </div>
+            </span>
+          </div>
+          <li className='hover:font-semibold'>
+            <Link href='/'>Sale</Link>
+          </li>
 
-        </ul>
+          <div className='relative hover:scale-105'>
+            <Link href='/shoppingcart'>
+              <CiShoppingCart size={30} />
+            </Link>
+            <div className='absolute bottom-4  shadow-md left-6 bg-wenge rounded-full w-7 h-7 text-white p-3  flex items-center justify-center'>
+              {totalItems}
+            </div>
+          </div>
+
+          <li  className='relative hover:scale-105'>
+            <Link href='/wishlist'>
+              <PiHeartLight size={30} />{' '}
+            </Link>
+          </li>
+          <li>
+          {isAuthenticated ? (
+            <div className='w-full '>
+              <div  className='bg-wenge mx-auto text-white capitalize cursor-pointer rounded-full w-8 h-8 text-xl text-center flex items-center justify-center'>
+                {userEmail[0]}
+              </div>
+              <button
+                className='bg-wenge p-2 rounded w-32 mt-4 text-white'
+                onClick={handleLogout}
+              >
+                LogOut
+              </button>
+             
+            </div>
+          ) : (
+            <button className='uppercase w-32 bg-wenge p-1 rounded text-white shadow-md hover:text-xl'>
+              <Link href='/signin'>Sign In</Link>
+            </button>
+          )}
+          </li>
+          </ul>
+          
       </div>):('')
     }
     <nav className='w-full md:flex pb-2 justify-around items-center mt-6 font-kreon  hidden'>

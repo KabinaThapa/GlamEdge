@@ -72,7 +72,7 @@ const Signin: React.FC = () => {
               }
             />
           </div>
-          <div className="ml-[-150px] z-[1] md:w-[28rem] mt-8 mb-8 md:bg-timber backdrop-blur-md">
+          <div className="ml-[-150px] z-[1] md:w-[28rem]  mt-8 mb-8 md:bg-timber backdrop-blur-md">
             <Formik
               initialValues={initialValues}
               onSubmit={handleSubmit}
@@ -120,7 +120,7 @@ const Signin: React.FC = () => {
                       </div>
                     </Form>
 
-                    <ToastContainer className="ml-auto" />
+                    
                   </>
                 );
               }}
