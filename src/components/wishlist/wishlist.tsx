@@ -35,13 +35,13 @@ const Wishlist = () => {
     { items.length===0?(
       <>
        <div className=' relative h-screen w-full flex items-center p-12  '>
-        <div className=' flex flex-col justify-around items-center text-2xl overflow-hidden gap-4 mx-auto'>
+        <div className=' flex flex-col justify-around items-center md:text-left text-center text-2xl overflow-hidden gap-4 mx-auto'>
           <h1 className='underline'>Your Wishlist is Empty!</h1>
           <button className='w-full p-2 bg-wenge rounded text-lg hover:text-xl text-white'> 
           <Link href='/'>Back To Shopping</Link></button>
         </div>
 
-        <div className=' absolute w-[45%] h-[100%] top-2 right-80 z-[-1] p-8' >
+        <div className=' absolute md:w-[45%] md:h-[100%] md:top-2 top-18 md:right-80 right-1 z-[-1] p-8' >
         <Image alt='pic' width={200} height={300} src={blob3.src} className='w-full h-full object-cover'/>
    </div>
    </div>
