@@ -52,7 +52,7 @@ console.log(featuredproducts);
     dispatch(fetchCategory());
   }, [dispatch]);
   if (status === "loading") {
-    return <p><LoadingSkeleton/></p>;
+    return <LoadingSkeleton/>;
   }
   if (status === "failed") {
     return <p>Error:{error}</p>;
@@ -96,7 +96,7 @@ console.log(featuredproducts);
   return (
     <>
     
-      <div className=" flex flex-col  w-full items-center justify-center">
+      <div className=" flex flex-col overflow-x-hidden w-full items-center justify-center">
         <section className="w-full h-auto  flex  justify-center items-center md:gap-6 gap-4 md:p-4 p-2 pt-4 pb-4">
           <div className=" relative md:w-[70%] w-[60%] md:h-auto h-[20rem]  flex">
             <Image
@@ -118,7 +118,7 @@ console.log(featuredproducts);
               </button>
             </div>
           </div>
-          <div className="md:w-[32%] w-[40%] ">
+          <div className="md:w-[30%] w-[40%] ">
             <Carousel settings={Imagesetting}>
               {images.map((image, index) => (
                 <div key={index} className="relative md:h-80 h-44 ">
@@ -137,8 +137,9 @@ console.log(featuredproducts);
             </Carousel>
           </div>
         </section>
-
-        <section className="bg-khaki flex flex-col justify-center items-center p-4 md:p-12">
+       
+<LoadingSkeleton/>
+        <section className="bg-khaki flex flex-col justify-center w-full items-center p-4 md:p-12">
           <h1 className={styles.kabi + " md:text-4xl text-2xl text-center mb-8 font-semibold"}>
             Our Category
           </h1>
@@ -288,6 +289,7 @@ console.log(featuredproducts);
             </Carousel>
           </div>
         </section>
+       
       </div>
     </>
   );
