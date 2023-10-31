@@ -138,7 +138,8 @@ console.log(featuredproducts);
           </div>
         </section>
        
-<LoadingSkeleton/>
+
+
         <section className="bg-khaki flex flex-col justify-center w-full items-center p-4 md:p-12">
           <h1 className={styles.kabi + " md:text-4xl text-2xl text-center mb-8 font-semibold"}>
             Our Category
